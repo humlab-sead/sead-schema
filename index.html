@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>Tables</h1><br />
+</section>
+<!-- Main content -->
+<section class="content">
+
+    <div class="box box-primary">
+        <div class="box-body">
+            <table
+                    id="database_objects"
+                    class="table table-bordered table-striped dataTable"
+                    role="grid"
+                    data-paging="true"
+                    data-page-length="50"
+                    data-length-change="false">
+                <thead>
+                    <tr>
+                        <th valign="bottom">Table / View</th>
+                        <th align="right" valign="bottom">Children</th>
+                        <th align="right" valign="bottom">Parents</th>
+                        <th align="right" valign="bottom">Columns</th>
+                        <th align="right" valign="bottom">Rows</th>
+                        <th align="right" valign="bottom">Type</th>
+                        <th class="toggle">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_tree_genera.html">tbl_taxa_tree_genera</a></td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">5233</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Taxonomic genera</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_value_qualifiers.html">tbl_value_qualifiers</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_reference_specimens.html">tbl_taxa_reference_specimens</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Information on reference and type specimens used for primary description of species.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_measured_value_dimensions.html">tbl_measured_value_dimensions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stores eg. weight of samples used in measured value table, pre and post burning weights. But could also be volume or other dimension measures.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ceramics.html">tbl_ceramics</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">77974</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Analysis results from ceramic thin-sections and sherds</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_text_biology.html">tbl_text_biology</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">39452</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Ecological, habitat and behavioural information for taxa, including reference for the source. E.g. in hollows on old oaks.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_locations.html">tbl_sample_locations</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">20216</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Description of the sample&rsquo;s location according to defined types</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_rdb_codes.html">tbl_rdb_codes</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Rarety data definitions according to different systems defined in tbl_rdb_systems</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxonomic_order.html">tbl_taxonomic_order</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">14528</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Taxonomic code which allows ordered placement  in a taxonomic ordering system (checklist) or reference to another database system (e.g. GBIF, Artdatabanken)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_languages.html">tbl_languages</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Human language used for common name of taxa</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_contact_types.html">tbl_contact_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Name and description of the purpose of a contact (e.g. laboratory, sample taker, dataset creator).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxonomy_notes.html">tbl_taxonomy_notes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">17255</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>General notes on a taxon, usually on identification (e.g. easily confused with x) with references, but amy also indlude links to images.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_record_types.html">tbl_record_types</a></td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">22</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Used to group biological proxies according to the way they are generally used, and/or their origin. It is used to provide useful subsets of the full taxonomic index, abundance_elements (i.e. so that &ldquo;seed&rdquo; is not an available option for insect data) and methods. Groups are made at the &ldquo;Order&rdquo; level in the taxonomic tree. E.g. &ldquo;Insects &amp; similar&rdquo; groups insects with arthropods and other animals commonly extracted during insect work. &ldquo;Plants &amp; pollen&rdquo; are grouped as they have similar ecological implications (i.e. presence of plant).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_abundance_modifications.html">tbl_abundance_modifications</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">7594</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Records modifications applied to individual counts, such as carbonized, corroded, or calcified specimens. This allows multiple instances of the same taxon to be recorded with different modifications (e.g., Hordeum sp. carbonized and Hordeum sp. unmodified).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_descriptions.html">tbl_sample_descriptions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">6943</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Descriptions of samples according to different description types</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_relative_age_types.html">tbl_relative_age_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">14</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Relative age types, e.g. archaeological, Blytt-Sernander, Geological. Can be either quite precise in their definition (e.g. Blytt-Sernander) or generalising (e.g. Geological) as required.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_references.html">tbl_sample_group_references</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">967</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Bibliographic information that is specific or most relevant for the sample group and not the site or dataset (e.g. a paper reinterpreting one structure from a site)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_images.html">tbl_taxa_images</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stores links to images of taxa either stored in another database or online.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_age_types.html">tbl_age_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Frame of reference for denoting years (e.g. AD, BC, BP)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_image_types.html">tbl_image_types</a></td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Metadata on the purpose or images (e.g. site photo, sample group sketch, core photo).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_preservation_status.html">tbl_site_preservation_status</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Information on preservation level of sites and risks to cultural heritage. One record per preservation status/threat. Table added at request of PAN (Polar Archaeology Network) members and is aimed at providing support for evaluation of threats to  (Arctic) cultural heritage.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_location_type_sampli_68b7010d.html">tbl_sample_location_type_sampling_contexts</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_boolean_values.html">tbl_analysis_boolean_values</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ceramics_lookup.html">tbl_ceramics_lookup</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">28</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_relative_dates.html">tbl_relative_dates</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">19822</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Describes the relateive dating of aný sample by linking a relative age definition to a physical sample (via an analysis entity). Dates may include notes and indications of uncertainty (e.g. from, ca, &lt;) as well as the method used for dating.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_identification_levels.html">tbl_identification_levels</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Lookup data for taxonomic resolution/uncertainty in identification, and taxonomic level of uncertainty. e.g. c.f. Family, c.f. Genus, c.f. Species.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_species_association_types.html">tbl_species_association_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">108</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>List of permissable associations between species, e.g. predates on; is predated by; parasitic on; parasitized by etc.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_synonyms.html">tbl_taxa_synonyms</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Alternative scientific names of taxa, including primary reference for definition or use.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_notes.html">tbl_sample_group_notes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Notes on the group of samples</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dendro.html">tbl_dendro</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">64637</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_geochron_refs.html">tbl_geochron_refs</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>References for geochronological (radiometric) dates for samples.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_sampling_contexts.html">tbl_sample_group_sampling_contexts</a></td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Type of situation under which the sample group was collected, investigation purpose, or other initial collection purpose. E.g. stratigraphic sequence, invertebrate survey, archaeological excavation, Quantitative vegetation survey. It provides a collection context for the sample group and provides for extraction/analysis on only samples collected in a specific type of project. For example, climate reconstruction using only strategraphic sequences, habitat analysis using only modern survey data.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_descriptions.html">tbl_sample_group_descriptions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">7059</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Description or definition of a group of samples according to a sample group description type</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_years_types.html">tbl_years_types</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Name and description of type of years in which a date is given (e.g. radiocarbon, calendar)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dataset_masters.html">tbl_dataset_masters</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Major grouping unit for datasets, usually designating contributing database, project, user or lab. E.g. BugsCEP, MAL, Lund Dendro lab</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_tephras.html">tbl_tephras</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definitions of volcanic as layers and their age ranges (e.g. Hekla 1984).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_categorical_values.html">tbl_analysis_categorical_values</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_geochronology.html">tbl_geochronology</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">12</td>
+                        <td class="detail" align="right">1463</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Radiometric dates for samples. Most are radiocarbon, but there are others (e.g. Uranium series). Also known as absolute dates.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_aggregate_samples.html">tbl_aggregate_samples</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>20120504pib: can we drop aggregate sample name? seems excessive and unnecessary sample names can be traced.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_coordinates.html">tbl_sample_group_coordinates</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">1026</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Coordinates for sample groups. E.g. top of core, top of profile dendrochronological object, ceramic object.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_numerical_values.html">tbl_analysis_numerical_values</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_aggregate_sample_ages.html">tbl_aggregate_sample_ages</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_isotopes.html">tbl_isotopes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_physical_samples.html">tbl_physical_samples</a></td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">43181</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A Sample represents an instance of a material gathered at some point in time, at a specific Site, with a certain absolute or relative location (coordinate, depth etc) within that site, and within the context of a containing sample set. The physical qualities and properties of the sample, i.e. the various dimensions that describes the sample, are expressed via magnitudes of a specifc units (e.g. litre, kg etc.). The sample can also have additional (encoded) descriptive information, general notes and alternative external keys (in other ledgers or systems).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_relative_ages.html">tbl_relative_ages</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">13</td>
+                        <td class="detail" align="right">1164</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definitions of ages based on periods of calendar events. Includes age range and geographical relevance (e.g. Mesolithic Sweden)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxonomic_order_biblio.html">tbl_taxonomic_order_biblio</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Bibliographic information for the taxonomic ordering or numbering system (may be multiple references)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_abundances.html">tbl_abundances</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">233645</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stores individual counts, presence data, or scaled values for biological proxies, linking an analysis entity to occurrences of a specific taxon. Essentially functions as a species list with counts for a single physical sample, with the intermediate analysis entity enabling multiple proxies per sample. Typically, it records count values (abundance) but may also indicate presence (1) or use categorical or relative scales, as defined by the data type within the dataset.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_taxon_counts.html">tbl_analysis_taxon_counts</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_horizons.html">tbl_horizons</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">122</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Technical name of the layer of soil the sample is from according to a defined standard (e.g. FAO A horizon)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_value_types.html">tbl_value_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_value_type_items.html">tbl_value_type_items</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_measured_values.html">tbl_measured_values</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">91617</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A Measured value is a continues (non-discrete) chemical or physical (non-taxa) value of a certain dimension. A Sample Analysis can have (zero or) one measured values.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_alt_refs.html">tbl_sample_alt_refs</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">28421</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stores multiple names, of different types, for any physical sample (e.g. lab number = MAL01, field number = S1)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_lithology.html">tbl_lithology</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Description of sediment units within a sample group. Allows for a soil profile to be described at depths in parallel to the sample depths (e.g. 0-10cm humus, 10-30cm sand).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_location_types.html">tbl_location_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">14</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definitions of the resolution of geographical terms as well as there context (e.g. administrative unit, historical administrative unit, lake, country).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_types.html">tbl_sample_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">18</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Physical form of the sample. Normally these will either be subsamples relating the sample group sampling method, or bulk samples. e.g. Core subsample, grab sample, bulk (bag) sample</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_data_type_groups.html">tbl_data_type_groups</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Grouping of different data types (e.g. relative scale, semi-quantitative)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_common_names.html">tbl_taxa_common_names</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">4272</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Vernacular (=common) name of an organism (e.g. bluebottle)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_tree_families.html">tbl_taxa_tree_families</a></td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">529</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Taxonomic family</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_colours.html">tbl_colours</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Name and definition of colours according to specified method or colour space (e.g. Munsell, 2.5YR) .</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_values.html">tbl_analysis_values</a></td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">225</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_chronologies.html">tbl_chronologies</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A cohesive collection of dated samples defined for a specific purpose, such as giving a single age range to each sample in a master dataset, or an age-depth model for a lake. Chornologies may be defined to simplify connection to external services which only allow for a limited scope of dating evidence to be included (e.g. GBIF, SBDI).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_other_records.html">tbl_site_other_records</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">2583</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Information on the availability of data not currently stored in SEAD. One record should be used for each proxy type even if they refer to the same publication. Note that some of these data may be entered into SEAD at a later date. Submission requests may be made to the SEAD project group.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_entity_prep_methods.html">tbl_analysis_entity_prep_methods</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">34477</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_tree_master.html">tbl_taxa_tree_master</a></td>
+                        <td class="detail" align="right">22</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">23980</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Finest level of taxonomic identity, usually species, but may be sp. for unknown single species, spp. for unknown multiple species, grp for taxnomic group, or split identifications (x/y) or a number of other cases depending on taxonomic group.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_entity_ages.html">tbl_analysis_entity_ages</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">9</td>
+                        <td class="detail" align="right">6808</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A virtual object defining a single proxy within a single physical sample, essentially a statistical sample. A single physical sample may have multiple analysis_entities each of which provide the linkages for the storage of different proxies. It also allows easier recording of specific species when used in (radiocarbon) dating.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_description_types.html">tbl_sample_description_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definitions of types for sample descriptions</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_aggregate_order_types.html">tbl_aggregate_order_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>20120504pib: drop this? or replace with alternative?</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dating_material.html">tbl_dating_material</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Details on material used for dating. Material may be either connected to a specific taxon (or pseudotaxon if at higher taxonomic level than species) or described in the material_dated text field. Specific abundance elements (e.g. seed, elytron) may also be selected. A date may consist of multiple dated materials.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_activity_types.html">tbl_activity_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Specifies the life stage or activity of an organism during a particular time of the year (e.g., adult, flowering).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_projects.html">tbl_projects</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">505</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Name and description of project context for datasets for site(s).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_text_identification_keys.html">tbl_text_identification_keys</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">425</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Identification key extracts with bibliographic source.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_abundance_elements.html">tbl_abundance_elements</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Reference data specifying the type of element, part, or unit being counted, as represented by the values in tbl_abundances.  For insects, this is usually the Minimum Number of Individuals (MNI) but can also refer to individual body parts like wings, shells, or leg segments. For plant remains (macrofossiles), it typically represents specific plant parts such as seeds, leaves, or bud scales.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_methods.html">tbl_methods</a></td>
+                        <td class="detail" align="right">15</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">133</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definition of analysis methods.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_dimensions.html">tbl_sample_dimensions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">7763</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Measurable dimension type data for samples, excluding coordinates, but including depth or sample in stratigraphy or core. E.g. size of sample on arrival (volume, weight etc), depth of sample top, depth of sample bottom. Note that the name and description of the dimension are stored in tbl_dimension.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dataset_methods.html">tbl_dataset_methods</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_locations.html">tbl_locations</a></td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">3404</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Geographical location in physical (but sometimes historical) space. Usually defined in terms of regions.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_tephra_refs.html">tbl_tephra_refs</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Bibliographic data for tephra (volcanic ash layer) definitions.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_abundance_ident_levels.html">tbl_abundance_ident_levels</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">480</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Degree of certainty in taxonomic identification, such as at the Family, Genus, or Species level (e.g., cf. Family, cf. Genus, cf. Species).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_identifiers.html">tbl_analysis_identifiers</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dataset_submission_types.html">tbl_dataset_submission_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Lookup data listing types of dataset submission, e.g. original submission, ingestion from other database.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dendro_lookup.html">tbl_dendro_lookup</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>type=lookup</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_references.html">tbl_site_references</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">2703</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Allows listing of publications at site level. Note that publications refering to only a set of sample_groups or physical_samples or specific dataset etc are stored at the appropriate lower level in the hierarchy.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_measured_attributes.html">tbl_taxa_measured_attributes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">12159</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Any size related measurement of an organism (e.g. max length)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_coordinates.html">tbl_sample_coordinates</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">56928</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Physical location of sample, where available, as recorded on local grid or converted to other standard. Uses methods table to look up type of grid, which enables all samples recorded with Lat/Long to be easily plotted on large scale maps, but local grids to be plotted on a site/project basis.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_groups.html">tbl_sample_groups</a></td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">6528</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A collection of related samples. Common groups are all samples from a structure (e.g. House 1), a stratigraphic sequence (e.g. profile 3) or a lake core, but groups may be defined in any way.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_features.html">tbl_features</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">2669</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>An archaeological feature is a non-portable trace of past human activity, distinct from movable artifacts. Features include structures or alterations in the landscape indicating human behavior, such as building remains, hearths, burials, pits, roads, agricultural modifications like terraces, and defensive constructions like mounds and ditches. These elements are crucial for understanding ancient societies&rsquo; spatial organization, cultural practices, and everyday life, providing context for interpreting artifacts and the environment. Archaeological features are studied in situ through excavation and surveying to glean insights into historical human-environment interactions.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/dyntaxa_taxonomyc_order_system_temp.html">dyntaxa_taxonomyc_order_system_temp</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">4090</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_season_types.html">tbl_season_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Defines the grouping of seasons.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dating_labs.html">tbl_dating_labs</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">234</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Radiocarbon laboratory identifiers and names from <a href="http://www.radiocarbon.org/Info/labcodes.html">http://www.radiocarbon.org/Info/labcodes.html</a> Allows transparency in C14 and other radiometric dating records.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_isotope_standards.html">tbl_isotope_standards</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Type=lookup</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ecocode_systems.html">tbl_ecocode_systems</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definition of systems for classifying different aspects of taxa, such as habitat preference, food type, cultural use etc.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dating_uncertainty.html">tbl_dating_uncertainty</a></td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Lookup table listing possible forms of uncertainty for dates, such as &ldquo;from&rdquo;, &ldquo;to&rdquo;, &ldquo;Ca.&rdquo; and &ldquo;?&rdquo;. These are used either to establish ranges for ages (e.g. from mesolithic to neolithic; from AD100 to AD300)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_tree_orders.html">tbl_taxa_tree_orders</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">56</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Taxonomic order level in the hierarchy</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_horizons.html">tbl_sample_horizons</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">7857</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Technical soil layer to from which the sample was taken.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_description_ty_6c2e420e.html">tbl_sample_group_description_type_sampling_contexts</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">56</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Groups description types to methods. For dendro, a bunch of description types at different levels of detail. This then groups those types and says: These fields groups things from a dendro building?</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_data_types.html">tbl_data_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">17</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Type of quantification used for the dataset, including classification system definitions.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_contacts.html">tbl_contacts</a></td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">395</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Contact information for multiple purposes (e.g. dataset author, identifier of specimens, laboratory manager).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_locations.html">tbl_site_locations</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8524</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>?Connects sites and location names?</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_isotope_types.html">tbl_isotope_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">164</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Type=lookup</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_mcr_summary_data.html">tbl_mcr_summary_data</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">436</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Simple summaries of the maximum  extent of the temperature tolerance of MCR species.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_colours.html">tbl_sample_colours</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_description_types.html">tbl_sample_group_description_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">58</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Defines the type of a description for a sample group. Definition types include building structure data information (roof, structure type, etc) or dendro annotation data surrounding wrecks. These descriptions should not be used to determine sampled features. They are defined for samples. User added lookup data.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_aggregate_datasets.html">tbl_aggregate_datasets</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_text_distribution.html">tbl_text_distribution</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">43641</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Text based distribution information for taxa, including reference for the source. E.g. Scandinavia north of Tromso, Bitish Isle - rare.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_value_qualifier_symbols.html">tbl_value_qualifier_symbols</a></td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_natgridrefs.html">tbl_site_natgridrefs</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>General site coordinates using national grid system, e.g. UK Ordinanace Survey National Grid, Swedish SWEREF99. A site can be defined on multiple grids (e.g. Swedish RT90 and SWEREF99TM)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_species_associations.html">tbl_species_associations</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">8852</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Describes the relationship of one taxon to others, such as predation, paracitism, common habitat etc. Also includes synonym links. Note that the direction of the association is important in most cases (e.g. x predates on y)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_units.html">tbl_units</a></td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">15</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Measurement unit definitions (e.g. mm, milimetres)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sites.html">tbl_sites</a></td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">3462</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>A Site in SEAD refers to a single Location excavated or sampled for the purpose of building environmental pre- and historical data records. The Samples are grouped into Sample Sets.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_rdb.html">tbl_rdb</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">2224</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Rarety data for any taxon for a specified geographical area (e.g. threatenned in Sweden)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_integer_ranges.html">tbl_analysis_integer_ranges</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">9</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_updates_log.html">tbl_updates_log</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_mcrdata_birmbeetledat.html">tbl_mcrdata_birmbeetledat</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">15696</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definition of species climate enveolopes in binary 1 degree Celsius cells for TRange (columns) and TMax (rows). See <a href="http://www.bugscep.com">www.bugscep.com</a> for more info.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_dating_ranges.html">tbl_analysis_dating_ranges</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">12</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_images.html">tbl_sample_images</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Images of samples (e.g. photograph from the site, lab processing, microscope images)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_notes.html">tbl_sample_notes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">5357</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>General notes on the sample that do not fit in other tables (e.g. stored in a cellar until processing in 2020).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ceramics_measurements.html">tbl_ceramics_measurements</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_biblio.html">tbl_biblio</a></td>
+                        <td class="detail" align="right">19</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">12</td>
+                        <td class="detail" align="right">8943</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>The centralized collection of bibliographic references within the SEAD database, storing detailed citations (author, title, year, publisher, DOI/URL) for sources like books and articles. It links to other domain-specific tables via foreign keys, allowing records to reference relevant literature. This setup ensures data integrity, credits sources, and supports research by organizing all bibliographic information in one place, thereby streamlining verification and study processes.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dataset_contacts.html">tbl_dataset_contacts</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">42642</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>One or more contacts for a dataset (e.g. data provider, digitaliser).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_datasets.html">tbl_datasets</a></td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">59042</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Datasets group collections of analysis_entities in a manner that is meaningful for the proxy concerned. For biological proxies, the dataset is usually equivalent of a spreadsheet containing samples and taxa for a single proxy. method of analysis (eg phosphates through citric acid extraction&hellip; etc)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dendro_dates.html">tbl_dendro_dates</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">7321</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>20130722PIB: Added field dating_uncertainty_id to cater for &gt;&lt; etc. 20130722pib: prefixed fieldnames age_younger and age_older with &ldquo;cal_&rdquo; to conform with equivalent names in other tables</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_feature_types.html">tbl_feature_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">111</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Archaeological feature types categorize features by their purpose, shape, or construction, aiding in the analysis of past human activities. Key types include domestic structures (homes), public and ceremonial spaces (temples, public buildings), economic/industrial areas (workshops, kilns), defensive structures (fortifications, walls), agricultural modifications (terraces, irrigation systems), funerary sites (graves, tombs), transportation routes (roads, bridges), and water management systems (wells, aqueducts). These classifications help understand societal organization, cultural practices, and technological advancements across different periods and locations.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ecocodes.html">tbl_ecocodes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">41996</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Maps classifications to individual taxa</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_rdb_systems.html">tbl_rdb_systems</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">9</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Description of rarety designation systems (so called red data books) nad the region for which they are applicable</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_imported_taxa_replacements.html">tbl_imported_taxa_replacements</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_dimensions.html">tbl_sample_group_dimensions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">134</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Physical dimensions of a sample group (e.g. core length) according to a defined dimension type</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dendro_date_notes.html">tbl_dendro_date_notes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">442</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_isotope_measurements.html">tbl_isotope_measurements</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_value_dimensions.html">tbl_analysis_value_dimensions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_seasonality.html">tbl_taxa_seasonality</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">9915</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stores the part of the year (e.g. Winter, June) in which a particular activity or developmental stage occurs (e.g. adult June-August).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dimensions.html">tbl_dimensions</a></td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definition of different measurement types, such as sample weight, core length, according to a method group.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxonomic_order_systems.html">tbl_taxonomic_order_systems</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Systems for ordering or numbering taxa systematically so as to allow for a unique and name independent identifier for any taxon. It also allows mapping between different systems to enable connectivity between databases.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_description_sample_g_89e77fa2.html">tbl_sample_description_sample_group_contexts</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_entities.html">tbl_analysis_entities</a></td>
+                        <td class="detail" align="right">14</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">163158</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>An Analysis Entity allows the representation of multiple proxies for a single physical sample, essentially a virtual entity or statistical sample connecting physical samples to measurements or abundances (counts) for specific methods. Analysis entities are grouped by dataset, the construction of datasets are proxy dependent (see Dataset).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_site_images.html">tbl_site_images</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Images at the site level (e.g. site photograph, aerial photograph, location map).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_coordinate_method_dimensions.html">tbl_coordinate_method_dimensions</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Support for which dimensions and their legal values for coordinate system methods. A list per coordinate system method with dimensions associated with that method.  Additionally, the legal values (if any) of the given dimension can be specified.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_seasons.html">tbl_seasons</a></td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">20</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Contains names of seasons and months for use in describing activities.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_physical_sample_features.html">tbl_physical_sample_features</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">7968</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Allow many-many between samples and specific (named) features, so that the same feature can have multiple samples, and one sample can come from a nested group of features or a feature with multiple names.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_numerical_ranges.html">tbl_analysis_numerical_ranges</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_modification_types.html">tbl_modification_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Allows the recording of multiple damage or change forms to the normal state of a (Quaternary/sub) fossil, such as carbonisation, mineralization, fragmentation etc.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_integer_values.html">tbl_analysis_integer_values</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_method_groups.html">tbl_method_groups</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">15</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Groups of (analysis) methods that have some form of similarity (e.g. dating methods, isotope analyses, palaeoentomology, geographical location).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_location_types.html">tbl_sample_location_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">9</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ecocode_definitions.html">tbl_ecocode_definitions</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">8</td>
+                        <td class="detail" align="right">322</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Definition of ecological, habitat or ethnographic (etc) categories according to a defined system to which a taxon can be assigned.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_value_classes.html">tbl_value_classes</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">54</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_tephra_dates.html">tbl_tephra_dates</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Sample dates based on tephrachronology, including uncertainty (e.g. &gt;) and notes.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_project_types.html">tbl_project_types</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Describes type of investigation in terms of main purpose/aim, e.g. teaching, consultanct, research, or combinations of these.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_taxa_tree_authors.html">tbl_taxa_tree_authors</a></td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">4828</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Authority for the species name or synonym</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_temperatures.html">tbl_temperatures</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">2078</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_relative_age_refs.html">tbl_relative_age_refs</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Bibliographic information for the definition of a dating period (note: not the dating of a particular same, but an accepted authority for the date/age range).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_sample_group_images.html">tbl_sample_group_images</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Images of the sample group (e.g. a photograph or annotated sketch of a core)</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_isotope_value_specifiers.html">tbl_isotope_value_specifiers</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_dataset_submissions.html">tbl_dataset_submissions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">7</td>
+                        <td class="detail" align="right">143412</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Records different submission events for a dataset (e.g. original recording to paper, entry into Bugs database, ingestion into SEAD).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_alt_ref_types.html">tbl_alt_ref_types</a></td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">11</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>What the sample name means (e.g. lab number, field number) Purpose or origin of the alternative sample reference/name. E.g. museum number, field sample number, on site excavation number</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_project_stages.html">tbl_project_stages</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Stages of investigation, e.g. desktop study, prospection, full excavation, reanalysis.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_ecocode_groups.html">tbl_ecocode_groups</a></td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">12</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Higher level grouping of taxon classifications allowing a single system to include multiple types of classification (e.g. Habitat, Food type, Food condition).</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_mcr_names.html">tbl_mcr_names</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">6</td>
+                        <td class="detail" align="right">436</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>The original taxon names used in the Birmingham MCR calculation system for climate reconstruction. Stored to enable reproducibility and cross-comparison with older results.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_notes.html">tbl_analysis_notes</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">1</td>
+                        <td class="detail" align="right">3</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/tbl_analysis_entity_dimensions.html">tbl_analysis_entity_dimensions</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">5</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">Table</td>
+                        <td class="comment detail" style="display: table-cell;"><p>Physical sample size used for analysis (often a subsample of physical sample) analysed sample non-analysed residue.</p></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/view_taxa_alphabetically.html">view_taxa_alphabetically</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">4</td>
+                        <td class="detail" align="right">10</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">View</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+                    <tr class="tbl even" valign="top">
+                        <td class="detail"><a href="tables/view_bibliography_references.html">view_bibliography_references</a></td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">2</td>
+                        <td class="detail" align="right">0</td>
+                        <td class="detail" align="right">View</td>
+                        <td class="comment detail" style="display: table-cell;"></td>
+                    </tr>
+            </table>
+        </div>
+    </div><!-- /.box-body -->
+</section>
+<!-- /.content -->
+<script>
+    var config = {
+        pagination: true
+    }
+</script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy @project.version@</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="main.js"></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>

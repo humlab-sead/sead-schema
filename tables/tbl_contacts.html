@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tbl_contacts - sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tbl_contacts</h1><p><span id="recordNumber">395</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Contact information for multiple purposes (e.g. dataset author, identifier of specimens, laboratory manager).</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="contact_id">contact_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;tbl_contacts_contact_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_chronologies.contact_id references tbl_contacts.contact_id via fk_chronologies_contact_id"><a href='tbl_chronologies.html'>tbl_chronologies</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_chronologies_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dataset_contacts.contact_id references tbl_contacts.contact_id via fk_dataset_contacts_contact_id"><a href='tbl_dataset_contacts.html'>tbl_dataset_contacts</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_dataset_contacts_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dataset_masters.contact_id references tbl_contacts.contact_id via fk_dataset_masters_contact_id"><a href='tbl_dataset_masters.html'>tbl_dataset_masters</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_dataset_masters_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dataset_submissions.contact_id references tbl_contacts.contact_id via fk_dataset_submissions_contact_id"><a href='tbl_dataset_submissions.html'>tbl_dataset_submissions</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_dataset_submissions_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dating_labs.contact_id references tbl_contacts.contact_id via fk_dating_labs_contact_id"><a href='tbl_dating_labs.html'>tbl_dating_labs</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_dating_labs_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_site_images.contact_id references tbl_contacts.contact_id via fk_site_images_contact_id"><a href='tbl_site_images.html'>tbl_site_images</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_site_images_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_site_preservation_status.assessment_author_contact_id&#39;s name implies that it&#39;s a child of tbl_contacts.contact_id, but it doesn&#39;t reference that column."><a href='tbl_site_preservation_status.html'>tbl_site_preservation_status</a><span class='relatedKey'>.assessment_author_contact_id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_reference_specimens.contact_id references tbl_contacts.contact_id via fk_taxa_reference_specimens_contact_id"><a href='tbl_taxa_reference_specimens.html'>tbl_taxa_reference_specimens</a><span class='relatedKey'>.contact_id</span></td>
+                                                <td class="constraint detail">fk_taxa_reference_specimens_contact_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="address_1">address_1</span></td>
+                                    <td>varchar(255)</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="address_2">address_2</span></td>
+                                    <td>varchar(255)</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="location_id">location_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_contacts.location_id&#39;s name implies that it&#39;s a child of tbl_locations.location_id, but it doesn&#39;t reference that column."><a href='tbl_locations.html'>tbl_locations</a><span class='relatedKey'>.location_id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>key</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="email">email</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="first_name">first_name</span></td>
+                                    <td>varchar(50)</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="last_name">last_name</span></td>
+                                    <td>varchar(100)</td>
+                                    <td>100</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="phone_number">phone_number</span></td>
+                                    <td>varchar(50)</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="url">url</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="date_updated">date_updated</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> tbl_contacts_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>contact_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="453,5,701,181">
+<area shape="rect" id="node2" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="5,759,345,1121">
+<area shape="rect" id="node3" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="435,199,720,404">
+<area shape="rect" id="node4" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="437,421,718,656">
+<area shape="rect" id="node5" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="417,673,738,879">
+<area shape="rect" id="node6" href="tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="457,896,698,1043">
+<area shape="rect" id="node7" href="tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="461,1060,694,1265">
+<area shape="rect" id="node8" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="389,1283,765,1459">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tbl_contacts.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="837,424,1157,512">
+<area shape="rect" id="node2" href="tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="453,421,701,597">
+<area shape="rect" id="node3" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="5,492,345,854">
+<area shape="rect" id="node4" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="1246,38,1531,244">
+<area shape="rect" id="node5" href="tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="869,100,1124,188">
+<area shape="rect" id="node6" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="895,205,1099,293">
+<area shape="rect" id="node7" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="437,169,718,404">
+<area shape="rect" id="node8" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="89,164,262,252">
+<area shape="rect" id="node9" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1228,612,1549,817">
+<area shape="rect" id="node10" href="tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="809,673,1184,761">
+<area shape="rect" id="node11" href="tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="457,614,698,761">
+<area shape="rect" id="node12" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="865,568,1129,656">
+<area shape="rect" id="node13" href="tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="461,814,694,1020">
+<area shape="rect" id="node14" href="tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="55,872,296,960">
+<area shape="rect" id="node15" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="88,977,263,1065">
+<area shape="rect" id="node16" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="389,1045,765,1221">
+<area shape="rect" id="node17" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="31,1082,319,1170">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_contacts.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="704,5,952,181">
+<area shape="rect" id="node2" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="256,841,596,1204">
+<area shape="rect" id="node3" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="5,932,212,1079">
+<area shape="rect" id="node4" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="685,199,971,404">
+<area shape="rect" id="node5" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="687,421,969,656">
+<area shape="rect" id="node6" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="667,673,989,879">
+<area shape="rect" id="node7" href="tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="707,896,949,1043">
+<area shape="rect" id="node8" href="tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="711,1060,945,1265">
+<area shape="rect" id="node9" href="tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="649,1283,1007,1459">
+<area shape="rect" id="node10" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="640,1476,1016,1652">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tbl_contacts.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="1473,599,1793,687">
+<area shape="rect" id="node2" href="tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="1089,628,1337,804">
+<area shape="rect" id="node3" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="641,684,981,1047">
+<area shape="rect" id="node4" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="350,528,557,675">
+<area shape="rect" id="node14" href="tbl_location_types.html" target="_top" title="tbl_location_types" alt="" coords="5,560,265,648">
+<area shape="rect" id="node5" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="1882,279,2167,484">
+<area shape="rect" id="node6" href="tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="1505,340,1760,428">
+<area shape="rect" id="node7" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="1531,445,1735,533">
+<area shape="rect" id="node8" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="1073,376,1354,611">
+<area shape="rect" id="node9" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="725,397,898,485">
+<area shape="rect" id="node10" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1864,632,2185,837">
+<area shape="rect" id="node11" href="tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="1445,704,1820,792">
+<area shape="rect" id="node12" href="tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="1093,893,1334,1040">
+<area shape="rect" id="node13" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="1501,999,1765,1087">
+<area shape="rect" id="node15" href="tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="732,151,891,239">
+<area shape="rect" id="node16" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="309,151,597,239">
+<area shape="rect" id="node17" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="1093,199,1334,287">
+<area shape="rect" id="node18" href="tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="687,1287,936,1375">
+<area shape="rect" id="node19" href="tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="1908,855,2141,1060">
+<area shape="rect" id="node20" href="tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="1512,893,1753,981">
+<area shape="rect" id="node21" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="1545,1104,1720,1192">
+<area shape="rect" id="node23" href="tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="1034,1057,1393,1233">
+<area shape="rect" id="node22" href="tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="1899,1159,2151,1247">
+<area shape="rect" id="node24" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="1025,5,1401,181">
+<area shape="rect" id="node25" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="671,256,952,344">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tbl_contacts.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy @project.version@</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

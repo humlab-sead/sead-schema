@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tbl_sample_groups - sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tbl_sample_groups</h1><p><span id="recordNumber">6528</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>A collection of related samples. Common groups are all samples from a structure (e.g. House 1), a stratigraphic sequence (e.g. profile 3) or a lake core, but groups may be defined in any way.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="sample_group_id">sample_group_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;tbl_sample_groups_sample_group_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_lithology.sample_group_id references tbl_sample_groups.sample_group_id via fk_lithology_sample_group_id"><a href='tbl_lithology.html'>tbl_lithology</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_lithology_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_physical_samples.sample_group_id references tbl_sample_groups.sample_group_id via fk_samples_sample_group_id"><a href='tbl_physical_samples.html'>tbl_physical_samples</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_samples_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_coordinates.sample_group_id references tbl_sample_groups.sample_group_id via fk_sample_group_positions_sample_group_id"><a href='tbl_sample_group_coordinates.html'>tbl_sample_group_coordinates</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_sample_group_positions_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_descriptions.sample_group_id references tbl_sample_groups.sample_group_id via fk_sample_groups_sample_group_descriptions_id"><a href='tbl_sample_group_descriptions.html'>tbl_sample_group_descriptions</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_sample_groups_sample_group_descriptions_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_dimensions.sample_group_id references tbl_sample_groups.sample_group_id via fk_sample_group_dimensions_sample_group_id"><a href='tbl_sample_group_dimensions.html'>tbl_sample_group_dimensions</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_sample_group_dimensions_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_images.sample_group_id references tbl_sample_groups.sample_group_id via fk_sample_group_images_sample_group_id"><a href='tbl_sample_group_images.html'>tbl_sample_group_images</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_sample_group_images_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_notes.sample_group_id references tbl_sample_groups.sample_group_id via fk_tbl_sample_group_notes_sample_groups"><a href='tbl_sample_group_notes.html'>tbl_sample_group_notes</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_tbl_sample_group_notes_sample_groups</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_sample_group_references.sample_group_id references tbl_sample_groups.sample_group_id via fk_sample_group_references_sample_group_id"><a href='tbl_sample_group_references.html'>tbl_sample_group_references</a><span class='relatedKey'>.sample_group_id</span></td>
+                                                <td class="constraint detail">fk_sample_group_references_sample_group_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="site_id">site_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_sample_groups.site_id references tbl_sites.site_id via fk_sample_groups_site_id"><a href='tbl_sites.html'>tbl_sites</a><span class='relatedKey'>.site_id</span></td>
+                                                <td class="constraint detail">fk_sample_groups_site_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="sampling_context_id">sampling_context_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_sample_groups.sampling_context_id references tbl_sample_group_sampling_contexts.sampling_context_id via fk_sample_group_sampling_context_id"><a href='tbl_sample_group_sampling_contexts.html'>tbl_sample_group_sampling_contexts</a><span class='relatedKey'>.sampling_context_id</span></td>
+                                                <td class="constraint detail">fk_sample_group_sampling_context_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>key</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="method_id">method_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_sample_groups.method_id references tbl_methods.method_id via fk_sample_groups_method_id"><a href='tbl_methods.html'>tbl_methods</a><span class='relatedKey'>.method_id</span></td>
+                                                <td class="constraint detail">fk_sample_groups_method_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>sampling method, e.g. russian auger core, pitfall traps. note different from context in that it is specific to method of sample retrieval and not type of investigation.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sample_group_name">sample_group_name</span></td>
+                                    <td>varchar(100)</td>
+                                    <td>100</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL::character varying</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sample_group_description">sample_group_description</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="date_updated">date_updated</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="sample_group_uuid">sample_group_uuid</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>uuid_generate_v4()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> tbl_sample_groups_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>sample_group_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> pk_tbl_sample_groups</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>sample_group_uuid</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="1075,5,1287,152">
+<area shape="rect" id="node2" href="tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="495,739,945,1043">
+<area shape="rect" id="node10" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="65,935,391,1228">
+<area shape="rect" id="node11" href="tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="5,800,451,917">
+<area shape="rect" id="node12" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="70,607,386,783">
+<area shape="rect" id="node3" href="tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="1037,169,1325,375">
+<area shape="rect" id="node4" href="tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="992,392,1371,568">
+<area shape="rect" id="node5" href="tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="989,585,1373,761">
+<area shape="rect" id="node6" href="tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="994,779,1369,955">
+<area shape="rect" id="node7" href="tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="1015,972,1348,1148">
+<area shape="rect" id="node8" href="tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="1022,1165,1341,1312">
+<area shape="rect" id="node9" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="997,1329,1365,1505">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tbl_sample_groups.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="2193,933,2474,1021">
+<area shape="rect" id="node2" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="1069,994,1273,1082">
+<area shape="rect" id="node3" href="tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="1653,1913,1941,2118">
+<area shape="rect" id="node5" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="469,705,795,998">
+<area shape="rect" id="node12" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="99,1205,273,1293">
+<area shape="rect" id="node19" href="tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="946,1611,1397,1915">
+<area shape="rect" id="node22" href="tbl_alt_ref_types.html" target="_top" title="tbl_alt_ref_types" alt="" coords="1049,2098,1293,2186">
+<area shape="rect" id="node23" href="tbl_sample_types.html" target="_top" title="tbl_sample_types" alt="" coords="1045,1993,1297,2081">
+<area shape="rect" id="node4" href="tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="2561,417,2973,505">
+<area shape="rect" id="node14" href="tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="51,447,321,535">
+<area shape="rect" id="node15" href="tbl_units.html" target="_top" title="tbl_units" alt="" coords="102,782,270,870">
+<area shape="rect" id="node20" href="tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="63,897,309,985">
+<area shape="rect" id="node6" href="tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1031,429,1311,517">
+<area shape="rect" id="node7" href="tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="991,534,1351,622">
+<area shape="rect" id="node8" href="tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="1702,758,1891,846">
+<area shape="rect" id="node9" href="tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="958,218,1385,306">
+<area shape="rect" id="node10" href="tbl_dimensions.html" target="_top" title="tbl_dimensions" alt="" coords="517,218,747,306">
+<area shape="rect" id="node11" href="tbl_dataset_methods.html" target="_top" title="tbl_dataset_methods" alt="" coords="1653,863,1940,951">
+<area shape="rect" id="node13" href="tbl_dendro_lookup.html" target="_top" title="tbl_dendro_lookup" alt="" coords="1040,639,1303,727">
+<area shape="rect" id="node16" href="tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="1695,653,1898,741">
+<area shape="rect" id="node17" href="tbl_isotope_measurements.html" target="_top" title="tbl_isotope_measurements" alt="" coords="999,781,1344,869">
+<area shape="rect" id="node18" href="tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="1691,1585,1903,1731">
+<area shape="rect" id="node29" href="tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="409,2699,855,2817">
+<area shape="rect" id="node41" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="474,1425,790,1601">
+<area shape="rect" id="node21" href="tbl_physical_sample_features.html" target="_top" title="tbl_physical_sample_features" alt="" coords="2149,1691,2517,1779">
+<area shape="rect" id="node24" href="tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="2639,738,2896,826">
+<area shape="rect" id="node25" href="tbl_sample_alt_refs.html" target="_top" title="tbl_sample_alt_refs" alt="" coords="2198,2113,2469,2201">
+<area shape="rect" id="node26" href="tbl_sample_colours.html" target="_top" title="tbl_sample_colours" alt="" coords="2199,827,2468,915">
+<area shape="rect" id="node27" href="tbl_sample_coordinates.html" target="_top" title="tbl_sample_coordinates" alt="" coords="2177,617,2490,705">
+<area shape="rect" id="node28" href="tbl_sample_description_sample_g_89e77fa2.html" target="_top" title="tbl_sample_description_sample_group_contexts" alt="" coords="899,2738,1444,2826">
+<area shape="rect" id="node30" href="tbl_sample_descriptions.html" target="_top" title="tbl_sample_descriptions" alt="" coords="2175,1797,2492,1885">
+<area shape="rect" id="node31" href="tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="2179,73,2488,161">
+<area shape="rect" id="node32" href="tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="1607,1198,1986,1374">
+<area shape="rect" id="node33" href="tbl_sample_group_description_ty_6c2e420e.html" target="_top" title="tbl_sample_group_description_type_sampling_contexts" alt="" coords="1488,2699,2105,2787">
+<area shape="rect" id="node34" href="tbl_sample_group_description_types.html" target="_top" title="tbl_sample_group_description_types" alt="" coords="953,2526,1389,2614">
+<area shape="rect" id="node35" href="tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="1605,2365,1989,2541">
+<area shape="rect" id="node36" href="tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="1609,1005,1984,1181">
+<area shape="rect" id="node37" href="tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="1630,2171,1963,2347">
+<area shape="rect" id="node38" href="tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="1051,2421,1292,2509">
+<area shape="rect" id="node39" href="tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="1637,1749,1956,1895">
+<area shape="rect" id="node40" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="1613,1391,1981,1567">
+<area shape="rect" id="node51" href="tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="7,1442,365,1530">
+<area shape="rect" id="node42" href="tbl_sample_horizons.html" target="_top" title="tbl_sample_horizons" alt="" coords="2193,722,2474,810">
+<area shape="rect" id="node43" href="tbl_sample_images.html" target="_top" title="tbl_sample_images" alt="" coords="2199,2377,2467,2465">
+<area shape="rect" id="node44" href="tbl_sample_location_type_sampli_68b7010d.html" target="_top" title="tbl_sample_location_type_sampling_contexts" alt="" coords="912,2843,1431,2931">
+<area shape="rect" id="node45" href="tbl_sample_locations.html" target="_top" title="tbl_sample_locations" alt="" coords="2190,1902,2477,1990">
+<area shape="rect" id="node46" href="tbl_sample_notes.html" target="_top" title="tbl_sample_notes" alt="" coords="2207,2007,2459,2095">
+<area shape="rect" id="node47" href="tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="1680,2594,1913,2682">
+<area shape="rect" id="node48" href="tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="1045,1451,1297,1539">
+<area shape="rect" id="node49" href="tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="1035,1099,1308,1187">
+<area shape="rect" id="node50" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="1022,1205,1321,1293">
+<area shape="rect" id="node52" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="1037,1346,1305,1434">
+<area shape="rect" id="node53" href="tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="1046,323,1297,411">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_sample_groups.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy @project.version@</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

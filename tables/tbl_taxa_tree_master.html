@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tbl_taxa_tree_master - sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tbl_taxa_tree_master</h1><p><span id="recordNumber">23980</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Finest level of taxonomic identity, usually species, but may be sp. for unknown single species, spp. for unknown multiple species, grp for taxnomic group, or split identifications (x/y) or a number of other cases depending on taxonomic group.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="taxon_id">taxon_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;tbl_taxa_tree_master_taxon_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_abundances.taxon_id references tbl_taxa_tree_master.taxon_id via fk_abundances_taxon_id"><a href='tbl_abundances.html'>tbl_abundances</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_abundances_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_analysis_taxon_counts.taxon_id references tbl_taxa_tree_master.taxon_id via tbl_analysis_taxon_counts_taxon_id_fkey"><a href='tbl_analysis_taxon_counts.html'>tbl_analysis_taxon_counts</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">tbl_analysis_taxon_counts_taxon_id_fkey</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dating_material.taxon_id references tbl_taxa_tree_master.taxon_id via fk_dating_material_taxa_tree_master_taxon_id"><a href='tbl_dating_material.html'>tbl_dating_material</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_dating_material_taxa_tree_master_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_ecocodes.taxon_id references tbl_taxa_tree_master.taxon_id via fk_ecocodes_taxon_id"><a href='tbl_ecocodes.html'>tbl_ecocodes</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_ecocodes_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_imported_taxa_replacements.taxon_id references tbl_taxa_tree_master.taxon_id via fk_imported_taxa_replacements_taxon_id"><a href='tbl_imported_taxa_replacements.html'>tbl_imported_taxa_replacements</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_imported_taxa_replacements_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_mcr_names.taxon_id references tbl_taxa_tree_master.taxon_id via fk_mcr_names_taxon_id"><a href='tbl_mcr_names.html'>tbl_mcr_names</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_mcr_names_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_mcr_summary_data.taxon_id references tbl_taxa_tree_master.taxon_id via fk_mcr_summary_data_taxon_id"><a href='tbl_mcr_summary_data.html'>tbl_mcr_summary_data</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_mcr_summary_data_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_mcrdata_birmbeetledat.taxon_id references tbl_taxa_tree_master.taxon_id via fk_mcrdata_birmbeetledat_taxon_id"><a href='tbl_mcrdata_birmbeetledat.html'>tbl_mcrdata_birmbeetledat</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_mcrdata_birmbeetledat_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_rdb.taxon_id references tbl_taxa_tree_master.taxon_id via fk_rdb_taxon_id"><a href='tbl_rdb.html'>tbl_rdb</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_rdb_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_species_associations.taxon_id references tbl_taxa_tree_master.taxon_id via fk_species_associations_taxon_id"><a href='tbl_species_associations.html'>tbl_species_associations</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_species_associations_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_common_names.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_common_names_taxon_id"><a href='tbl_taxa_common_names.html'>tbl_taxa_common_names</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_common_names_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_images.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_images_taxa_tree_master_id"><a href='tbl_taxa_images.html'>tbl_taxa_images</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_images_taxa_tree_master_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_measured_attributes.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_measured_attributes_taxon_id"><a href='tbl_taxa_measured_attributes.html'>tbl_taxa_measured_attributes</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_measured_attributes_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_reference_specimens.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_reference_specimens_taxon_id"><a href='tbl_taxa_reference_specimens.html'>tbl_taxa_reference_specimens</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_reference_specimens_taxon_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_seasonality.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_seasonality_taxon_id"><a href='tbl_taxa_seasonality.html'>tbl_taxa_seasonality</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_seasonality_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxa_synonyms.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxa_synonyms_taxon_id"><a href='tbl_taxa_synonyms.html'>tbl_taxa_synonyms</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxa_synonyms_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxonomic_order.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxonomic_order_taxon_id"><a href='tbl_taxonomic_order.html'>tbl_taxonomic_order</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxonomic_order_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_taxonomy_notes.taxon_id references tbl_taxa_tree_master.taxon_id via fk_taxonomy_notes_taxon_id"><a href='tbl_taxonomy_notes.html'>tbl_taxonomy_notes</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_taxonomy_notes_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_text_biology.taxon_id references tbl_taxa_tree_master.taxon_id via fk_text_biology_taxon_id"><a href='tbl_text_biology.html'>tbl_text_biology</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_text_biology_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_text_distribution.taxon_id references tbl_taxa_tree_master.taxon_id via fk_text_distribution_taxon_id"><a href='tbl_text_distribution.html'>tbl_text_distribution</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_text_distribution_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_text_identification_keys.taxon_id references tbl_taxa_tree_master.taxon_id via fk_text_identification_keys_taxon_id"><a href='tbl_text_identification_keys.html'>tbl_text_identification_keys</a><span class='relatedKey'>.taxon_id</span></td>
+                                                <td class="constraint detail">fk_text_identification_keys_taxon_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="author_id">author_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_taxa_tree_master.author_id references tbl_taxa_tree_authors.author_id via fk_taxa_tree_master_author_id"><a href='tbl_taxa_tree_authors.html'>tbl_taxa_tree_authors</a><span class='relatedKey'>.author_id</span></td>
+                                                <td class="constraint detail">fk_taxa_tree_master_author_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="date_updated">date_updated</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="genus_id">genus_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_taxa_tree_master.genus_id references tbl_taxa_tree_genera.genus_id via fk_taxa_tree_master_genus_id"><a href='tbl_taxa_tree_genera.html'>tbl_taxa_tree_genera</a><span class='relatedKey'>.genus_id</span></td>
+                                                <td class="constraint detail">fk_taxa_tree_master_genus_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="species">species</span></td>
+                                    <td>varchar(255)</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL::character varying</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> tbl_taxa_tree_master_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>taxon_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_taxa_tree_master_author_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>author_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_taxa_tree_master_genus_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>genus_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="843,316,1115,521">
+<area shape="rect" id="node2" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="344,1860,735,2076">
+<area shape="rect" id="node18" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="5,1336,300,1483">
+<area shape="rect" id="node19" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="9,1725,297,1901">
+<area shape="rect" id="node3" href="tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="811,539,1147,715">
+<area shape="rect" id="node4" href="tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="843,732,1115,937">
+<area shape="rect" id="node5" href="tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="850,955,1109,1131">
+<area shape="rect" id="node6" href="tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="779,1148,1180,1295">
+<area shape="rect" id="node7" href="tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="865,1312,1094,1429">
+<area shape="rect" id="node8" href="tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="826,1447,1133,1593">
+<area shape="rect" id="node9" href="tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="805,1611,1153,1757">
+<area shape="rect" id="node10" href="tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="888,1775,1071,1980">
+<area shape="rect" id="node11" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="819,1997,1140,2232">
+<area shape="rect" id="node12" href="tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="817,2249,1142,2425">
+<area shape="rect" id="node13" href="tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="859,2443,1099,2619">
+<area shape="rect" id="node14" href="tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="793,2636,1166,2783">
+<area shape="rect" id="node15" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="791,2800,1167,2976">
+<area shape="rect" id="node16" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="839,2993,1120,3228">
+<area shape="rect" id="node17" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="845,5,1113,299">
+<area shape="rect" id="node20" href="tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="821,3245,1138,3451">
+<area shape="rect" id="node21" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="840,3468,1119,3673">
+<area shape="rect" id="node22" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="860,3691,1099,3896">
+<area shape="rect" id="node23" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="839,3913,1120,4119">
+<area shape="rect" id="node24" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="804,4136,1155,4341">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tbl_taxa_tree_master.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="1572,179,1923,267">
+<area shape="rect" id="node2" href="tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="1183,228,1455,433">
+<area shape="rect" id="node4" href="tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="717,183,1042,271">
+<area shape="rect" id="node5" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="352,289,633,377">
+<area shape="rect" id="node6" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="684,1919,1075,2135">
+<area shape="rect" id="node3" href="tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="1564,284,1931,372">
+<area shape="rect" id="node34" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="345,715,640,803">
+<area shape="rect" id="node36" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="349,820,637,908">
+<area shape="rect" id="node7" href="tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="1151,451,1487,627">
+<area shape="rect" id="node8" href="tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="744,423,1015,511">
+<area shape="rect" id="node9" href="tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="1183,5,1455,211">
+<area shape="rect" id="node10" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="747,57,1011,145">
+<area shape="rect" id="node11" href="tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="1190,2683,1449,2859">
+<area shape="rect" id="node12" href="tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="723,2715,1035,2803">
+<area shape="rect" id="node13" href="tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="1119,1892,1520,2039">
+<area shape="rect" id="node14" href="tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="1205,2056,1434,2173">
+<area shape="rect" id="node15" href="tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="1166,2191,1473,2337">
+<area shape="rect" id="node16" href="tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="1145,2355,1493,2501">
+<area shape="rect" id="node17" href="tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="1228,3679,1411,3884">
+<area shape="rect" id="node18" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="776,3828,983,3916">
+<area shape="rect" id="node19" href="tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="771,3723,988,3811">
+<area shape="rect" id="node20" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="1159,749,1480,984">
+<area shape="rect" id="node21" href="tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="693,840,1066,928">
+<area shape="rect" id="node22" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="793,1145,966,1233">
+<area shape="rect" id="node23" href="tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="1157,2876,1482,3052">
+<area shape="rect" id="node24" href="tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="769,2908,989,2996">
+<area shape="rect" id="node25" href="tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="1199,3069,1439,3245">
+<area shape="rect" id="node26" href="tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="759,3101,1000,3189">
+<area shape="rect" id="node27" href="tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="1133,2519,1506,2665">
+<area shape="rect" id="node28" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="1131,3263,1507,3439">
+<area shape="rect" id="node29" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="778,3324,981,3412">
+<area shape="rect" id="node30" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="1179,3901,1460,4136">
+<area shape="rect" id="node31" href="tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="752,3933,1007,4021">
+<area shape="rect" id="node32" href="tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="781,4039,978,4127">
+<area shape="rect" id="node33" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="1185,644,1453,732">
+<area shape="rect" id="node35" href="tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="5,729,301,817">
+<area shape="rect" id="node37" href="tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="1161,3456,1478,3661">
+<area shape="rect" id="node38" href="tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="694,3547,1065,3635">
+<area shape="rect" id="node39" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="1180,1224,1459,1429">
+<area shape="rect" id="node40" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="1200,1447,1439,1652">
+<area shape="rect" id="node41" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="1179,1669,1460,1875">
+<area shape="rect" id="node42" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="1144,1001,1495,1207">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_taxa_tree_master.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="843,316,1115,521">
+<area shape="rect" id="node2" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="344,1860,735,2076">
+<area shape="rect" id="node18" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="5,1336,300,1483">
+<area shape="rect" id="node19" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="9,1725,297,1901">
+<area shape="rect" id="node3" href="tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="811,539,1147,715">
+<area shape="rect" id="node4" href="tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="843,732,1115,937">
+<area shape="rect" id="node5" href="tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="850,955,1109,1131">
+<area shape="rect" id="node6" href="tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="779,1148,1180,1295">
+<area shape="rect" id="node7" href="tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="865,1312,1094,1429">
+<area shape="rect" id="node8" href="tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="826,1447,1133,1593">
+<area shape="rect" id="node9" href="tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="805,1611,1153,1757">
+<area shape="rect" id="node10" href="tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="888,1775,1071,1980">
+<area shape="rect" id="node11" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="819,1997,1140,2232">
+<area shape="rect" id="node12" href="tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="817,2249,1142,2425">
+<area shape="rect" id="node13" href="tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="859,2443,1099,2619">
+<area shape="rect" id="node14" href="tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="793,2636,1166,2783">
+<area shape="rect" id="node15" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="791,2800,1167,2976">
+<area shape="rect" id="node16" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="839,2993,1120,3228">
+<area shape="rect" id="node17" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="845,5,1113,299">
+<area shape="rect" id="node20" href="tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="821,3245,1138,3451">
+<area shape="rect" id="node21" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="840,3468,1119,3673">
+<area shape="rect" id="node22" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="860,3691,1099,3896">
+<area shape="rect" id="node23" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="839,3913,1120,4119">
+<area shape="rect" id="node24" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="804,4136,1155,4341">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tbl_taxa_tree_master.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="1577,179,1927,267">
+<area shape="rect" id="node2" href="tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="1183,228,1455,433">
+<area shape="rect" id="node4" href="tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="717,183,1042,271">
+<area shape="rect" id="node5" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="352,289,633,377">
+<area shape="rect" id="node6" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="684,1919,1075,2135">
+<area shape="rect" id="node3" href="tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="1569,284,1935,372">
+<area shape="rect" id="node34" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="345,737,640,825">
+<area shape="rect" id="node36" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="349,843,637,931">
+<area shape="rect" id="node7" href="tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="1151,451,1487,627">
+<area shape="rect" id="node8" href="tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="744,423,1015,511">
+<area shape="rect" id="node9" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="1218,3744,1421,3832">
+<area shape="rect" id="node10" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="776,3744,983,3832">
+<area shape="rect" id="node11" href="tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="1183,5,1455,211">
+<area shape="rect" id="node12" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="747,57,1011,145">
+<area shape="rect" id="node13" href="tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="1190,2719,1449,2895">
+<area shape="rect" id="node14" href="tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="723,2751,1035,2839">
+<area shape="rect" id="node15" href="tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="1119,2420,1520,2567">
+<area shape="rect" id="node16" href="tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="1205,2584,1434,2701">
+<area shape="rect" id="node17" href="tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="1166,1892,1473,2039">
+<area shape="rect" id="node18" href="tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="1145,2056,1493,2203">
+<area shape="rect" id="node19" href="tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="1228,3521,1411,3727">
+<area shape="rect" id="node20" href="tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="771,3583,988,3671">
+<area shape="rect" id="node21" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="1159,749,1480,984">
+<area shape="rect" id="node22" href="tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="693,853,1066,941">
+<area shape="rect" id="node23" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="793,1144,966,1232">
+<area shape="rect" id="node24" href="tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="1157,2912,1482,3088">
+<area shape="rect" id="node25" href="tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="769,2944,989,3032">
+<area shape="rect" id="node26" href="tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="1199,3105,1439,3281">
+<area shape="rect" id="node27" href="tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="759,3137,1000,3225">
+<area shape="rect" id="node28" href="tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="1133,2256,1506,2403">
+<area shape="rect" id="node29" href="tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="1564,2917,1940,3093">
+<area shape="rect" id="node30" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="1179,3849,1460,4084">
+<area shape="rect" id="node31" href="tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="752,3865,1007,3953">
+<area shape="rect" id="node32" href="tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="781,3971,978,4059">
+<area shape="rect" id="node33" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="1185,644,1453,732">
+<area shape="rect" id="node35" href="tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="5,664,301,752">
+<area shape="rect" id="node37" href="tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="1161,3299,1478,3504">
+<area shape="rect" id="node38" href="tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="694,3389,1065,3477">
+<area shape="rect" id="node39" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="1180,1001,1459,1207">
+<area shape="rect" id="node40" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="1200,1224,1439,1429">
+<area shape="rect" id="node41" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="1179,1447,1460,1652">
+<area shape="rect" id="node42" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="1144,1669,1495,1875">
+<area shape="rect" id="node43" href="view_taxa_alphabetically.html" target="_top" title="view_taxa_alphabetically" alt="" coords="717,736,1041,800">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tbl_taxa_tree_master.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy @project.version@</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

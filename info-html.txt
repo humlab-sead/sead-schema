@@ -1,0 +1,5 @@
+date=2025-03-18 15:52:22+0000
+os=Linux 5.10.0-33-amd64
+schemaspy-version=7.0.3-SNAPSHOT
+schemaspy-revision=HEAD
+renderer=Graphviz dot 2.43.0 
