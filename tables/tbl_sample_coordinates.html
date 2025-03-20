@@ -84,7 +84,7 @@
                             </div>
                         </div><!-- /.box-header -->
                         <div class="box-body clearfix">
-                            <p>Physical location of sample, where available, as recorded on local grid or converted to other standard. Uses methods table to look up type of grid, which enables all samples recorded with Lat/Long to be easily plotted on large scale maps, but local grids to be plotted on a site/project basis.</p>
+                            <p>Stores the physical location data of samples. This includes both local grid references and standardized global coordinates, such as latitude and longitude. The table references a methods table to determine the type of grid used, facilitating the plotting of samples on large-scale maps or site-specific projects.</p>
                         </div><!-- /.box-body -->
                     </div>
                 </section>
@@ -136,7 +136,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_sample_id">physical_sample_id</span></td>
@@ -214,7 +214,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>GPS type accuracy, e.g. 5m 10m 0.01m</p></td>
+                                    <td><p>Describes the precision of the GPS data, e.g., 5m, 10m, 0.01m.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>

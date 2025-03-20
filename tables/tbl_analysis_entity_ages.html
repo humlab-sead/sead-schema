@@ -84,7 +84,7 @@
                             </div>
                         </div><!-- /.box-header -->
                         <div class="box-body clearfix">
-                            <p>A virtual object defining a single proxy within a single physical sample, essentially a statistical sample. A single physical sample may have multiple analysis_entities each of which provide the linkages for the storage of different proxies. It also allows easier recording of specific species when used in (radiocarbon) dating.</p>
+                            <p>This table represents a virtual entity that defines a single proxy within a specific physical sample, acting as a statistical sample. A physical sample can contain multiple analysis entities, each linking various proxies. This structure facilitates the precise recording of specific species used in methods like radiocarbon dating.</p>
                         </div><!-- /.box-body -->
                     </div>
                 </section>
@@ -141,7 +141,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="age">age</span></td>
@@ -175,7 +175,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td></td>
+                                    <td><p>The upper bound of the age range estimate.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="age_younger">age_younger</span></td>
@@ -192,7 +192,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td></td>
+                                    <td><p>The lower bound of the age range estimate.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="analysis_entity_id">analysis_entity_id</span></td>
@@ -214,7 +214,7 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Identifies the specific analysis entity associated with this record.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="chronology_id">chronology_id</span></td>

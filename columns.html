@@ -192,7 +192,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_abundance_elements_abundance_element_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_abundance_elements",
@@ -234,7 +234,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Long description of element, e.g. minimum number of individuals, base of seed grain, covering of leaf or flower bud</p>"
+        "comments": "<p>Detailed description of the element, such as &lsquo;minimum number of individuals&rsquo;, &lsquo;base of seed grain&rsquo;, or &lsquo;covering of leaf or flower bud&rsquo;.</p>"
     },
     {
         "tableName": "tbl_abundance_elements",
@@ -276,7 +276,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the related abundance record.</p>"
     },
     {
         "tableName": "tbl_abundance_ident_levels",
@@ -290,7 +290,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the specific identification level.</p>"
     },
     {
         "tableName": "tbl_abundance_ident_levels",
@@ -318,7 +318,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_abundance_modifications_abundance_modification_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_abundance_modifications",
@@ -332,7 +332,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the related abundance record.</p>"
     },
     {
         "tableName": "tbl_abundance_modifications",
@@ -346,7 +346,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of modification applied.</p>"
     },
     {
         "tableName": "tbl_abundance_modifications",
@@ -388,7 +388,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_abundances",
@@ -416,7 +416,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies specific parts of a taxon, like leaf, seed, or MNI (Minimum Number of Individuals), enabling detailed taxonomic recording.</p>"
     },
     {
         "tableName": "tbl_abundances",
@@ -430,7 +430,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>Frequency of occurrence, usually a count value (abundance) but can be presence (1) or categorical or relative scale</p>"
+        "comments": "<p>Represents the frequency of occurrence, which is usually a numerical count, but can also indicate presence (1), a categorical value, or a value on a relative scale, in accordance with the dataset&rsquo;s data type.</p>"
     },
     {
         "tableName": "tbl_abundances",
@@ -472,7 +472,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": "<p>Activity type name</p>"
+        "comments": "<p>Name showing the type of activity or life stage.</p>"
     },
     {
         "tableName": "tbl_activity_types",
@@ -514,7 +514,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_age_types_age_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_age_types",
@@ -542,7 +542,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Description of frame of reference for denoting years (e.g. AD, BC, BP)</p>"
+        "comments": "<p>Detailed explanation of the chronological system denoted by the abbreviation.</p>"
     },
     {
         "tableName": "tbl_age_types",
@@ -920,7 +920,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the specific analysis value associated with this data.</p>"
     },
     {
         "tableName": "tbl_analysis_boolean_values",
@@ -934,7 +934,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional information qualifying the value.</p>"
     },
     {
         "tableName": "tbl_analysis_boolean_values",
@@ -962,7 +962,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_categorical_valu_analysis_categorical_value_id_seq'::regclass)",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_categorical_values",
@@ -990,7 +990,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>References the predefined category type.</p>"
     },
     {
         "tableName": "tbl_analysis_categorical_values",
@@ -1018,7 +1018,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if value is an alternative interpretation of analysed value.</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1032,7 +1032,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_dating_ranges_analysis_dating_range_id_seq'::regclass)",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1046,7 +1046,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the specific analysis value associated with this data.</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1060,7 +1060,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The lower value of the range.</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1074,7 +1074,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The higher value of the range.</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1102,7 +1102,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if higher value is uncertain (e.g. question mark).</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1144,7 +1144,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "1",
-        "comments": ""
+        "comments": "<p>Specifies the chronological system (e.g., AD, BC, BP).</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1158,7 +1158,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Limits the dating range to a particular season.</p>"
     },
     {
         "tableName": "tbl_analysis_dating_ranges",
@@ -1186,7 +1186,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if value is an alternative interpretation of analysed value.</p>"
     },
     {
         "tableName": "tbl_analysis_entities",
@@ -1256,7 +1256,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_entity_ages_analysis_entity_age_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_entity_ages",
@@ -1284,7 +1284,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The upper bound of the age range estimate.</p>"
     },
     {
         "tableName": "tbl_analysis_entity_ages",
@@ -1298,7 +1298,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The lower bound of the age range estimate.</p>"
     },
     {
         "tableName": "tbl_analysis_entity_ages",
@@ -1312,7 +1312,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific analysis entity associated with this record.</p>"
     },
     {
         "tableName": "tbl_analysis_entity_ages",
@@ -1382,7 +1382,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_entity_dimensions_analysis_entity_dimension_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_entity_dimensions",
@@ -1452,7 +1452,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_entity_prep_meth_analysis_entity_prep_method_i_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_entity_prep_methods",
@@ -1466,7 +1466,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific analysis entity associated with this record.</p>"
     },
     {
         "tableName": "tbl_analysis_entity_prep_methods",
@@ -1480,7 +1480,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>preparation methods only</p>"
+        "comments": "<p>Specifies the preparation method related to the analysis entity.</p>"
     },
     {
         "tableName": "tbl_analysis_entity_prep_methods",
@@ -1564,7 +1564,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the specific analysis value associated with this data.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_ranges",
@@ -1592,7 +1592,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The higher value of the analysis.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_ranges",
@@ -1606,7 +1606,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if lower value is uncertain (e.g. question mark).</p>"
     },
     {
         "tableName": "tbl_analysis_integer_ranges",
@@ -1620,7 +1620,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if higher value is uncertain (e.g. question mark).</p>"
     },
     {
         "tableName": "tbl_analysis_integer_ranges",
@@ -1648,7 +1648,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional information qualifying the higher value.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_ranges",
@@ -1676,7 +1676,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_integer_values_analysis_integer_value_id_seq'::regclass)",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_integer_values",
@@ -1690,7 +1690,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the specific analysis value associated with this data.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_values",
@@ -1704,7 +1704,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional information qualifying the value.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_values",
@@ -1718,7 +1718,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The analysed value interpretated as an integer value.</p>"
     },
     {
         "tableName": "tbl_analysis_integer_values",
@@ -1774,7 +1774,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The actal note.</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_ranges",
@@ -1788,7 +1788,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_numerical_ranges_analysis_numerical_range_id_seq'::regclass)",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_ranges",
@@ -1802,7 +1802,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the specific analysis value associated with this data.</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_ranges",
@@ -1830,7 +1830,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if lower value is uncertain (e.g. question mark).</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_ranges",
@@ -1844,7 +1844,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if higher value is uncertain (e.g. question mark).</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_ranges",
@@ -1886,7 +1886,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if value is an alternative interpretation of analysed value.</p>"
     },
     {
         "tableName": "tbl_analysis_numerical_values",
@@ -1970,7 +1970,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_analysis_taxon_counts_analysis_taxon_count_id_seq'::regclass)",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_analysis_taxon_counts",
@@ -2068,7 +2068,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The value of specified dimension.</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2096,7 +2096,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Reference to associated value class that specifies kind of analysis value.</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2124,7 +2124,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The resulting value from the analysis (untyped as a string)</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2138,7 +2138,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Boolean (true/false) interpretation of the value (is is_boolean is true).</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2166,7 +2166,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if resulting value of analysis is uncertain.</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2208,7 +2208,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Indicates if result of analysis is indeterminable.</p>"
     },
     {
         "tableName": "tbl_analysis_values",
@@ -2250,7 +2250,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Identifier linking this entry to the BugsCEP database or other related datasets.</p>"
     },
     {
         "tableName": "tbl_biblio",
@@ -2292,7 +2292,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>International Standard Book Number (ISBN) for cataloging and tracking books.</p>"
     },
     {
         "tableName": "tbl_biblio",
@@ -2362,7 +2362,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "''::text",
-        "comments": "<p>The complete citation that details the source of information, data, or quotes used in a document, including the author, title, publication date, and publisher.</p>"
+        "comments": "<p>Complete citation including all necessary details such as author, title, publication date, and publisher.</p>"
     },
     {
         "tableName": "tbl_biblio",
@@ -2432,7 +2432,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Numeric value representing the measurement obtained from the ceramic analysis.</p>"
     },
     {
         "tableName": "tbl_ceramics",
@@ -2502,7 +2502,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed description of the ceramic type.</p>"
     },
     {
         "tableName": "tbl_ceramics_lookup",
@@ -2544,7 +2544,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_ceramics_measurements_ceramics_measurement_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_ceramics_measurements",
@@ -2614,7 +2614,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Constraint removed to obsolete table (tbl_age_types), replaced by non-binding id of relative_age_types - but not fully implemented. Notes should be used to inform on chronology years types and construction.</p>"
+        "comments": "<p>This was previously constrained by the obsolete tbl_age_types table. Now, it serves as a non-binding reference to relative_age_types, although not fully implemented. Relevant notes should document year types and construction methods for the chronology.</p>"
     },
     {
         "tableName": "tbl_chronologies",
@@ -2628,7 +2628,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A descriptive title for the chronology, indicating its purpose and extent.</p>"
     },
     {
         "tableName": "tbl_chronologies",
@@ -2642,7 +2642,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the contact person or organization for the chronology.</p>"
     },
     {
         "tableName": "tbl_chronologies",
@@ -2656,7 +2656,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The date the chronology was initially created or most recently updated.</p>"
     },
     {
         "tableName": "tbl_chronologies",
@@ -2684,7 +2684,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Supplementary information or anlabels related to the chronology, including data sources, assumptions, or constraints.</p>"
     },
     {
         "tableName": "tbl_colours",
@@ -2698,7 +2698,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_colours_colour_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_colours",
@@ -2712,7 +2712,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Descriptive name of the colour.</p>"
     },
     {
         "tableName": "tbl_colours",
@@ -2740,7 +2740,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the method or colour space used for classification.</p>"
     },
     {
         "tableName": "tbl_colours",
@@ -2754,7 +2754,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>RGB value representing the colour in the RGB colour model.</p>"
     },
     {
         "tableName": "tbl_contact_types",
@@ -2866,7 +2866,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies to a location, associating the contact with a specific geographic or organizational location.</p>"
     },
     {
         "tableName": "tbl_contacts",
@@ -2936,7 +2936,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Associated website or online profile link.</p>"
     },
     {
         "tableName": "tbl_contacts",
@@ -3006,7 +3006,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Specifies the upper bound of the legal value range for the dimension, if applicable.</p>"
     },
     {
         "tableName": "tbl_coordinate_method_dimensions",
@@ -3048,7 +3048,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_data_type_groups_data_type_group_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_data_type_groups",
@@ -3062,7 +3062,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Name of the data type group.</p>"
     },
     {
         "tableName": "tbl_data_type_groups",
@@ -3090,7 +3090,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed information about the data type group.</p>"
     },
     {
         "tableName": "tbl_data_types",
@@ -3104,7 +3104,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_data_types_data_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_data_types",
@@ -3118,7 +3118,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the group to which this data type belongs.</p>"
     },
     {
         "tableName": "tbl_data_types",
@@ -3160,7 +3160,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed explanation or description of the data type.</p>"
     },
     {
         "tableName": "tbl_dataset_contacts",
@@ -3244,7 +3244,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_dataset_masters_master_set_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_dataset_masters",
@@ -3258,7 +3258,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the contact person or organization responsible for the master dataset.</p>"
     },
     {
         "tableName": "tbl_dataset_masters",
@@ -3272,7 +3272,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>primary reference for master dataset if available, e.g. buckland &amp; buckland 2006 for bugscep</p>"
+        "comments": "<p>Specifies the primary literature or reference related to the master dataset (e.g., Buckland &amp; Buckland 2006 for BugsCEP).</p>"
     },
     {
         "tableName": "tbl_dataset_masters",
@@ -3286,7 +3286,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>identification of master dataset, e.g. mal, bugscep, dendrolab</p>"
+        "comments": "<p>Name or title assigned to the master dataset (e.g., MAL, BugsCEP, DendroLab).</p>"
     },
     {
         "tableName": "tbl_dataset_masters",
@@ -3314,7 +3314,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>website or other url for master dataset, be it a project, lab or&hellip; other</p>"
+        "comments": "<p>Web address or URL related to the master dataset, which could be a project, lab, or other entity.</p>"
     },
     {
         "tableName": "tbl_dataset_masters",
@@ -3412,7 +3412,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_dataset_submission_types_submission_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_dataset_submission_types",
@@ -3426,7 +3426,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>descriptive name for type of submission, e.g. original submission, ingestion from another database</p>"
+        "comments": "<p>A concise name showing the type of dataset submission (e.g., &lsquo;Original Submission&rsquo;, &lsquo;Ingestion from External Database&rsquo;).</p>"
     },
     {
         "tableName": "tbl_dataset_submission_types",
@@ -3538,7 +3538,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>any details of submission not covered by submission_type information, such as name of source from which submission originates if not covered elsewhere in database, e.g. from bugscep</p>"
+        "comments": "<p>Contains supplementary information regarding the submission, such as its origin if not documented elsewhere (e.g., BugsCEP).</p>"
     },
     {
         "tableName": "tbl_dataset_submissions",
@@ -3566,7 +3566,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_datasets_dataset_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_datasets",
@@ -3580,7 +3580,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the master set to which this dataset belongs.</p>"
     },
     {
         "tableName": "tbl_datasets",
@@ -3594,7 +3594,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of data contained in the dataset.</p>"
     },
     {
         "tableName": "tbl_datasets",
@@ -3650,7 +3650,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the project related to this dataset.</p>"
     },
     {
         "tableName": "tbl_datasets",
@@ -3706,7 +3706,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_dating_labs_dating_lab_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_dating_labs",
@@ -3720,7 +3720,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>address details are stored in tbl_contacts</p>"
+        "comments": "<p>Identifies the contact person or organization related to the dating lab.</p>"
     },
     {
         "tableName": "tbl_dating_labs",
@@ -3734,7 +3734,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>international standard radiocarbon lab identifier, from radiocarbon.org/laboratories.</p>"
+        "comments": "<p>Standardized identifier for the radiocarbon lab, as listed on radiocarbon.org/laboratories.</p>"
     },
     {
         "tableName": "tbl_dating_labs",
@@ -3748,7 +3748,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": "<p>international standard name of radiocarbon lab, from radiocarbon.org/laboratories.</p>"
+        "comments": "<p>Official name of the radiocarbon lab, standardized according to radiocarbon.org/laboratories.</p>"
     },
     {
         "tableName": "tbl_dating_labs",
@@ -3762,7 +3762,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the country where the dating lab is located.</p>"
     },
     {
         "tableName": "tbl_dating_labs",
@@ -3804,7 +3804,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the geochronological context of the dating material.</p>"
     },
     {
         "tableName": "tbl_dating_material",
@@ -3818,7 +3818,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_dating_material",
@@ -3832,7 +3832,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Text field describing the specific material that was dated.</p>"
     },
     {
         "tableName": "tbl_dating_material",
@@ -3860,7 +3860,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the abundance element related to the material.</p>"
     },
     {
         "tableName": "tbl_dating_material",
@@ -3916,7 +3916,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A description of the type of dating uncertainty.</p>"
     },
     {
         "tableName": "tbl_dating_uncertainty",
@@ -3930,7 +3930,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A brief code or label showing the type of dating uncertainty, such as &lsquo;from&rsquo;, &lsquo;to&rsquo;, or &lsquo;Ca.&rsquo;.</p>"
     },
     {
         "tableName": "tbl_dendro",
@@ -4322,7 +4322,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed description of the dimension.</p>"
     },
     {
         "tableName": "tbl_dimensions",
@@ -4350,7 +4350,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the unit of measurement used for the dimension.</p>"
     },
     {
         "tableName": "tbl_dimensions",
@@ -4392,7 +4392,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>A short form or acronym representing the ecocode.</p>"
     },
     {
         "tableName": "tbl_ecocode_definitions",
@@ -4420,7 +4420,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed explanation of the ecocode category.</p>"
     },
     {
         "tableName": "tbl_ecocode_definitions",
@@ -4448,7 +4448,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the ecocode category.</p>"
     },
     {
         "tableName": "tbl_ecocode_definitions",
@@ -4546,7 +4546,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Full name of the ecocode group.</p>"
     },
     {
         "tableName": "tbl_ecocode_groups",
@@ -4574,7 +4574,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_ecocode_systems_ecocode_system_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_ecocode_systems",
@@ -4588,7 +4588,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication that describes or mentions  the ecocode system.</p>"
     },
     {
         "tableName": "tbl_ecocode_systems",
@@ -4630,7 +4630,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Name of the ecocode system.</p>"
     },
     {
         "tableName": "tbl_ecocode_systems",
@@ -4644,7 +4644,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional notes or comments about the ecocode system.</p>"
     },
     {
         "tableName": "tbl_ecocode_systems",
@@ -4714,7 +4714,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_feature_types",
@@ -4728,7 +4728,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_feature_types_feature_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_feature_types",
@@ -4756,7 +4756,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed description of the feature type, explaining its characteristics and significance.</p>"
     },
     {
         "tableName": "tbl_feature_types",
@@ -4784,7 +4784,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_features_feature_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_features",
@@ -4882,7 +4882,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>reference for specific date</p>"
+        "comments": "<p>Specifies the publication that describes or mentions the geochronological dating.</p>"
     },
     {
         "tableName": "tbl_geochron_refs",
@@ -4910,7 +4910,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_geochronology_geochron_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -4924,7 +4924,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific analysis entity associated with this record.</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -4966,7 +4966,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>radiocarbon (or other radiometric) age.</p>"
+        "comments": "<p>Measured radiometric age of the sample, expressed in years.</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -4980,7 +4980,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>plus (+) side of the measured error (set same as error_younger if standard +/- error)</p>"
+        "comments": "<p>Upper bound of the measured error range. Matches &lsquo;error_younger&rsquo; for symmetrical errors.</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -4994,7 +4994,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>minus (-) side of the measured error (set same as error_younger if standard +/- error)</p>"
+        "comments": "<p>Lower bound of the measured error range. Matches &lsquo;error_older&rsquo; for symmetrical errors.</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -5050,7 +5050,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the uncertainty category related to the dating method used.</p>"
     },
     {
         "tableName": "tbl_geochronology",
@@ -5078,7 +5078,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_horizons_horizon_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_horizons",
@@ -5106,7 +5106,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed description of the soil horizon.</p>"
     },
     {
         "tableName": "tbl_horizons",
@@ -5148,7 +5148,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_identification_levels_identification_level_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_identification_levels",
@@ -5176,7 +5176,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The full name of the identification level, providing a detailed description.</p>"
     },
     {
         "tableName": "tbl_identification_levels",
@@ -5190,7 +5190,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional information or remarks related to the identification level.</p>"
     },
     {
         "tableName": "tbl_identification_levels",
@@ -5218,7 +5218,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_image_types_image_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_image_types",
@@ -5260,7 +5260,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The specific category or designation of the image.</p>"
     },
     {
         "tableName": "tbl_imported_taxa_replacements",
@@ -5792,7 +5792,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the language in English.</p>"
     },
     {
         "tableName": "tbl_languages",
@@ -5806,7 +5806,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the language in its native script or form.</p>"
     },
     {
         "tableName": "tbl_lithology",
@@ -5848,7 +5848,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The depth at the bottom of the lithological layer, measured in centimeters.</p>"
     },
     {
         "tableName": "tbl_lithology",
@@ -5862,7 +5862,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The depth at the top of the lithological layer, measured in centimeters.</p>"
     },
     {
         "tableName": "tbl_lithology",
@@ -5876,7 +5876,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A description of the lithological characteristics of the sedimentary layer.</p>"
     },
     {
         "tableName": "tbl_lithology",
@@ -5890,7 +5890,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Details regarding the boundary characteristics at the lower end of the lithological layer.</p>"
     },
     {
         "tableName": "tbl_lithology",
@@ -5904,7 +5904,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies a sample group. linking lithology data to specific sample groups.</p>"
     },
     {
         "tableName": "tbl_location_types",
@@ -5946,7 +5946,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed explanation or definition of the location type.</p>"
     },
     {
         "tableName": "tbl_location_types",
@@ -5974,7 +5974,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_locations_location_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_locations",
@@ -5988,7 +5988,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The name of the location.</p>"
     },
     {
         "tableName": "tbl_locations",
@@ -6002,7 +6002,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of location.</p>"
     },
     {
         "tableName": "tbl_locations",
@@ -6030,7 +6030,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>default longitude in decimal degrees for location, e.g. mid point of country</p>"
+        "comments": "<p>Default longitude of the location in decimal degrees, e.g., the midpoint of a country. Leave empty if unknown.</p>"
     },
     {
         "tableName": "tbl_locations",
@@ -6072,7 +6072,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Additional notes for cross-referencing and comparison with other taxa.</p>"
     },
     {
         "tableName": "tbl_mcr_names",
@@ -6142,7 +6142,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_mcr_summary_data_mcr_summary_data_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_mcr_summary_data",
@@ -6170,7 +6170,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": ""
+        "comments": "<p>Midpoint of the temperature range for the center of gravity of the species.</p>"
     },
     {
         "tableName": "tbl_mcr_summary_data",
@@ -6212,7 +6212,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": ""
+        "comments": "<p>Highest observed maximum temperature tolerance for the species.</p>"
     },
     {
         "tableName": "tbl_mcr_summary_data",
@@ -6240,7 +6240,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": ""
+        "comments": "<p>Highest observed minimum temperature tolerance for the species.</p>"
     },
     {
         "tableName": "tbl_mcr_summary_data",
@@ -6254,7 +6254,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": ""
+        "comments": "<p>Lowest observed minimum temperature tolerance for the species.</p>"
     },
     {
         "tableName": "tbl_mcr_summary_data",
@@ -6324,7 +6324,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Data related to the MCR (Mean Climate Range) for each species.</p>"
     },
     {
         "tableName": "tbl_mcrdata_birmbeetledat",
@@ -6352,7 +6352,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_measured_value_dimensions",
@@ -6366,7 +6366,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_measured_value_dimensions_measured_value_dimension_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_measured_value_dimensions",
@@ -6422,7 +6422,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the measured value to which this dimension belongs.</p>"
     },
     {
         "tableName": "tbl_measured_values",
@@ -6450,7 +6450,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific analysis entity associated with this record.</p>"
     },
     {
         "tableName": "tbl_measured_values",
@@ -6478,7 +6478,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The continuous value obtained from the sample analysis.</p>"
     },
     {
         "tableName": "tbl_method_groups",
@@ -6492,7 +6492,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_method_groups_method_group_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_method_groups",
@@ -6548,7 +6548,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_methods_method_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_methods",
@@ -6562,7 +6562,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication that describes or mentions the method.</p>"
     },
     {
         "tableName": "tbl_methods",
@@ -6618,7 +6618,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the group category of the method.</p>"
     },
     {
         "tableName": "tbl_methods",
@@ -6646,7 +6646,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of record related to the method.</p>"
     },
     {
         "tableName": "tbl_methods",
@@ -6660,7 +6660,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the unit of measurement used in the method.</p>"
     },
     {
         "tableName": "tbl_methods",
@@ -6688,7 +6688,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_modification_types_modification_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_modification_types",
@@ -6702,7 +6702,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>short name of modification, e.g. carbonised</p>"
+        "comments": "<p>Concise identifier for the modification type, such as &lsquo;carbonized&rsquo;.</p>"
     },
     {
         "tableName": "tbl_modification_types",
@@ -6716,7 +6716,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>clear explanation of modification so that name makes sense to non-domain scientists</p>"
+        "comments": "<p>Detailed description of the modification to ensure clarity and understanding, especially for those unfamiliar with domain-specific terminology.</p>"
     },
     {
         "tableName": "tbl_modification_types",
@@ -6744,7 +6744,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_physical_sample_features_physical_sample_feature_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_physical_sample_features",
@@ -6772,7 +6772,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the unique identifier of a feature.</p>"
     },
     {
         "tableName": "tbl_physical_sample_features",
@@ -6786,7 +6786,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific physical sample.</p>"
     },
     {
         "tableName": "tbl_physical_samples",
@@ -6800,7 +6800,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_physical_samples_physical_sample_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_physical_samples",
@@ -6814,7 +6814,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific sample group this sample belongs to.</p>"
     },
     {
         "tableName": "tbl_physical_samples",
@@ -6842,7 +6842,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>physical form of sample, e.g. bulk sample, kubienta subsample, core subsample, dendro core, dendro slice&hellip;</p>"
+        "comments": "<p>Specifies the physical form of the sample, such as bulk sample or core subsample.</p>"
     },
     {
         "tableName": "tbl_physical_samples",
@@ -6856,7 +6856,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>reference number or name of sample. multiple references/names can be added as alternative references.</p>"
+        "comments": "<p>Primary reference number or name of the sample. Additional references can be recorded as alternative names.</p>"
     },
     {
         "tableName": "tbl_physical_samples",
@@ -6898,7 +6898,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_project_stages_project_stage_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_project_stages",
@@ -6926,7 +6926,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>explanation of stage name term, including details of purpose and general contents</p>"
+        "comments": "<p>A detailed explanation of the project stage, outlining its purpose and general activities involved.</p>"
     },
     {
         "tableName": "tbl_project_stages",
@@ -6954,7 +6954,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_project_types_project_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_project_types",
@@ -6968,7 +6968,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>descriptive name for project type, e.g. consultancy, research, teaching; also combinations consultancy/teaching</p>"
+        "comments": "<p>The name representing the project type, such as consultancy, research, teaching, or combinations like consultancy/teaching.</p>"
     },
     {
         "tableName": "tbl_project_types",
@@ -7010,7 +7010,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_projects_project_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_projects",
@@ -7052,7 +7052,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>name of project (e.g. phil&rsquo;s phd thesis, malmö ringroad vägverket)</p>"
+        "comments": "<p>The full name of the project (e.g., Phil&rsquo;s PhD Thesis, Malm� Ring Road V�gverket).</p>"
     },
     {
         "tableName": "tbl_projects",
@@ -7108,7 +7108,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_rdb_rdb_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_rdb",
@@ -7136,7 +7136,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the the specific rarity designation or classification code.</p>"
     },
     {
         "tableName": "tbl_rdb",
@@ -7206,7 +7206,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the rarity category.</p>"
     },
     {
         "tableName": "tbl_rdb_codes",
@@ -7248,7 +7248,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_rdb_systems_rdb_system_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_rdb_systems",
@@ -7290,7 +7290,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The year the RDB system was first published.</p>"
     },
     {
         "tableName": "tbl_rdb_systems",
@@ -7304,7 +7304,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name or title of the RDB system.</p>"
     },
     {
         "tableName": "tbl_rdb_systems",
@@ -7332,7 +7332,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The version or edition number of the RDB system.</p>"
     },
     {
         "tableName": "tbl_rdb_systems",
@@ -7374,7 +7374,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_record_types_record_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_record_types",
@@ -7388,7 +7388,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": "<p>short name of proxy/proxies in group</p>"
+        "comments": "<p>Concise name representing the proxy or proxies within the group.</p>"
     },
     {
         "tableName": "tbl_record_types",
@@ -7444,7 +7444,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication that describes or mentions the relative age definition.</p>"
     },
     {
         "tableName": "tbl_relative_age_refs",
@@ -7486,7 +7486,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_relative_age_types_relative_age_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_relative_age_types",
@@ -7500,7 +7500,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>name of chronological age type, e.g. archaeological period, single calendar date, calendar age range, blytt-sernander</p>"
+        "comments": "<p>The name of the chronological age type, which can include archaeological periods, specific calendar dates, calendar age ranges, or periods defined by the Blytt-Sernander classification.</p>"
     },
     {
         "tableName": "tbl_relative_age_types",
@@ -7570,7 +7570,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>name of the dating period, e.g. bronze age. calendar ages should be given appropriate names such as ad 1492, 74 bc</p>"
+        "comments": "<p>Name of the dating period, e.g., &lsquo;Bronze Age&rsquo;. Calendar ages should be named appropriately, such as &lsquo;AD 1492&rsquo; or &lsquo;74 BC&rsquo;.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7584,7 +7584,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>a description of the (usually) period.</p>"
+        "comments": "<p>A detailed description of the period, typically outlining its characteristics.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7598,7 +7598,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>c14 age of younger boundary of period (where relevant).</p>"
+        "comments": "<p>C14 age of the older boundary of the period, if applicable.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7626,7 +7626,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>(approximate) age before present (1950) of earliest boundary of period. or if calendar age then the calendar age converted to bp.</p>"
+        "comments": "<p>Approximate age before present (1950) of the earliest boundary of the period, or the calendar age converted to BP if applicable.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7654,7 +7654,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>any further notes not included in the description, such as reliability of definition or fuzzyness of boundaries.</p>"
+        "comments": "<p>Additional notes on the period, such as definitions&rsquo; reliability or boundary uncertainties.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7682,7 +7682,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the location related to the period.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7696,7 +7696,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Standard abbreviated form of name if available</p>"
+        "comments": "<p>Standard abbreviated form of the period name, if available.</p>"
     },
     {
         "tableName": "tbl_relative_ages",
@@ -7752,7 +7752,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>dating method used to attribute sample to period or calendar date.</p>"
+        "comments": "<p>Specifies the method used for dating the sample to a period or calendar date.</p>"
     },
     {
         "tableName": "tbl_relative_dates",
@@ -7766,7 +7766,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>any notes specific to the dating of this sample to this calendar or period based age</p>"
+        "comments": "<p>Additional notes regarding the sample&rsquo;s dating, including any specific details or observations.</p>"
     },
     {
         "tableName": "tbl_relative_dates",
@@ -7794,7 +7794,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the uncertainty category related to the dating method used.</p>"
     },
     {
         "tableName": "tbl_relative_dates",
@@ -7822,7 +7822,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_alt_refs_sample_alt_ref_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_alt_refs",
@@ -7850,7 +7850,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of alternative identification.</p>"
     },
     {
         "tableName": "tbl_sample_alt_refs",
@@ -7934,7 +7934,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific physical sample.</p>"
     },
     {
         "tableName": "tbl_sample_coordinates",
@@ -7948,7 +7948,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_coordinates_sample_coordinate_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_coordinates",
@@ -8004,7 +8004,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>GPS type accuracy, e.g. 5m 10m 0.01m</p>"
+        "comments": "<p>Describes the precision of the GPS data, e.g., 5m, 10m, 0.01m.</p>"
     },
     {
         "tableName": "tbl_sample_coordinates",
@@ -8046,7 +8046,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the sampling context, providing contextual details about the sampling environment.</p>"
     },
     {
         "tableName": "tbl_sample_description_sample_group_contexts",
@@ -8214,7 +8214,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_dimensions_sample_dimension_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_dimensions",
@@ -8256,7 +8256,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>method describing dimension measurement, with link to units used</p>"
+        "comments": "<p>Specifies the measurement method used, including associated units.</p>"
     },
     {
         "tableName": "tbl_sample_dimensions",
@@ -8340,7 +8340,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Specifies the accuracy level of the recorded position.</p>"
     },
     {
         "tableName": "tbl_sample_group_coordinates",
@@ -8382,7 +8382,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_group_description__sample_group_description_type_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_group_description_type_sampling_contexts",
@@ -8452,7 +8452,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The name or label of the sample group description type.</p>"
     },
     {
         "tableName": "tbl_sample_group_description_types",
@@ -8466,7 +8466,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed description of the sample group description type.</p>"
     },
     {
         "tableName": "tbl_sample_group_description_types",
@@ -8508,7 +8508,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Textual description of the sample group.</p>"
     },
     {
         "tableName": "tbl_sample_group_descriptions",
@@ -8564,7 +8564,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_group_dimensions_sample_group_dimension_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_group_dimensions",
@@ -8620,7 +8620,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific sample group.</p>"
     },
     {
         "tableName": "tbl_sample_group_images",
@@ -8634,7 +8634,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_group_images_sample_group_image_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_group_images",
@@ -8690,7 +8690,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The file name or title of the image.</p>"
     },
     {
         "tableName": "tbl_sample_group_images",
@@ -8704,7 +8704,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the image type, indicating the category or format of the image.</p>"
     },
     {
         "tableName": "tbl_sample_group_images",
@@ -8746,7 +8746,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific sample group.</p>"
     },
     {
         "tableName": "tbl_sample_group_notes",
@@ -8760,7 +8760,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Textual note providing additional information about the sample group.</p>"
     },
     {
         "tableName": "tbl_sample_group_notes",
@@ -8830,7 +8830,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific sample group.</p>"
     },
     {
         "tableName": "tbl_sample_group_sampling_contexts",
@@ -8872,7 +8872,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>full explanation of the grouping term</p>"
+        "comments": "<p>Detailed explanation of the sampling context term.</p>"
     },
     {
         "tableName": "tbl_sample_group_sampling_contexts",
@@ -8886,7 +8886,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>allows lists to group similar or associated group context close to each other, e.g. modern investigations together, palaeo investigations together</p>"
+        "comments": "<p>Defines the order for grouping similar or related contexts, facilitating the organization of modern and paleo investigations.</p>"
     },
     {
         "tableName": "tbl_sample_group_sampling_contexts",
@@ -8914,7 +8914,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_groups_sample_group_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_groups",
@@ -8970,7 +8970,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": "<p>Name which identifies the collection of samples. For ceramics, use vessel number.</p>"
+        "comments": "<p>A unique identifier name for the sample group. For ceramics, this should be the vessel number.</p>"
     },
     {
         "tableName": "tbl_sample_groups",
@@ -8984,7 +8984,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed description of the sample group, providing context and additional information.</p>"
     },
     {
         "tableName": "tbl_sample_groups",
@@ -9110,7 +9110,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A brief description of the image content.</p>"
     },
     {
         "tableName": "tbl_sample_images",
@@ -9166,7 +9166,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific physical sample.</p>"
     },
     {
         "tableName": "tbl_sample_location_type_sampling_contexts",
@@ -9292,7 +9292,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_locations_sample_location_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_locations",
@@ -9306,7 +9306,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the type of the sample location.</p>"
     },
     {
         "tableName": "tbl_sample_locations",
@@ -9376,7 +9376,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the specific physical sample.</p>"
     },
     {
         "tableName": "tbl_sample_notes",
@@ -9404,7 +9404,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>note contents</p>"
+        "comments": "<p>The content of the note.</p>"
     },
     {
         "tableName": "tbl_sample_notes",
@@ -9432,7 +9432,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_sample_types_sample_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_sample_types",
@@ -9460,7 +9460,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed description of the sample type.</p>"
     },
     {
         "tableName": "tbl_sample_types",
@@ -9488,7 +9488,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_season_types_season_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_season_types",
@@ -9530,7 +9530,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The name or identifier of the season type.</p>"
     },
     {
         "tableName": "tbl_seasons",
@@ -9544,7 +9544,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_seasons_season_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_seasons",
@@ -9614,7 +9614,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": ""
+        "comments": "<p>Specifies the display order of seasons.</p>"
     },
     {
         "tableName": "tbl_site_images",
@@ -9642,7 +9642,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the contact person or organization related to the site image.</p>"
     },
     {
         "tableName": "tbl_site_images",
@@ -9656,7 +9656,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Acknowledgment or attribution for the image.</p>"
     },
     {
         "tableName": "tbl_site_images",
@@ -9670,7 +9670,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The date on which the image was captured.</p>"
     },
     {
         "tableName": "tbl_site_images",
@@ -9726,7 +9726,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The filename or designated name of the image.</p>"
     },
     {
         "tableName": "tbl_site_images",
@@ -9810,7 +9810,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the specific site.</p>"
     },
     {
         "tableName": "tbl_site_natgridrefs",
@@ -9838,7 +9838,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the specific site.</p>"
     },
     {
         "tableName": "tbl_site_natgridrefs",
@@ -9894,7 +9894,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_site_other_records_site_other_records_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_site_other_records",
@@ -9936,7 +9936,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>reference to type of data (proxy)</p>"
+        "comments": "<p>Specifies the type of data (proxy) represented in this record.</p>"
     },
     {
         "tableName": "tbl_site_other_records",
@@ -9992,7 +9992,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_site_preservation_status_site_preservation_status_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10006,7 +10006,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>allows multiple preservation/threat records per site</p>"
+        "comments": "<p>Specifies the site to allow multiple preservation status or threat records per site.</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10020,7 +10020,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>descriptive name for: preservation status, e.g. (e.g. lost, damaged, threatened) or main reason for potential or real risk to site (e.g. hydroelectric, oil exploitation, mining, forestry, climate change, erosion)</p>"
+        "comments": "<p>A descriptive term for the preservation status (e.g., lost, damaged, threatened) or the primary cause of risk to the site (e.g., hydroelectric projects, oil exploitation, mining, forestry, climate change, erosion).</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10034,7 +10034,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>brief description of site preservation status or threat to site preservation. include data here that does not fit in the other fields (for now - we may expand these features later if demand exists)</p>"
+        "comments": "<p>A brief overview of the site&rsquo;s preservation status or the threats it faces. This field is for information that does not fit into other specified columns.</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10048,7 +10048,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>type of assessment giving information on preservation status and threat, e.g. unesco report, archaeological survey</p>"
+        "comments": "<p>Specifies the type of assessment conducted, such as a UNESCO report or archaeological survey, detailing preservation status and threats.</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10062,7 +10062,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>person or authority in tbl_contacts responsible for the assessment of preservation status and threat</p>"
+        "comments": "<p>Identifier for the person or authority in tbl_contacts responsible for assessing the preservation status and threats.</p>"
     },
     {
         "tableName": "tbl_site_preservation_status",
@@ -10104,7 +10104,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_site_references_site_reference_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_site_references",
@@ -10118,7 +10118,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the specific site.</p>"
     },
     {
         "tableName": "tbl_site_references",
@@ -10244,7 +10244,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The official or commonly used name of the site.</p>"
     },
     {
         "tableName": "tbl_sites",
@@ -10286,7 +10286,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Accuracy of highest location resolution level. E.g. Nearest settlement, lake, bog, ancient monument, approximate</p>"
+        "comments": "<p>Describes the accuracy of the site&rsquo;s location resolution, such as &lsquo;Nearest settlement&rsquo;, &lsquo;Lake&rsquo;, &lsquo;Bog&rsquo;, &lsquo;Ancient monument&rsquo;, or &lsquo;Approximate&rsquo;.</p>"
     },
     {
         "tableName": "tbl_sites",
@@ -10314,7 +10314,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_species_association_types_association_type_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_species_association_types",
@@ -10328,7 +10328,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Short name or label for the association type.</p>"
     },
     {
         "tableName": "tbl_species_association_types",
@@ -10370,7 +10370,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_species_associations_species_association_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_species_associations",
@@ -10384,7 +10384,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Taxon with which the primary taxon (taxon_id) is associated.</p>"
+        "comments": "<p>Identifier for the taxon related to the primary taxon (defined by taxon_id).</p>"
     },
     {
         "tableName": "tbl_species_associations",
@@ -10440,7 +10440,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Type of association between primary taxon (taxon_id) and associated taxon. Note that the direction of the association is important in most cases (e.g. x predates on y)</p>"
+        "comments": "<p>Identifier for the type of relationship between the primary taxon and the associated taxon, noting the importance of association directionality (e.g., &lsquo;x preys on y&rsquo;).</p>"
     },
     {
         "tableName": "tbl_species_associations",
@@ -10482,7 +10482,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxa_common_names_taxon_common_name_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxa_common_names",
@@ -10496,7 +10496,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The common or vernacular name of the organism.</p>"
     },
     {
         "tableName": "tbl_taxa_common_names",
@@ -10524,7 +10524,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the language in which the common name is recorded.</p>"
     },
     {
         "tableName": "tbl_taxa_common_names",
@@ -10552,7 +10552,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxa_images_taxa_images_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxa_images",
@@ -10594,7 +10594,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The URL or file path where the image is located.</p>"
     },
     {
         "tableName": "tbl_taxa_images",
@@ -10608,7 +10608,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the image type, indicating the format or category of the image.</p>"
     },
     {
         "tableName": "tbl_taxa_images",
@@ -10664,7 +10664,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The specific measurement value of the attribute (e.g., 10.5 cm).</p>"
     },
     {
         "tableName": "tbl_taxa_measured_attributes",
@@ -10692,7 +10692,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Units in which the measurement is recorded (e.g., cm, mm).</p>"
     },
     {
         "tableName": "tbl_taxa_measured_attributes",
@@ -10776,7 +10776,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Identifies the contact person or organization responsible for the taxon reference specimen.</p>"
     },
     {
         "tableName": "tbl_taxa_reference_specimens",
@@ -10790,7 +10790,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional information or remarks about the reference specimen.</p>"
     },
     {
         "tableName": "tbl_taxa_reference_specimens",
@@ -10818,7 +10818,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxa_seasonality_seasonality_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxa_seasonality",
@@ -10916,7 +10916,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication that describes or mentions then  taxon synonym.</p>"
     },
     {
         "tableName": "tbl_taxa_synonyms",
@@ -10944,7 +10944,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic family related to the taxon synonym.</p>"
     },
     {
         "tableName": "tbl_taxa_synonyms",
@@ -10958,7 +10958,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the genus related to the taxon synonym.</p>"
     },
     {
         "tableName": "tbl_taxa_synonyms",
@@ -11014,7 +11014,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Synonym at level defined by id level. I.e. if synonym is at genus level, then only the genus synonym is included here. Another synonym record is used for the species level synonym for the same taxon only if the name is different to that used in the master list.</p>"
+        "comments": "<p>The synonym at the specified taxonomic level. A separate record is used for different taxonomic levels when names differ from the master list.</p>"
     },
     {
         "tableName": "tbl_taxa_synonyms",
@@ -11028,7 +11028,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Form of information relating to the synonym in the given bibliographic link, e.g. by use, definition, incorrect usage.</p>"
+        "comments": "<p>Type of reference related to the synonym, such as usage, definition, or incorrect usage.</p>"
     },
     {
         "tableName": "tbl_taxa_synonyms",
@@ -11070,7 +11070,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the authority related to the species or synonym.</p>"
     },
     {
         "tableName": "tbl_taxa_tree_authors",
@@ -11126,7 +11126,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Name of the taxonomic family.</p>"
     },
     {
         "tableName": "tbl_taxa_tree_families",
@@ -11154,7 +11154,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxa_tree_genera_genus_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxa_tree_genera",
@@ -11224,7 +11224,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the author of the taxonomic classification.</p>"
     },
     {
         "tableName": "tbl_taxa_tree_master",
@@ -11252,7 +11252,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the genus related to this taxon.</p>"
     },
     {
         "tableName": "tbl_taxa_tree_master",
@@ -11266,7 +11266,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>Name of the species or designation for unspecified species (e.g., &lsquo;sp.&rsquo;, &lsquo;spp.&rsquo;).</p>"
     },
     {
         "tableName": "tbl_taxa_tree_orders",
@@ -11308,7 +11308,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the taxonomic order.</p>"
     },
     {
         "tableName": "tbl_taxa_tree_orders",
@@ -11336,7 +11336,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Specifies the display order of taxonomic orders.</p>"
     },
     {
         "tableName": "tbl_taxonomic_order",
@@ -11350,7 +11350,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxonomic_order_taxonomic_order_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxonomic_order",
@@ -11378,7 +11378,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_taxonomic_order",
@@ -11420,7 +11420,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxonomic_order_biblio_taxonomic_order_biblio_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxonomic_order_biblio",
@@ -11518,7 +11518,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL::character varying",
-        "comments": ""
+        "comments": "<p>The name of the taxonomic order system.</p>"
     },
     {
         "tableName": "tbl_taxonomic_order_systems",
@@ -11546,7 +11546,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_taxonomy_notes_taxonomy_notes_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_taxonomy_notes",
@@ -11602,7 +11602,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Detailed notes about the taxon, including identification tips and relevant references.</p>"
     },
     {
         "tableName": "tbl_taxonomy_notes",
@@ -11630,7 +11630,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_temperatures_record_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_temperatures",
@@ -11644,7 +11644,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The age of the sample in years before present, providing a temporal context for the data.</p>"
     },
     {
         "tableName": "tbl_temperatures",
@@ -11714,7 +11714,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Optional field for additional information or comments related to the tephra date.</p>"
     },
     {
         "tableName": "tbl_tephra_dates",
@@ -11756,7 +11756,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_tephra_refs_tephra_ref_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_tephra_refs",
@@ -11770,7 +11770,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication that describes or mentions  the tephra layer.</p>"
     },
     {
         "tableName": "tbl_tephra_refs",
@@ -11798,7 +11798,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the specific tephra layer.</p>"
     },
     {
         "tableName": "tbl_tephras",
@@ -11840,7 +11840,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Upper limit of the radiocarbon age range.</p>"
     },
     {
         "tableName": "tbl_tephras",
@@ -11868,7 +11868,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Calibrated age of the tephra layer.</p>"
     },
     {
         "tableName": "tbl_tephras",
@@ -11896,7 +11896,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Lower boundary of the calibrated age range.</p>"
     },
     {
         "tableName": "tbl_tephras",
@@ -11980,7 +11980,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the publication detailing the biological information.</p>"
     },
     {
         "tableName": "tbl_text_biology",
@@ -11994,7 +11994,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Descriptive text providing ecological, habitat, or behavioral details.</p>"
     },
     {
         "tableName": "tbl_text_biology",
@@ -12092,7 +12092,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Textual description of the taxon&rsquo;s distribution.</p>"
     },
     {
         "tableName": "tbl_text_distribution",
@@ -12134,7 +12134,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_text_identification_keys_key_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_text_identification_keys",
@@ -12176,7 +12176,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Text description of the identification key.</p>"
     },
     {
         "tableName": "tbl_text_identification_keys",
@@ -12190,7 +12190,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>key</p>"
+        "comments": "<p>Specifies the taxonomic unit related to this record.</p>"
     },
     {
         "tableName": "tbl_text_identification_keys",
@@ -12218,7 +12218,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "nextval('tbl_units_unit_id_seq'::regclass)",
-        "comments": "<p>key</p>"
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_units",
@@ -12246,7 +12246,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed explanation or description of the measurement unit.</p>"
     },
     {
         "tableName": "tbl_units",
@@ -12274,7 +12274,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The full name of the measurement unit (e.g., &lsquo;millimeters&rsquo;).</p>"
     },
     {
         "tableName": "tbl_updates_log",
@@ -12330,7 +12330,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_value_classes",
@@ -12344,7 +12344,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Identifies the type of value associated with the class.</p>"
     },
     {
         "tableName": "tbl_value_classes",
@@ -12358,7 +12358,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Links to the method associated with the value class.</p>"
     },
     {
         "tableName": "tbl_value_classes",
@@ -12372,7 +12372,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>References a parent value class for hierarchical structuring.</p>"
     },
     {
         "tableName": "tbl_value_classes",
@@ -12442,7 +12442,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The textual representation of the qualifier (e.g. &lsquo;&gt;&rsquo;, &lsquo;&lt;&rsquo; etc.).</p>"
     },
     {
         "tableName": "tbl_value_qualifier_symbols",
@@ -12484,7 +12484,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_value_qualifiers",
@@ -12540,7 +12540,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_value_type_items",
@@ -12582,7 +12582,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional details about the category value.</p>"
     },
     {
         "tableName": "tbl_value_types",
@@ -12596,7 +12596,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Primary key (automatically incremented).</p>"
     },
     {
         "tableName": "tbl_value_types",
@@ -12638,7 +12638,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The name of the value type.</p>"
     },
     {
         "tableName": "tbl_value_types",
@@ -12680,7 +12680,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>Additional details about the value type.</p>"
     },
     {
         "tableName": "tbl_value_types",
@@ -12722,7 +12722,7 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The name of the year type, e.g., &lsquo;Radiocarbon&rsquo;, &lsquo;Calendar&rsquo;.</p>"
     },
     {
         "tableName": "tbl_years_types",
@@ -12736,7 +12736,7 @@
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A detailed explanation of the year type.</p>"
     },
     {
         "tableName": "tbl_years_types",

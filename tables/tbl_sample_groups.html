@@ -84,7 +84,7 @@
                             </div>
                         </div><!-- /.box-header -->
                         <div class="box-body clearfix">
-                            <p>A collection of related samples. Common groups are all samples from a structure (e.g. House 1), a stratigraphic sequence (e.g. profile 3) or a lake core, but groups may be defined in any way.</p>
+                            <p>Contains collections of related samples, typically grouped by structures (e.g., House 1), stratigraphic sequences (e.g., profile 3), or lake cores. Groups can be defined flexibly based on research needs.</p>
                         </div><!-- /.box-body -->
                     </div>
                 </section>
@@ -176,7 +176,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="site_id">site_id</span></td>
@@ -259,7 +259,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>Name which identifies the collection of samples. For ceramics, use vessel number.</p></td>
+                                    <td><p>A unique identifier name for the sample group. For ceramics, this should be the vessel number.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="sample_group_description">sample_group_description</span></td>
@@ -276,7 +276,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td></td>
+                                    <td><p>Detailed description of the sample group, providing context and additional information.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>

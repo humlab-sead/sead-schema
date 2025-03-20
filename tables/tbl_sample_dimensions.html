@@ -84,7 +84,7 @@
                             </div>
                         </div><!-- /.box-header -->
                         <div class="box-body clearfix">
-                            <p>Measurable dimension type data for samples, excluding coordinates, but including depth or sample in stratigraphy or core. E.g. size of sample on arrival (volume, weight etc), depth of sample top, depth of sample bottom. Note that the name and description of the dimension are stored in tbl_dimension.</p>
+                            <p>Contains measurable dimension data for samples, excluding coordinates. This includes attributes such as volume, weight, and depth within stratigraphy or cores. Related names and descriptions of dimensions are maintained in the &lsquo;tbl_dimension&rsquo; table.</p>
                         </div><!-- /.box-body -->
                     </div>
                 </section>
@@ -136,7 +136,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_sample_id">physical_sample_id</span></td>
@@ -202,7 +202,7 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>method describing dimension measurement, with link to units used</p></td>
+                                    <td><p>Specifies the measurement method used, including associated units.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="dimension_value">dimension_value</span></td>

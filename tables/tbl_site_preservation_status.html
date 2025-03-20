@@ -84,7 +84,7 @@
                             </div>
                         </div><!-- /.box-header -->
                         <div class="box-body clearfix">
-                            <p>Information on preservation level of sites and risks to cultural heritage. One record per preservation status/threat. Table added at request of PAN (Polar Archaeology Network) members and is aimed at providing support for evaluation of threats to  (Arctic) cultural heritage.</p>
+                            <p>Contains data on the preservation levels and threats to cultural heritage sites. Each record represents a unique preservation status or threat. This table was created at the request of PAN (Polar Archaeology Network) members to support the evaluation of threats to Arctic cultural heritage.</p>
                         </div><!-- /.box-body -->
                     </div>
                 </section>
@@ -141,7 +141,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>key</p></td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="site_id">site_id</span></td>
@@ -163,7 +163,7 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>allows multiple preservation/threat records per site</p></td>
+                                    <td><p>Specifies the site to allow multiple preservation status or threat records per site.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="preservation_status_or_threat">preservation_status_or_threat</span></td>
@@ -180,7 +180,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>descriptive name for: preservation status, e.g. (e.g. lost, damaged, threatened) or main reason for potential or real risk to site (e.g. hydroelectric, oil exploitation, mining, forestry, climate change, erosion)</p></td>
+                                    <td><p>A descriptive term for the preservation status (e.g., lost, damaged, threatened) or the primary cause of risk to the site (e.g., hydroelectric projects, oil exploitation, mining, forestry, climate change, erosion).</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="description">description</span></td>
@@ -197,7 +197,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>brief description of site preservation status or threat to site preservation. include data here that does not fit in the other fields (for now - we may expand these features later if demand exists)</p></td>
+                                    <td><p>A brief overview of the site&rsquo;s preservation status or the threats it faces. This field is for information that does not fit into other specified columns.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="assessment_type">assessment_type</span></td>
@@ -214,7 +214,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>type of assessment giving information on preservation status and threat, e.g. unesco report, archaeological survey</p></td>
+                                    <td><p>Specifies the type of assessment conducted, such as a UNESCO report or archaeological survey, detailing preservation status and threats.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="assessment_author_contact_id">assessment_author_contact_id</span></td>
@@ -236,7 +236,7 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>person or authority in tbl_contacts responsible for the assessment of preservation status and threat</p></td>
+                                    <td><p>Identifier for the person or authority in tbl_contacts responsible for assessing the preservation status and threats.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
