@@ -114,9 +114,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -126,7 +126,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
-                                    <td><p>Primary key (automatically incremented).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
@@ -140,6 +139,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="contact_id">contact_id</span></td>
@@ -147,7 +147,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Identifies the contact person or organization responsible for the master dataset.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -161,6 +160,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Identifies the contact person or organization responsible for the master dataset.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="biblio_id">biblio_id</span></td>
@@ -168,7 +168,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Specifies the primary literature or reference related to the master dataset (e.g., Buckland &amp; Buckland 2006 for BugsCEP).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -182,6 +181,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the primary literature or reference related to the master dataset (e.g., Buckland &amp; Buckland 2006 for BugsCEP).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="master_name">master_name</span></td>
@@ -189,15 +189,15 @@
                                     <td>100</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Name or title assigned to the master dataset (e.g., MAL, BugsCEP, DendroLab).</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="master_notes">master_notes</span></td>
@@ -205,15 +205,15 @@
                                     <td>2147483647</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Detailed description of the master dataset, including its nature (e.g., database, lab) and any pertinent tracking information.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="url">url</span></td>
@@ -221,15 +221,15 @@
                                     <td>2147483647</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Web address or URL related to the master dataset, which could be a project, lab, or other entity.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
@@ -237,15 +237,15 @@
                                     <td>35,6</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="master_set_uuid">master_set_uuid</span></td>
@@ -253,15 +253,15 @@
                                     <td>2147483647</td>
                                     <td title=''></td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

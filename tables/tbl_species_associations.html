@@ -114,9 +114,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -126,15 +126,15 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Primary key (automatically incremented).</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="associated_taxon_id">associated_taxon_id</span></td>
@@ -142,15 +142,15 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Identifier for the taxon related to the primary taxon (defined by taxon_id).</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="biblio_id">biblio_id</span></td>
@@ -158,7 +158,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Specifies the publication that describes or mentions the species association.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -172,6 +171,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the publication that describes or mentions the species association.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
@@ -179,15 +179,15 @@
                                     <td>35,6</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="taxon_id">taxon_id</span></td>
@@ -195,7 +195,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td><p>Specifies the taxonomic unit related to this record.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -209,6 +208,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the taxonomic unit related to this record.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="association_type_id">association_type_id</span></td>
@@ -216,7 +216,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Identifier for the type of relationship between the primary taxon and the associated taxon, noting the importance of association directionality (e.g., &lsquo;x preys on y&rsquo;).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -230,6 +229,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Identifier for the type of relationship between the primary taxon and the associated taxon, noting the importance of association directionality (e.g., &lsquo;x preys on y&rsquo;).</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="referencing_type">referencing_type</span></td>
@@ -237,15 +237,15 @@
                                     <td>2147483647</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Type or method of reference used for the species association documentation.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="species_association_uuid">species_association_uuid</span></td>
@@ -253,15 +253,15 @@
                                     <td>2147483647</td>
                                     <td title=''></td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

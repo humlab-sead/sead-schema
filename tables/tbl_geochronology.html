@@ -114,9 +114,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -126,7 +126,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
-                                    <td><p>Primary key (automatically incremented).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
@@ -145,6 +144,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="analysis_entity_id">analysis_entity_id</span></td>
@@ -152,7 +152,6 @@
                                     <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td><p>Identifies the specific analysis entity associated with this record.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -166,6 +165,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Identifies the specific analysis entity associated with this record.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="dating_lab_id">dating_lab_id</span></td>
@@ -173,7 +173,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Foreign key identifying the laboratory that conducted the dating analysis.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -187,6 +186,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Foreign key identifying the laboratory that conducted the dating analysis.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="lab_number">lab_number</span></td>
@@ -194,15 +194,15 @@
                                     <td>40</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Identifier assigned by the laboratory for the sample.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="age">age</span></td>
@@ -210,15 +210,15 @@
                                     <td>20,5</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Measured radiometric age of the sample, expressed in years.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="error_older">error_older</span></td>
@@ -226,15 +226,15 @@
                                     <td>20,5</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Upper bound of the measured error range. Matches &lsquo;error_younger&rsquo; for symmetrical errors.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="error_younger">error_younger</span></td>
@@ -242,15 +242,15 @@
                                     <td>20,5</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Lower bound of the measured error range. Matches &lsquo;error_older&rsquo; for symmetrical errors.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="delta_13c">delta_13c</span></td>
@@ -258,15 +258,15 @@
                                     <td>10,5</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Delta 13C value used for calibration correction, when available.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="notes">notes</span></td>
@@ -274,15 +274,15 @@
                                     <td>2147483647</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>Additional notes or comments pertinent to this specific date.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
@@ -290,15 +290,15 @@
                                     <td>35,6</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="dating_uncertainty_id">dating_uncertainty_id</span></td>
@@ -306,7 +306,6 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td><p>Specifies the uncertainty category related to the dating method used.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -320,6 +319,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the uncertainty category related to the dating method used.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="geochron_uuid">geochron_uuid</span></td>
@@ -327,15 +327,15 @@
                                     <td>2147483647</td>
                                     <td title=''></td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

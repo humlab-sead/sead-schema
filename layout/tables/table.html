@@ -43,9 +43,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -56,7 +56,6 @@
                                     <td>{{column.detailedSize}}</td>
                                     <td title='{{titleNullable}}'>{{nullable}}</td>
                                     <td title='{{titleAutoUpdated}}'>{{autoUpdated}}</td>
-                                    <td>{{#markup}}{{{comments}}}{{/markup}}</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             {{#children}}
@@ -79,6 +78,7 @@
                                             {{/parents}}
                                         </table>
                                     </td>
+                                    <td>{{#markup}}{{{comments}}}{{/markup}}</td>
                                 </tr>
                                 {{/columns}}
                                 </tbody>

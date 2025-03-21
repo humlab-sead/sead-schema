@@ -114,9 +114,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -126,7 +126,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
-                                    <td><p>Primary key (automatically incremented).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
@@ -140,6 +139,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="biblio_id">biblio_id</span></td>
@@ -147,7 +147,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td><p>Specifies the publication that describes or mentions  the RDB system.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -161,6 +160,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the publication that describes or mentions  the RDB system.</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="location_id">location_id</span></td>
@@ -168,7 +168,6 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td><p>Specifies the geographical applicability of the RDB system, e.g., UK, international, New Forest.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -182,6 +181,7 @@
                                             </tr>
                                         </table>
                                     </td>
+                                    <td><p>Specifies the geographical applicability of the RDB system, e.g., UK, international, New Forest.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="rdb_first_published">rdb_first_published</span></td>
@@ -189,15 +189,15 @@
                                     <td>5</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>The year the RDB system was first published.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="rdb_system">rdb_system</span></td>
@@ -205,15 +205,15 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>The name or title of the RDB system.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="rdb_system_date">rdb_system_date</span></td>
@@ -221,15 +221,15 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>The date related to the RDB system, possibly indicating the version or update year.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="rdb_version">rdb_version</span></td>
@@ -237,15 +237,15 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td><p>The version or edition number of the RDB system.</p></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
@@ -253,15 +253,15 @@
                                     <td>35,6</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="rdb_system_uuid">rdb_system_uuid</span></td>
@@ -269,15 +269,15 @@
                                     <td>2147483647</td>
                                     <td title=''></td>
                                     <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                     <td></td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
