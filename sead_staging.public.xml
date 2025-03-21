@@ -263,7 +263,6 @@
       <table name="tbl_age_types" numRows="0" remarks="This table provides a reference for different chronological systems used to denote years, such as AD, BC, and BP." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_age_types_age_type_id_seq'::regclass)" digits="0" id="0" name="age_type_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
             <child column="age_type_id" foreignKey="tbl_analysis_dating_ranges_age_type_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_dating_ranges"/>
-            <child column="age_type_id" foreignKey="fk_tbl_age_types_age_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="age_type" nullable="false" remarks="" size="150" type="varchar(150)" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="true" remarks="Detailed explanation of the chronological system denoted by the abbreviation." size="2147483647" type="text" typeCode="12"/>
@@ -271,76 +270,6 @@
          <primaryKey column="age_type_id" sequenceNumberInPK="1"/>
          <index name="tbl_age_types_pkey" unique="true">
             <column ascending="true" name="age_type_id"/>
-         </index>
-      </table>
-      <table name="tbl_aggregate_datasets" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_aggregate_datasets_aggregate_dataset_id_seq'::regclass)" digits="0" id="0" name="aggregate_dataset_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="aggregate_dataset_id" foreignKey="fk_aggregate_sample_ages_aggregate_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_sample_ages"/>
-            <child column="aggregate_dataset_id" foreignKey="fk_aggregate_samples_aggregate_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_samples"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="aggregate_order_type_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="aggregate_order_type_id" foreignKey="fk_aggregate_datasets_aggregate_order_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_order_types"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="biblio_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="biblio_id" foreignKey="fk_aggregate_datasets_biblio_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_biblio"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="aggregate_dataset_name" nullable="true" remarks="" size="255" type="varchar(255)" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="4" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="description" nullable="true" remarks="Notes explaining the purpose of the aggregated set of analysis entities" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="uuid_generate_v4()" digits="0" id="6" name="aggregate_dataset_uuid" nullable="false" remarks="" size="2147483647" type="uuid" typeCode="1111"/>
-         <primaryKey column="aggregate_dataset_id" sequenceNumberInPK="1"/>
-         <index name="tbl_aggregate_datasets_pkey" unique="true">
-            <column ascending="true" name="aggregate_dataset_id"/>
-         </index>
-         <index name="pk_tbl_aggregate_datasets" unique="true">
-            <column ascending="true" name="aggregate_dataset_uuid"/>
-         </index>
-      </table>
-      <table name="tbl_aggregate_order_types" numRows="8" remarks="20120504pib: drop this? or replace with alternative?" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_aggregate_order_types_aggregate_order_type_id_seq'::regclass)" digits="0" id="0" name="aggregate_order_type_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="aggregate_order_type_id" foreignKey="fk_aggregate_datasets_aggregate_order_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_datasets"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="aggregate_order_type" nullable="false" remarks="" size="60" type="varchar(60)" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="2" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="description" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <primaryKey column="aggregate_order_type_id" sequenceNumberInPK="1"/>
-         <index name="tbl_aggregate_order_types_pkey" unique="true">
-            <column ascending="true" name="aggregate_order_type_id"/>
-         </index>
-         <index name="tbl_aggregate_order_types_aggregate_order_type_key" unique="true">
-            <column ascending="true" name="aggregate_order_type"/>
-         </index>
-         <index name="tbl_aggregate_order_types_aggregate_order_type_unique" unique="true">
-            <column ascending="true" name="aggregate_order_type"/>
-         </index>
-      </table>
-      <table name="tbl_aggregate_sample_ages" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_aggregate_sample_ages_aggregate_sample_age_id_seq'::regclass)" digits="0" id="0" name="aggregate_sample_age_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="aggregate_dataset_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="aggregate_dataset_id" foreignKey="fk_aggregate_sample_ages_aggregate_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_datasets"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="analysis_entity_age_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="analysis_entity_age_id" foreignKey="fk_aggregate_sample_ages_analysis_entity_age_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entity_ages"/>
-         </column>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="3" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="aggregate_sample_age_id" sequenceNumberInPK="1"/>
-         <index name="tbl_aggregate_sample_ages_pkey" unique="true">
-            <column ascending="true" name="aggregate_sample_age_id"/>
-         </index>
-      </table>
-      <table name="tbl_aggregate_samples" numRows="0" remarks="20120504pib: can we drop aggregate sample name? seems excessive and unnecessary sample names can be traced." schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_aggregate_samples_aggregate_sample_id_seq'::regclass)" digits="0" id="0" name="aggregate_sample_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="aggregate_dataset_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="aggregate_dataset_id" foreignKey="fk_aggregate_samples_aggregate_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_datasets"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="analysis_entity_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
-            <parent column="analysis_entity_id" foreignKey="fk_aggragate_samples_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entities"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="aggregate_sample_name" nullable="true" remarks="" size="50" type="varchar(50)" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="4" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="aggregate_sample_id" sequenceNumberInPK="1"/>
-         <index name="tbl_aggregate_samples_pkey" unique="true">
-            <column ascending="true" name="aggregate_sample_id"/>
          </index>
       </table>
       <table name="tbl_alt_ref_types" numRows="11" remarks="This table defines the types of alternative references or names assigned to samples. These references might include identifiers like lab numbers, field numbers, museum numbers, or site excavation numbers, indicating the origin or purpose of the sample's alternative reference." schema="public" type="TABLE">
@@ -425,16 +354,12 @@
       <table name="tbl_analysis_entities" numRows="163158" remarks="The 'tbl_analysis_entities' table represents Analysis Entities, which are virtual constructs allowing the association of multiple proxies with a single physical sample. This enables the linking of physical samples to various measurements or counts across different methods. Analysis Entities are organized by datasets, which are constructed based on proxy requirements. Refer to the 'Dataset' documentation for more details." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_analysis_entities_analysis_entity_id_seq'::regclass)" digits="0" id="0" name="analysis_entity_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
             <child column="analysis_entity_id" foreignKey="fk_abundances_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_abundances"/>
-            <child column="analysis_entity_id" foreignKey="fk_aggragate_samples_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_samples"/>
             <child column="analysis_entity_id" foreignKey="fk_analysis_entity_ages_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entity_ages"/>
             <child column="analysis_entity_id" foreignKey="fk_analysis_entity_dimensions_analysis_entity_id" implied="false" onDeleteCascade="true" schema="public" table="tbl_analysis_entity_dimensions"/>
             <child column="analysis_entity_id" foreignKey="fk_analysis_entity_prep_methods_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entity_prep_methods"/>
             <child column="analysis_entity_id" foreignKey="tbl_analysis_values_analysis_entity_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_values"/>
             <child column="analysis_entity_id" foreignKey="fk_ceramics_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_ceramics"/>
-            <child column="analysis_entity_id" foreignKey="fk_dendro_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro"/>
-            <child column="analysis_entity_id" foreignKey="fk_dendro_dates_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
             <child column="analysis_entity_id" foreignKey="fk_geochronology_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_geochronology"/>
-            <child column="analysis_entity_id" foreignKey="fk_isotopes_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotopes"/>
             <child column="analysis_entity_id" foreignKey="fk_measured_values_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_measured_values"/>
             <child column="analysis_entity_id" foreignKey="fk_tbl_relative_dates_to_tbl_analysis_entities" implied="false" onDeleteCascade="false" schema="public" table="tbl_relative_dates"/>
             <child column="analysis_entity_id" foreignKey="fk_tephra_dates_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_tephra_dates"/>
@@ -458,9 +383,7 @@
          </index>
       </table>
       <table name="tbl_analysis_entity_ages" numRows="6808" remarks="This table represents a virtual entity that defines a single proxy within a specific physical sample, acting as a statistical sample. A physical sample can contain multiple analysis entities, each linking various proxies. This structure facilitates the precise recording of specific species used in methods like radiocarbon dating." schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_analysis_entity_ages_analysis_entity_age_id_seq'::regclass)" digits="0" id="0" name="analysis_entity_age_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
-            <child column="analysis_entity_age_id" foreignKey="fk_aggregate_sample_ages_analysis_entity_age_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_sample_ages"/>
-         </column>
+         <column autoUpdated="true" defaultValue="nextval('tbl_analysis_entity_ages_analysis_entity_age_id_seq'::regclass)" digits="0" id="0" name="analysis_entity_age_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="5" id="1" name="age" nullable="true" remarks="" size="20" type="numeric(20,5)" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="5" id="2" name="age_older" nullable="true" remarks="The upper bound of the age range estimate." size="20" type="numeric(20,5)" typeCode="2"/>
          <column autoUpdated="false" defaultValue="null" digits="5" id="3" name="age_younger" nullable="true" remarks="The lower bound of the age range estimate." size="20" type="numeric(20,5)" typeCode="2"/>
@@ -669,7 +592,6 @@
       </table>
       <table name="tbl_biblio" numRows="8943" remarks="Central repository for storing bibliographic references in the SEAD database. It stores detailed citations, including author, title, year, publisher, and DOI/URL for various sources such as books and articles. This table connects to domain-specific tables via foreign keys, ensuring data integrity and supporting research by centralizing bibliographic information." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_biblio_biblio_id_seq'::regclass)" digits="0" id="0" name="biblio_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="biblio_id" foreignKey="fk_aggregate_datasets_biblio_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_aggregate_datasets"/>
             <child column="biblio_id" foreignKey="fk_dataset_masters_biblio_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_masters"/>
             <child column="biblio_id" foreignKey="fk_datasets_biblio_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_datasets"/>
             <child column="biblio_id" foreignKey="fk_ecocode_systems_biblio_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_ecocode_systems"/>
@@ -938,20 +860,6 @@
             <column ascending="true" name="master_name"/>
          </index>
       </table>
-      <table name="tbl_dataset_methods" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_dataset_methods_dataset_method_id_seq'::regclass)" digits="0" id="0" name="dataset_method_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="dataset_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="dataset_id" foreignKey="fk_tbl_dataset_methods_to_tbl_datasets" implied="false" onDeleteCascade="false" schema="public" table="tbl_datasets"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="method_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="method_id" foreignKey="fk_tbl_dataset_methods_to_tbl_methods" implied="false" onDeleteCascade="false" schema="public" table="tbl_methods"/>
-         </column>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="3" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="dataset_method_id" sequenceNumberInPK="1"/>
-         <index name="tbl_dataset_methods_pkey" unique="true">
-            <column ascending="true" name="dataset_method_id"/>
-         </index>
-      </table>
       <table name="tbl_dataset_submission_types" numRows="0" remarks="This table serves as a lookup for different types of dataset submissions, such as original submissions or data ingested from external databases." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_dataset_submission_types_submission_type_id_seq'::regclass)" digits="0" id="0" name="submission_type_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
             <child column="submission_type_id" foreignKey="fk_dataset_submission_submission_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_submissions"/>
@@ -987,7 +895,6 @@
          <column autoUpdated="true" defaultValue="nextval('tbl_datasets_dataset_id_seq'::regclass)" digits="0" id="0" name="dataset_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
             <child column="dataset_id" foreignKey="fk_analysis_entities_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entities"/>
             <child column="dataset_id" foreignKey="fk_dataset_contacts_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_contacts"/>
-            <child column="dataset_id" foreignKey="fk_tbl_dataset_methods_to_tbl_datasets" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_methods"/>
             <child column="dataset_id" foreignKey="fk_dataset_submissions_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_submissions"/>
             <child column="updated_dataset_id" foreignKey="fk_datasets_updated_dataset_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_datasets"/>
          </column>
@@ -1076,7 +983,6 @@
       <table name="tbl_dating_uncertainty" numRows="8" remarks="Defines various types of dating uncertainties, such as 'from', 'to', 'circa (Ca.)', and '?'. These uncertainties help specify date ranges or approximate periods, such as 'from Mesolithic to Neolithic' or 'from AD 100 to AD 300'." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_dating_uncertainty_dating_uncertainty_id_seq'::regclass)" digits="0" id="0" name="dating_uncertainty_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
             <child column="dating_uncertainty_id" foreignKey="tbl_analysis_dating_ranges_dating_uncertainty_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_dating_ranges"/>
-            <child column="dating_uncertainty_id" foreignKey="fk_dendro_dates_dating_uncertainty_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
             <child column="dating_uncertainty_id" foreignKey="fk_geochronology_dating_uncertainty_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_geochronology"/>
             <child column="dating_uncertainty_id" foreignKey="fk_relative_dates_dating_uncertainty_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_relative_dates"/>
             <child column="dating_uncertainty_id" foreignKey="fk_tephra_dates_dating_uncertainty_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_tephra_dates"/>
@@ -1093,77 +999,6 @@
          </index>
          <index name="tbl_dating_uncertainty_uncertainty_unique" unique="true">
             <column ascending="true" name="uncertainty"/>
-         </index>
-      </table>
-      <table name="tbl_dendro" numRows="64637" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_dendro_dendro_id_seq'::regclass)" digits="0" id="0" name="dendro_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="analysis_entity_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="analysis_entity_id" foreignKey="fk_dendro_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entities"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="measurement_value" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="3" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="dendro_lookup_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="dendro_lookup_id" foreignKey="fk_dendro_dendro_lookup_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_lookup"/>
-         </column>
-         <primaryKey column="dendro_id" sequenceNumberInPK="1"/>
-         <index name="tbl_dendro_pkey" unique="true">
-            <column ascending="true" name="dendro_id"/>
-         </index>
-      </table>
-      <table name="tbl_dendro_date_notes" numRows="442" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_dendro_date_notes_dendro_date_note_id_seq'::regclass)" digits="0" id="0" name="dendro_date_note_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="dendro_date_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="dendro_date_id" foreignKey="fk_dendro_date_notes_dendro_date_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="note" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="3" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="dendro_date_note_id" sequenceNumberInPK="1"/>
-         <index name="tbl_dendro_date_notes_pkey" unique="true">
-            <column ascending="true" name="dendro_date_note_id"/>
-         </index>
-      </table>
-      <table name="tbl_dendro_dates" numRows="7321" remarks="20130722PIB: Added field dating_uncertainty_id to cater for &gt;&lt; etc. 20130722pib: prefixed fieldnames age_younger and age_older with &quot;cal_&quot; to conform with equivalent names in other tables" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_dendro_dates_dendro_date_id_seq'::regclass)" digits="0" id="0" name="dendro_date_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="dendro_date_id" foreignKey="fk_dendro_date_notes_dendro_date_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_date_notes"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="season_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="public" table="tbl_seasons"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="dating_uncertainty_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="dating_uncertainty_id" foreignKey="fk_dendro_dates_dating_uncertainty_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dating_uncertainty"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="dendro_lookup_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="dendro_lookup_id" foreignKey="fk_dendro_lookup_dendro_lookup_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_lookup"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="age_type_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="age_type_id" foreignKey="fk_tbl_age_types_age_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_age_types"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="analysis_entity_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="analysis_entity_id" foreignKey="fk_dendro_dates_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entities"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="age_older" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="age_younger" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="8" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="0A434153450A202020205748454E2028286167655F796F756E676572204953204E554C4C2920414E4420286167655F6F6C646572204953204E554C4C2929205448454E204E554C4C3A3A696E743472616E67650A20202020454C534520696E743472616E676528434F414C45534345286167655F6F6C6465722C206167655F796F756E676572292C2028434F414C45534345286167655F796F756E6765722C206167655F6F6C64657229202B203129290A454E44" defaultValueIsBinary="true" digits="0" id="9" name="age_range" nullable="true" remarks="" size="2147483647" type="int4range" typeCode="1111"/>
-         <primaryKey column="dendro_date_id" sequenceNumberInPK="1"/>
-         <index name="tbl_dendro_dates_pkey" unique="true">
-            <column ascending="true" name="dendro_date_id"/>
-         </index>
-      </table>
-      <table name="tbl_dendro_lookup" numRows="0" remarks="type=lookup" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_dendro_lookup_dendro_lookup_id_seq'::regclass)" digits="0" id="0" name="dendro_lookup_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="dendro_lookup_id" foreignKey="fk_dendro_dendro_lookup_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro"/>
-            <child column="dendro_lookup_id" foreignKey="fk_dendro_lookup_dendro_lookup_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="method_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="method_id" foreignKey="fk_dendro_lookup_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_methods"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="description" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="4" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="dendro_lookup_id" sequenceNumberInPK="1"/>
-         <index name="tbl_dendro_lookup_pkey" unique="true">
-            <column ascending="true" name="dendro_lookup_id"/>
          </index>
       </table>
       <table name="tbl_dimensions" numRows="0" remarks="Contains definitions of various measurement types, such as sample weight and core length, categorized by method group." schema="public" type="TABLE">
@@ -1432,92 +1267,6 @@
             <column ascending="true" name="imported_taxa_replacement_id"/>
          </index>
       </table>
-      <table name="tbl_isotope_measurements" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_isotope_measurements_isotope_measurement_id_seq'::regclass)" digits="0" id="0" name="isotope_measurement_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="isotope_measurement_id" foreignKey="fk_isotopes_isotope_measurement_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotopes"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="isotope_standard_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="isotope_standard_id" foreignKey="fk_isotope_measurements_isotope_standard_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_standards"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="method_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="method_id" foreignKey="fk_isotope_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_methods"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="isotope_type_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="isotope_type_id" foreignKey="fk_isotope_isotope_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_types"/>
-         </column>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="4" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="isotope_measurement_id" sequenceNumberInPK="1"/>
-         <index name="tbl_isotope_measurements_pkey" unique="true">
-            <column ascending="true" name="isotope_measurement_id"/>
-         </index>
-      </table>
-      <table name="tbl_isotope_standards" numRows="0" remarks="Type=lookup" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_isotope_standards_isotope_standard_id_seq'::regclass)" digits="0" id="0" name="isotope_standard_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="isotope_standard_id" foreignKey="fk_isotope_measurements_isotope_standard_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_measurements"/>
-            <child column="isotope_standard_id" foreignKey="fk_isotopes_isotope_standard_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotopes"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="isotope_ration" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="international_scale" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="accepted_ratio_xe6" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="error_of_ratio" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="reference" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="6" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="isotope_standard_id" sequenceNumberInPK="1"/>
-         <index name="tbl_isotope_standards_pkey" unique="true">
-            <column ascending="true" name="isotope_standard_id"/>
-         </index>
-      </table>
-      <table name="tbl_isotope_types" numRows="164" remarks="Type=lookup" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_isotope_types_isotope_type_id_seq'::regclass)" digits="0" id="0" name="isotope_type_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="isotope_type_id" foreignKey="fk_isotope_isotope_type_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_measurements"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="designation" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="abbreviation" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="atomic_number" nullable="true" remarks="" size="0" type="numeric" typeCode="2"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="description" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="alternative_designation" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="6" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="isotope_type_id" sequenceNumberInPK="1"/>
-         <index name="tbl_isotope_types_pkey" unique="true">
-            <column ascending="true" name="isotope_type_id"/>
-         </index>
-      </table>
-      <table name="tbl_isotope_value_specifiers" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="isotope_value_specifier_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <child column="isotope_value_specifier_id" foreignKey="fk_isotopes_isotope_value_specifier_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotopes"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="3" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="isotope_value_specifier_id" sequenceNumberInPK="1"/>
-         <index name="tbl_isotope_value_specifiers_pkey" unique="true">
-            <column ascending="true" name="isotope_value_specifier_id"/>
-         </index>
-      </table>
-      <table name="tbl_isotopes" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="true" defaultValue="nextval('tbl_isotopes_isotope_id_seq'::regclass)" digits="0" id="0" name="isotope_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="analysis_entity_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="analysis_entity_id" foreignKey="fk_isotopes_analysis_entity_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_entities"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="isotope_measurement_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="isotope_measurement_id" foreignKey="fk_isotopes_isotope_measurement_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_measurements"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="isotope_standard_id" nullable="true" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="isotope_standard_id" foreignKey="fk_isotopes_isotope_standard_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_standards"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="measurement_value" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="unit_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="unit_id" foreignKey="fk_isotopes_unit_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_units"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="isotope_value_specifier_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
-            <parent column="isotope_value_specifier_id" foreignKey="fk_isotopes_isotope_value_specifier_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_value_specifiers"/>
-         </column>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="7" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
-         <primaryKey column="isotope_id" sequenceNumberInPK="1"/>
-         <index name="tbl_isotopes_pkey" unique="true">
-            <column ascending="true" name="isotope_id"/>
-         </index>
-      </table>
       <table name="tbl_languages" numRows="0" remarks="Stores information about human languages used for the common names of taxa." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_languages_language_id_seq'::regclass)" digits="0" id="0" name="language_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
             <child column="language_id" foreignKey="fk_taxa_common_names_language_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_taxa_common_names"/>
@@ -1694,11 +1443,8 @@
             <child column="method_id" foreignKey="fk_ceramics_measurements_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_ceramics_measurements"/>
             <child column="method_id" foreignKey="fk_colours_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_colours"/>
             <child column="method_id" foreignKey="fk_coordinate_method_dimensions_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_coordinate_method_dimensions"/>
-            <child column="method_id" foreignKey="fk_tbl_dataset_methods_to_tbl_methods" implied="false" onDeleteCascade="false" schema="public" table="tbl_dataset_methods"/>
             <child column="method_id" foreignKey="fk_datasets_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_datasets"/>
-            <child column="method_id" foreignKey="fk_dendro_lookup_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dendro_lookup"/>
             <child column="method_id" foreignKey="fk_horizons_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_horizons"/>
-            <child column="method_id" foreignKey="fk_isotope_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotope_measurements"/>
             <child column="method_id" foreignKey="fk_relative_dates_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_relative_dates"/>
             <child column="method_id" foreignKey="fk_sample_dimensions_measurement_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_sample_dimensions"/>
             <child column="method_id" foreignKey="fk_sample_groups_method_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_sample_groups"/>
@@ -2478,7 +2224,6 @@
       <table name="tbl_seasons" numRows="20" remarks="Stores information about different seasons and their associated months for categorizing activities." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_seasons_season_id_seq'::regclass)" digits="0" id="0" name="season_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
             <child column="season_id" foreignKey="tbl_analysis_dating_ranges_season_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="tbl_analysis_dating_ranges"/>
-            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="public" table="tbl_dendro_dates"/>
             <child column="season_id" foreignKey="fk_taxa_seasonality_season_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_taxa_seasonality"/>
          </column>
          <column autoUpdated="false" defaultValue="now()" digits="6" id="1" name="date_updated" nullable="true" remarks="" size="35" type="timestamptz" typeCode="93"/>
@@ -3140,7 +2885,6 @@
       <table name="tbl_units" numRows="15" remarks="Table storing definitions of measurement units (e.g., mm for millimeters)." schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('tbl_units_unit_id_seq'::regclass)" digits="0" id="0" name="unit_id" nullable="false" remarks="Primary key (automatically incremented)." size="10" type="int4" typeCode="4">
             <child column="unit_id" foreignKey="fk_dimensions_unit_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_dimensions"/>
-            <child column="unit_id" foreignKey="fk_isotopes_unit_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_isotopes"/>
             <child column="unit_id" foreignKey="fk_methods_unit_id" implied="false" onDeleteCascade="false" schema="public" table="tbl_methods"/>
             <child column="unit_id" foreignKey="tbl_value_types_unit_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="tbl_value_types"/>
          </column>
@@ -3163,15 +2907,6 @@
          </index>
          <index name="tbl_units_unit_name_unique" unique="true">
             <column ascending="true" name="unit_name"/>
-         </index>
-      </table>
-      <table name="tbl_updates_log" numRows="0" remarks="" schema="public" type="TABLE">
-         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="updates_log_id" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="table_name" nullable="false" remarks="" size="150" type="varchar(150)" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="last_updated" nullable="false" remarks="" size="13" type="date" typeCode="91"/>
-         <primaryKey column="updates_log_id" sequenceNumberInPK="1"/>
-         <index name="tbl_updates_log_pkey" unique="true">
-            <column ascending="true" name="updates_log_id"/>
          </index>
       </table>
       <table name="tbl_value_classes" numRows="54" remarks="Specifies a value class describing e.g. a data column" schema="public" type="TABLE">

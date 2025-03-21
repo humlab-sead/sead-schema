@@ -136,11 +136,6 @@
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="tbl_dendro_dates.season_id&#39;s name implies that it&#39;s a child of tbl_seasons.season_id, but it doesn&#39;t reference that column."><a href='tbl_dendro_dates.html'>tbl_dendro_dates</a><span class='relatedKey'>.season_id</span></td>
-                                                <td class="constraint detail">Implied Constraint</td>
-                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
                                                 <td title="tbl_taxa_seasonality.season_id references tbl_seasons.season_id via fk_taxa_seasonality_season_id"><a href='tbl_taxa_seasonality.html'>tbl_taxa_seasonality</a><span class='relatedKey'>.season_id</span></td>
                                                 <td class="constraint detail">fk_taxa_seasonality_season_id</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
@@ -310,8 +305,6 @@
                                 <ul class="nav nav-tabs pull-left ui-sortable-handle">
                                     <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
                                     <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
-                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
-                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
                                 </ul>
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
@@ -338,36 +331,6 @@
 <area shape="rect" id="node11" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="331,795,619,883">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_seasons.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="676,5,1021,299">
-<area shape="rect" id="node2" href="tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="299,343,632,588">
-<area shape="rect" id="node4" href="tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="5,463,255,609">
-<area shape="rect" id="node3" href="tbl_dendro_dates.html" target="_top" title="tbl_dendro_dates" alt="" coords="719,316,979,580">
-<area shape="rect" id="node5" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="708,597,989,832">
-</map>
-                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tbl_seasons.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="727,69,1072,363">
-<area shape="rect" id="node2" href="tbl_age_types.html" target="_top" title="tbl_age_types" alt="" coords="398,216,615,304">
-<area shape="rect" id="node3" href="tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="371,5,642,93">
-<area shape="rect" id="node4" href="tbl_dating_uncertainty.html" target="_top" title="tbl_dating_uncertainty" alt="" coords="355,321,659,409">
-<area shape="rect" id="node5" href="tbl_value_qualifier_symbols.html" target="_top" title="tbl_value_qualifier_symbols" alt="" coords="331,111,683,199">
-<area shape="rect" id="node6" href="tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="340,427,673,672">
-<area shape="rect" id="node7" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="5,733,287,821">
-<area shape="rect" id="node11" href="tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="21,547,271,693">
-<area shape="rect" id="node8" href="tbl_dendro_date_notes.html" target="_top" title="tbl_dendro_date_notes" alt="" coords="1116,403,1420,491">
-<area shape="rect" id="node9" href="tbl_dendro_dates.html" target="_top" title="tbl_dendro_dates" alt="" coords="769,400,1029,664">
-<area shape="rect" id="node10" href="tbl_dendro_lookup.html" target="_top" title="tbl_dendro_lookup" alt="" coords="375,689,638,777">
-<area shape="rect" id="node12" href="tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="759,821,1040,1056">
-<area shape="rect" id="node13" href="tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="379,831,634,919">
-<area shape="rect" id="node14" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="403,1041,610,1129">
-<area shape="rect" id="node15" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="363,936,651,1024">
-</map>
-                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tbl_seasons.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>

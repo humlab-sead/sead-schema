@@ -131,11 +131,6 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="tbl_aggregate_datasets.biblio_id references tbl_biblio.biblio_id via fk_aggregate_datasets_biblio_id"><a href='tbl_aggregate_datasets.html'>tbl_aggregate_datasets</a><span class='relatedKey'>.biblio_id</span></td>
-                                                <td class="constraint detail">fk_aggregate_datasets_biblio_id</td>
-                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
                                                 <td title="tbl_dataset_masters.biblio_id references tbl_biblio.biblio_id via fk_dataset_masters_biblio_id"><a href='tbl_dataset_masters.html'>tbl_dataset_masters</a><span class='relatedKey'>.biblio_id</span></td>
                                                 <td class="constraint detail">fk_dataset_masters_biblio_id</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
@@ -485,90 +480,82 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="tbl_aggregate_datasets.html" target="_top" title="tbl_aggregate_datasets" alt="" coords="422,5,735,211">
-<area shape="rect" id="node2" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="5,1908,351,2329">
-<area shape="rect" id="node3" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="438,228,719,463">
-<area shape="rect" id="node4" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="807,392,1047,715">
-<area shape="rect" id="node5" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="415,480,742,773">
-<area shape="rect" id="node6" href="tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="435,827,723,1032">
-<area shape="rect" id="node7" href="tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="450,1049,707,1225">
-<area shape="rect" id="node8" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="458,1243,699,1448">
-<area shape="rect" id="node9" href="tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="436,1465,721,1641">
-<area shape="rect" id="node10" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="395,1659,763,1835">
-<area shape="rect" id="node11" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="429,1852,728,2087">
-<area shape="rect" id="node12" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="445,2104,713,2280">
-<area shape="rect" id="node13" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="418,2297,739,2532">
-<area shape="rect" id="node14" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="445,2549,713,2843">
-<area shape="rect" id="node15" href="tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="406,2860,751,3036">
-<area shape="rect" id="node16" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="439,3053,718,3259">
-<area shape="rect" id="node17" href="tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="463,3276,694,3452">
-<area shape="rect" id="node18" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="459,3469,698,3675">
-<area shape="rect" id="node19" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="438,3692,719,3897">
-<area shape="rect" id="node20" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="403,3915,754,4120">
+<area shape="rect" id="node1" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="438,5,719,240">
+<area shape="rect" id="node2" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="5,1812,351,2233">
+<area shape="rect" id="node3" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="807,169,1047,492">
+<area shape="rect" id="node4" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="415,257,742,551">
+<area shape="rect" id="node5" href="tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="435,604,723,809">
+<area shape="rect" id="node6" href="tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="450,827,707,1003">
+<area shape="rect" id="node7" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="458,1020,699,1225">
+<area shape="rect" id="node8" href="tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="436,1243,721,1419">
+<area shape="rect" id="node9" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="395,1436,763,1612">
+<area shape="rect" id="node10" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="429,1629,728,1864">
+<area shape="rect" id="node11" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="445,1881,713,2057">
+<area shape="rect" id="node12" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="418,2075,739,2309">
+<area shape="rect" id="node13" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="445,2327,713,2620">
+<area shape="rect" id="node14" href="tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="406,2637,751,2813">
+<area shape="rect" id="node15" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="439,2831,718,3036">
+<area shape="rect" id="node16" href="tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="463,3053,694,3229">
+<area shape="rect" id="node17" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="459,3247,698,3452">
+<area shape="rect" id="node18" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="438,3469,719,3675">
+<area shape="rect" id="node19" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="403,3692,754,3897">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tbl_biblio.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="tbl_aggregate_datasets.html" target="_top" title="tbl_aggregate_datasets" alt="" coords="1994,961,2307,1166">
-<area shape="rect" id="node2" href="tbl_aggregate_order_types.html" target="_top" title="tbl_aggregate_order_types" alt="" coords="1537,130,1881,218">
-<area shape="rect" id="node3" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="698,2477,1043,2898">
-<area shape="rect" id="node4" href="tbl_aggregate_sample_ages.html" target="_top" title="tbl_aggregate_sample_ages" alt="" coords="2408,963,2761,1051">
-<area shape="rect" id="node5" href="tbl_aggregate_samples.html" target="_top" title="tbl_aggregate_samples" alt="" coords="2430,1081,2739,1169">
-<area shape="rect" id="node6" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="2010,1325,2291,1413">
-<area shape="rect" id="node7" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="1607,1502,1811,1590">
-<area shape="rect" id="node9" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="1175,922,1379,1010">
-<area shape="rect" id="node16" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="1136,1099,1417,1187">
-<area shape="rect" id="node19" href="tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="1164,1205,1389,1293">
-<area shape="rect" id="node20" href="tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="1177,1310,1376,1398">
-<area shape="rect" id="node8" href="tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="2379,1209,2791,1297">
-<area shape="rect" id="node28" href="tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="736,959,1005,1047">
-<area shape="rect" id="node29" href="tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="748,1143,993,1231">
-<area shape="rect" id="node30" href="tbl_units.html" target="_top" title="tbl_units" alt="" coords="787,854,955,942">
-<area shape="rect" id="node10" href="tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1569,235,1849,323">
-<area shape="rect" id="node11" href="tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="1529,341,1889,429">
-<area shape="rect" id="node12" href="tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="1615,446,1804,534">
-<area shape="rect" id="node13" href="tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="1496,551,1923,639">
-<area shape="rect" id="node14" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="2008,203,2293,291">
-<area shape="rect" id="node15" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="769,57,972,145">
-<area shape="rect" id="node17" href="tbl_dataset_methods.html" target="_top" title="tbl_dataset_methods" alt="" coords="2007,1219,2294,1307">
-<area shape="rect" id="node18" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1990,491,2311,579">
-<area shape="rect" id="node21" href="tbl_dendro_lookup.html" target="_top" title="tbl_dendro_lookup" alt="" coords="1578,657,1841,745">
-<area shape="rect" id="node22" href="tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="1571,2299,1847,2387">
-<area shape="rect" id="node23" href="tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="1133,2297,1421,2502">
-<area shape="rect" id="node24" href="tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="2835,1875,3092,2051">
-<area shape="rect" id="node25" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="2453,1325,2717,1413">
-<area shape="rect" id="node26" href="tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="1608,762,1811,850">
-<area shape="rect" id="node27" href="tbl_isotope_measurements.html" target="_top" title="tbl_isotope_measurements" alt="" coords="1537,867,1882,955">
-<area shape="rect" id="node31" href="tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="1601,2041,1818,2129">
-<area shape="rect" id="node32" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="1156,2038,1397,2243">
-<area shape="rect" id="node33" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="767,1998,974,2086">
-<area shape="rect" id="node34" href="tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="1567,1841,1852,2017">
-<area shape="rect" id="node35" href="tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1152,1897,1401,1985">
-<area shape="rect" id="node36" href="tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="2456,1430,2713,1518">
-<area shape="rect" id="node37" href="tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="1555,973,1864,1061">
-<area shape="rect" id="node38" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="1967,1502,2335,1678">
-<area shape="rect" id="node39" href="tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="1577,1397,1842,1485">
-<area shape="rect" id="node40" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="783,1407,958,1495">
-<area shape="rect" id="node41" href="tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="1573,1291,1846,1379">
-<area shape="rect" id="node42" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="1127,1415,1426,1650">
-<area shape="rect" id="node43" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="1143,1667,1411,1843">
-<area shape="rect" id="node44" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="1116,3482,1437,3717">
-<area shape="rect" id="node45" href="tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="684,3573,1057,3661">
-<area shape="rect" id="node46" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="727,3394,1015,3482">
-<area shape="rect" id="node48" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="345,3727,640,3815">
-<area shape="rect" id="node50" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="349,3622,637,3710">
-<area shape="rect" id="node47" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="1143,3734,1411,4027">
-<area shape="rect" id="node49" href="tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="5,3709,301,3797">
-<area shape="rect" id="node51" href="tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="1104,4045,1449,4221">
-<area shape="rect" id="node52" href="tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="685,4106,1056,4194">
-<area shape="rect" id="node53" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="1137,2591,1416,2797">
-<area shape="rect" id="node54" href="tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="1161,4238,1392,4414">
-<area shape="rect" id="node55" href="tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="774,4299,967,4387">
-<area shape="rect" id="node56" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="1157,2814,1396,3019">
-<area shape="rect" id="node57" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="1136,3037,1417,3242">
-<area shape="rect" id="node58" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="1101,3259,1452,3465">
-<area shape="rect" id="node59" href="tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="1584,1078,1835,1166">
+<area shape="rect" id="node1" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="2010,253,2291,341">
+<area shape="rect" id="node2" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="1607,1027,1811,1115">
+<area shape="rect" id="node4" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="1175,555,1379,643">
+<area shape="rect" id="node11" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="1136,907,1417,995">
+<area shape="rect" id="node12" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="698,2032,1043,2453">
+<area shape="rect" id="node14" href="tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="1164,801,1389,889">
+<area shape="rect" id="node15" href="tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="1177,696,1376,784">
+<area shape="rect" id="node3" href="tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="2379,112,2791,200">
+<area shape="rect" id="node21" href="tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="736,604,1005,692">
+<area shape="rect" id="node22" href="tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="748,841,993,929">
+<area shape="rect" id="node23" href="tbl_units.html" target="_top" title="tbl_units" alt="" coords="787,499,955,587">
+<area shape="rect" id="node5" href="tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1569,500,1849,588">
+<area shape="rect" id="node6" href="tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="1529,605,1889,693">
+<area shape="rect" id="node7" href="tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="1615,711,1804,799">
+<area shape="rect" id="node8" href="tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="1496,816,1923,904">
+<area shape="rect" id="node9" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="2008,148,2293,236">
+<area shape="rect" id="node10" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="769,39,972,127">
+<area shape="rect" id="node13" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1990,5,2311,93">
+<area shape="rect" id="node16" href="tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="1571,1932,1847,2020">
+<area shape="rect" id="node17" href="tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="1133,1929,1421,2135">
+<area shape="rect" id="node18" href="tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="2835,1137,3092,1313">
+<area shape="rect" id="node19" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="2453,253,2717,341">
+<area shape="rect" id="node20" href="tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="1608,184,1811,272">
+<area shape="rect" id="node24" href="tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="1601,1795,1818,1883">
+<area shape="rect" id="node25" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="1156,1671,1397,1876">
+<area shape="rect" id="node26" href="tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="767,1648,974,1736">
+<area shape="rect" id="node27" href="tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="1567,1601,1852,1777">
+<area shape="rect" id="node28" href="tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1152,1565,1401,1653">
+<area shape="rect" id="node29" href="tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="2456,359,2713,447">
+<area shape="rect" id="node30" href="tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="1555,289,1864,377">
+<area shape="rect" id="node31" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="1967,1195,2335,1371">
+<area shape="rect" id="node32" href="tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="1577,1132,1842,1220">
+<area shape="rect" id="node33" href="tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="783,1027,958,1115">
+<area shape="rect" id="node34" href="tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="1573,921,1846,1009">
+<area shape="rect" id="node35" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="1127,1048,1426,1283">
+<area shape="rect" id="node36" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="1143,1300,1411,1476">
+<area shape="rect" id="node37" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="1116,3079,1437,3313">
+<area shape="rect" id="node38" href="tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="684,3169,1057,3257">
+<area shape="rect" id="node39" href="tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="727,2991,1015,3079">
+<area shape="rect" id="node41" href="tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="345,3324,640,3412">
+<area shape="rect" id="node43" href="tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="349,3219,637,3307">
+<area shape="rect" id="node40" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="1143,3331,1411,3624">
+<area shape="rect" id="node42" href="tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="5,3305,301,3393">
+<area shape="rect" id="node44" href="tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="1104,3641,1449,3817">
+<area shape="rect" id="node45" href="tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="685,3703,1056,3791">
+<area shape="rect" id="node46" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="1137,2411,1416,2616">
+<area shape="rect" id="node47" href="tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="1161,3835,1392,4011">
+<area shape="rect" id="node48" href="tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="774,3896,967,3984">
+<area shape="rect" id="node49" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="1157,2633,1396,2839">
+<area shape="rect" id="node50" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="1136,2856,1417,3061">
+<area shape="rect" id="node51" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="1101,2188,1452,2393">
+<area shape="rect" id="node52" href="tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="1584,395,1835,483">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_biblio.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
