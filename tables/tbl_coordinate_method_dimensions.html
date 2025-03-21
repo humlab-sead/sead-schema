@@ -114,10 +114,9 @@
                                     <th>Size</th>
                                     <th title='Are nulls allowed?'>Nulls</th>
                                     <th title='Is column automatically updated?'>Auto</th>
-                                    <th title='Default value'>Default</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                     <th title='Columns in tables that reference this column'>Children</th>
                                     <th title='Columns in tables that are referenced by this column'>Parents</th>
-                                    <th title='Comments' class="toggle"><span>Comments</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -127,7 +126,7 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title='Automatically updated by the database'>√</td>
-                                    <td>nextval(&#39;tbl_coordinate_method_dimensi_coordinate_method_dimension_i_seq&#39;::regclass)</td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
@@ -146,7 +145,6 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>Primary key (automatically incremented).</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="dimension_id">dimension_id</span></td>
@@ -154,7 +152,7 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td>null</td>
+                                    <td><p>Specifies the specific dimension being measured  (e.g., length, width, height)..</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -168,7 +166,6 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>Specifies the specific dimension being measured  (e.g., length, width, height)..</p></td>
                                 </tr>
                                 <tr>
                                     <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="method_id">method_id</span></td>
@@ -176,7 +173,7 @@
                                     <td>10</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td>null</td>
+                                    <td><p>Specifies the coordinate system method to which the dimension applies.</p></td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -190,7 +187,6 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>Specifies the coordinate system method to which the dimension applies.</p></td>
                                 </tr>
                                 <tr>
                                     <td><span id="limit_upper">limit_upper</span></td>
@@ -198,16 +194,15 @@
                                     <td>18,10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                     <td><p>Specifies the upper bound of the legal value range for the dimension, if applicable.</p></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="limit_lower">limit_lower</span></td>
@@ -215,16 +210,15 @@
                                     <td>18,10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                     <td><p>Specifies the lower bound of the legal value range for the dimension, if applicable.</p></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="date_updated">date_updated</span></td>
@@ -232,16 +226,15 @@
                                     <td>35,6</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>now()</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
                                     <td></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

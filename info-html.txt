@@ -1,4 +1,4 @@
-date=2025-03-21 08:44:11+0000
+date=2025-03-21 12:06:56+0000
 os=Linux 5.10.0-33-amd64
 schemaspy-version=7.0.3-SNAPSHOT
 schemaspy-revision=HEAD
