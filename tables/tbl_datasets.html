@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tbl_datasets - sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tbl_datasets</h1><p><span id="recordNumber">59052</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Organizes collections of analysis entities into datasets, which are structured collections relevant to the specific proxy being studied. For biological proxies, a dataset typically corresponds to a spreadsheet containing samples and taxa for a single analysis method, such as phosphates through citric acid extraction.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="dataset_id">dataset_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_analysis_entities.dataset_id references tbl_datasets.dataset_id via fk_analysis_entities_dataset_id"><a href='tbl_analysis_entities.html'>tbl_analysis_entities</a><span class='relatedKey'>.dataset_id</span></td>
+                                                <td class="constraint detail">fk_analysis_entities_dataset_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dataset_contacts.dataset_id references tbl_datasets.dataset_id via fk_dataset_contacts_dataset_id"><a href='tbl_dataset_contacts.html'>tbl_dataset_contacts</a><span class='relatedKey'>.dataset_id</span></td>
+                                                <td class="constraint detail">fk_dataset_contacts_dataset_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_dataset_submissions.dataset_id references tbl_datasets.dataset_id via fk_dataset_submissions_dataset_id"><a href='tbl_dataset_submissions.html'>tbl_dataset_submissions</a><span class='relatedKey'>.dataset_id</span></td>
+                                                <td class="constraint detail">fk_dataset_submissions_dataset_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tbl_datasets.updated_dataset_id references tbl_datasets.dataset_id via fk_datasets_updated_dataset_id"><a href='tbl_datasets.html'>tbl_datasets</a><span class='relatedKey'>.updated_dataset_id</span></td>
+                                                <td class="constraint detail">fk_datasets_updated_dataset_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Primary key (automatically incremented).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="master_set_id">master_set_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.master_set_id references tbl_dataset_masters.master_set_id via fk_datasets_master_set_id"><a href='tbl_dataset_masters.html'>tbl_dataset_masters</a><span class='relatedKey'>.master_set_id</span></td>
+                                                <td class="constraint detail">fk_datasets_master_set_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies the master set to which this dataset belongs.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="data_type_id">data_type_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.data_type_id references tbl_data_types.data_type_id via fk_datasets_data_type_id"><a href='tbl_data_types.html'>tbl_data_types</a><span class='relatedKey'>.data_type_id</span></td>
+                                                <td class="constraint detail">fk_datasets_data_type_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies the type of data contained in the dataset.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="method_id">method_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.method_id references tbl_methods.method_id via fk_datasets_method_id"><a href='tbl_methods.html'>tbl_methods</a><span class='relatedKey'>.method_id</span></td>
+                                                <td class="constraint detail">fk_datasets_method_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies the method of analysis used for this dataset.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="biblio_id">biblio_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.biblio_id references tbl_biblio.biblio_id via fk_datasets_biblio_id"><a href='tbl_biblio.html'>tbl_biblio</a><span class='relatedKey'>.biblio_id</span></td>
+                                                <td class="constraint detail">fk_datasets_biblio_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies the publication that describes or mentions the dataset.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="updated_dataset_id">updated_dataset_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.updated_dataset_id references tbl_datasets.dataset_id via fk_datasets_updated_dataset_id"><a href='tbl_datasets.html'>tbl_datasets</a><span class='relatedKey'>.dataset_id</span></td>
+                                                <td class="constraint detail">fk_datasets_updated_dataset_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies any subsequent version of this dataset.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="project_id">project_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.project_id references tbl_projects.project_id via fk_datasets_project_id"><a href='tbl_projects.html'>tbl_projects</a><span class='relatedKey'>.project_id</span></td>
+                                                <td class="constraint detail">fk_datasets_project_id</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Specifies the project related to this dataset.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dataset_name">dataset_name</span></td>
+                                    <td>varchar(50)</td>
+                                    <td>50</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>A unique identifier for the dataset at this site, potentially matching the sample group name or created for clarity and context.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="date_updated">date_updated</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="dataset_uuid">dataset_uuid</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="submission_id">submission_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tbl_datasets.submission_id references tbl_submissions.submission_id via tbl_datasets_submission_id_fkey"><a href='tbl_submissions.html'>tbl_submissions</a><span class='relatedKey'>.submission_id</span></td>
+                                                <td class="constraint detail">tbl_datasets_submission_id_fkey</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Identifies the submission associated with this dataset.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> tbl_datasets_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>dataset_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_biblio_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>biblio_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_data_type_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>data_type_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_master_set_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>master_set_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_method_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>method_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_project_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>project_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_submission_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>submission_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_datasets_updated_dataset_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>updated_dataset_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> unique_tbl_datasets_dataset_uuid</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>dataset_uuid</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="1069,203,1351,379">
+<area shape="rect" id="node2" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="619,481,1005,873">
+<area shape="rect" id="node4" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="271,5,552,240">
+<area shape="rect" id="node5" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="5,601,204,748">
+<area shape="rect" id="node7" href="tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="292,257,531,433">
+<area shape="rect" id="node8" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="248,451,575,744">
+<area shape="rect" id="node9" href="tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="283,797,540,1003">
+<area shape="rect" id="node10" href="tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="283,1020,540,1255">
+<area shape="rect" id="node3" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="1067,396,1353,601">
+<area shape="rect" id="node6" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1049,619,1371,824">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tbl_datasets.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="2068,640,2304,728">
+<area shape="rect" id="node2" href="tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="1635,848,1916,1024">
+<area shape="rect" id="node3" href="tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="1184,2045,1571,2437">
+<area shape="rect" id="node4" href="tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="1233,815,1521,903">
+<area shape="rect" id="node8" href="tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="392,499,596,587">
+<area shape="rect" id="node17" href="tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="53,1521,227,1609">
+<area shape="rect" id="node19" href="tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="807,920,1046,1096">
+<area shape="rect" id="node23" href="tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="353,2259,635,2347">
+<area shape="rect" id="node26" href="tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="798,2647,1055,2852">
+<area shape="rect" id="node27" href="tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="807,2367,1046,2455">
+<area shape="rect" id="node36" href="tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="794,815,1059,903">
+<area shape="rect" id="node5" href="tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="2026,745,2346,833">
+<area shape="rect" id="node6" href="tbl_analysis_entity_dimensions.html" target="_top" title="tbl_analysis_entity_dimensions" alt="" coords="1993,851,2379,939">
+<area shape="rect" id="node7" href="tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="1980,429,2392,517">
+<area shape="rect" id="node33" href="tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="5,496,275,584">
+<area shape="rect" id="node34" href="tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="17,603,263,691">
+<area shape="rect" id="node35" href="tbl_units.html" target="_top" title="tbl_units" alt="" coords="56,213,224,301">
+<area shape="rect" id="node9" href="tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="2051,288,2321,376">
+<area shape="rect" id="node10" href="tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="1650,252,1901,340">
+<area shape="rect" id="node58" href="tbl_value_types.html" target="_top" title="tbl_value_types" alt="" coords="1260,252,1495,340">
+<area shape="rect" id="node11" href="tbl_ceramics.html" target="_top" title="tbl_ceramics" alt="" coords="2083,535,2289,623">
+<area shape="rect" id="node12" href="tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1635,637,1915,725">
+<area shape="rect" id="node13" href="tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="747,180,1107,268">
+<area shape="rect" id="node14" href="tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="832,285,1021,373">
+<area shape="rect" id="node15" href="tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="713,391,1140,479">
+<area shape="rect" id="node16" href="tbl_data_providers.html" target="_top" title="tbl_data_providers" alt="" coords="362,2364,626,2452">
+<area shape="rect" id="node18" href="tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="39,2537,241,2625">
+<area shape="rect" id="node20" href="tbl_data_type_groups.html" target="_top" title="tbl_data_type_groups" alt="" coords="348,815,640,903">
+<area shape="rect" id="node21" href="tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="1633,1960,1918,2165">
+<area shape="rect" id="node22" href="tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="1250,1916,1505,2004">
+<area shape="rect" id="node24" href="tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="1615,2644,1936,2849">
+<area shape="rect" id="node25" href="tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="1190,2705,1565,2793">
+<area shape="rect" id="node37" href="tbl_project_stages.html" target="_top" title="tbl_project_stages" alt="" coords="363,2757,625,2845">
+<area shape="rect" id="node38" href="tbl_project_types.html" target="_top" title="tbl_project_types" alt="" coords="369,2652,619,2740">
+<area shape="rect" id="node49" href="tbl_submission_states.html" target="_top" title="tbl_submission_states" alt="" coords="345,2469,643,2557">
+<area shape="rect" id="node28" href="tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="350,1308,638,1396">
+<area shape="rect" id="node29" href="tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="2436,1148,2693,1236">
+<area shape="rect" id="node30" href="tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="2054,1061,2318,1149">
+<area shape="rect" id="node31" href="tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="825,496,1028,584">
+<area shape="rect" id="node32" href="tbl_measured_values.html" target="_top" title="tbl_measured_values" alt="" coords="2042,956,2330,1044">
+<area shape="rect" id="node39" href="tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="373,1413,615,1501">
+<area shape="rect" id="node40" href="tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="351,1519,637,1607">
+<area shape="rect" id="node41" href="tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="2057,108,2315,196">
+<area shape="rect" id="node42" href="tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="1621,743,1930,831">
+<area shape="rect" id="node43" href="tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="1193,1043,1561,1131">
+<area shape="rect" id="node44" href="tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="790,601,1063,689">
+<area shape="rect" id="node45" href="tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="345,604,643,692">
+<area shape="rect" id="node46" href="tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="360,1660,628,1748">
+<area shape="rect" id="node47" href="tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="333,1765,655,1853">
+<area shape="rect" id="node48" href="tbl_submission_tasks.html" target="_top" title="tbl_submission_tasks" alt="" coords="1233,2455,1522,2543">
+<area shape="rect" id="node50" href="tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="360,1871,628,1959">
+<area shape="rect" id="node51" href="tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="321,1976,667,2064">
+<area shape="rect" id="node52" href="tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="355,2081,633,2169">
+<area shape="rect" id="node53" href="tbl_tephra_dates.html" target="_top" title="tbl_tephra_dates" alt="" coords="2063,1167,2309,1255">
+<area shape="rect" id="node54" href="tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="379,709,609,797">
+<area shape="rect" id="node55" href="tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="375,920,613,1008">
+<area shape="rect" id="node56" href="tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="353,1025,635,1113">
+<area shape="rect" id="node57" href="tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="319,1131,669,1219">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tbl_datasets.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 7.0.2</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

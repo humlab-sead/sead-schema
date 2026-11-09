@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sead_staging.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>sead_staging</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>All Relationships</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Diagrams</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom">
+                                <!-- Tabs within a box -->
+                                <h5>By default only columns that are primary keys, foreign keys or indexes are shown.</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#compactDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact</a></li>
+                                    <li class=""><a href="#largeDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large</a></li>
+                                    <li class=""><a href="#compactimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact Implied</a></li>
+                                    <li class=""><a href="#largeimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large Implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="compactDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactRelationshipsDiagram" name="compactRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="1140,354,1428,530">
+<area shape="rect" id="node61" href="tables/tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="690,384,986,560">
+<area shape="rect" id="node2" href="tables/tbl_value_qualifiers.html" target="_top" title="tbl_value_qualifiers" alt="" coords="2203,1724,2476,1870">
+<area shape="rect" id="node3" href="tables/tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="2151,6212,2527,6388">
+<area shape="rect" id="node66" href="tables/tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="1625,1648,1913,1824">
+<area shape="rect" id="node98" href="tables/tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="737,8357,939,8504">
+<area shape="rect" id="node4" href="tables/tbl_measured_value_dimensions.html" target="_top" title="tbl_measured_value_dimensions" alt="" coords="3737,5702,4135,5878">
+<area shape="rect" id="node53" href="tables/tbl_measured_values.html" target="_top" title="tbl_measured_values" alt="" coords="3343,5862,3631,6009">
+<area shape="rect" id="node128" href="tables/tbl_dimensions.html" target="_top" title="tbl_dimensions" alt="" coords="2205,4584,2473,4760">
+<area shape="rect" id="node5" href="tables/tbl_ceramics.html" target="_top" title="tbl_ceramics" alt="" coords="3365,6026,3610,6202">
+<area shape="rect" id="node27" href="tables/tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1629,5010,1909,5157">
+<area shape="rect" id="node130" href="tables/tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="2824,5964,3105,6140">
+<area shape="rect" id="node6" href="tables/tbl_submission_task_types.html" target="_top" title="tbl_submission_task_types" alt="" coords="1598,8040,1939,8157">
+<area shape="rect" id="node7" href="tables/tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="2220,1924,2459,2129">
+<area shape="rect" id="node116" href="tables/tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="739,5986,937,6133">
+<area shape="rect" id="node8" href="tables/tbl_sample_locations.html" target="_top" title="tbl_sample_locations" alt="" coords="2821,5384,3108,5560">
+<area shape="rect" id="node44" href="tables/tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="2195,5042,2483,5248">
+<area shape="rect" id="node141" href="tables/tbl_sample_location_types.html" target="_top" title="tbl_sample_location_types" alt="" coords="2170,5301,2509,5448">
+<area shape="rect" id="node9" href="tables/tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="2231,6864,2448,7010">
+<area shape="rect" id="node121" href="tables/tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="1648,6798,1889,7004">
+<area shape="rect" id="node10" href="tables/tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="2181,2562,2498,2768">
+<area shape="rect" id="node127" href="tables/tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="1583,3929,1954,4076">
+<area shape="rect" id="node11" href="tables/tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="1628,956,1909,1073">
+<area shape="rect" id="node12" href="tables/tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="2212,8789,2467,8906">
+<area shape="rect" id="node13" href="tables/tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="2200,2146,2479,2352">
+<area shape="rect" id="node14" href="tables/tbl_abundance_properties.html" target="_top" title="tbl_abundance_properties" alt="" coords="3768,602,4104,778">
+<area shape="rect" id="node47" href="tables/tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="3351,438,3623,644">
+<area shape="rect" id="node55" href="tables/tbl_property_types.html" target="_top" title="tbl_property_types" alt="" coords="3347,1406,3627,1670">
+<area shape="rect" id="node15" href="tables/tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="5,684,288,830">
+<area shape="rect" id="node16" href="tables/tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="3753,216,4119,392">
+<area shape="rect" id="node137" href="tables/tbl_modification_types.html" target="_top" title="tbl_modification_types" alt="" coords="3316,274,3659,421">
+<area shape="rect" id="node17" href="tables/tbl_sample_descriptions.html" target="_top" title="tbl_sample_descriptions" alt="" coords="2806,5577,3123,5753">
+<area shape="rect" id="node70" href="tables/tbl_sample_description_types.html" target="_top" title="tbl_sample_description_types" alt="" coords="2154,6012,2525,6158">
+<area shape="rect" id="node18" href="tables/tbl_relative_age_types.html" target="_top" title="tbl_relative_age_types" alt="" coords="1133,7060,1435,7206">
+<area shape="rect" id="node19" href="tables/tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="2155,4849,2523,5025">
+<area shape="rect" id="node86" href="tables/tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="1617,4293,1921,4528">
+<area shape="rect" id="node20" href="tables/tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="2219,2369,2459,2545">
+<area shape="rect" id="node22" href="tables/tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="1648,3729,1889,3876">
+<area shape="rect" id="node21" href="tables/tbl_age_types.html" target="_top" title="tbl_age_types" alt="" coords="3379,6472,3596,6589">
+<area shape="rect" id="node23" href="tables/tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="659,2841,1017,3017">
+<area shape="rect" id="node108" href="tables/tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="1126,2841,1442,3017">
+<area shape="rect" id="node24" href="tables/tbl_sample_location_type_sampli_68b7010d.html" target="_top" title="tbl_sample_location_type_sampling_contexts" alt="" coords="2705,5770,3224,5946">
+<area shape="rect" id="node34" href="tables/tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="1061,6505,1507,6622">
+<area shape="rect" id="node25" href="tables/tbl_feature_properties.html" target="_top" title="tbl_feature_properties" alt="" coords="3785,1496,4087,1672">
+<area shape="rect" id="node87" href="tables/tbl_features.html" target="_top" title="tbl_features" alt="" coords="3367,3138,3607,3285">
+<area shape="rect" id="node26" href="tables/tbl_analysis_boolean_values.html" target="_top" title="tbl_analysis_boolean_values" alt="" coords="3757,4094,4115,4241">
+<area shape="rect" id="node63" href="tables/tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="3352,3796,3623,3972">
+<area shape="rect" id="node76" href="tables/tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="1121,4253,1447,4546">
+<area shape="rect" id="node28" href="tables/tbl_site_type_groups.html" target="_top" title="tbl_site_type_groups" alt="" coords="696,577,980,724">
+<area shape="rect" id="node29" href="tables/tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="3357,6220,3617,6454">
+<area shape="rect" id="node45" href="tables/tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1644,7257,1893,7462">
+<area shape="rect" id="node93" href="tables/tbl_dating_uncertainty.html" target="_top" title="tbl_dating_uncertainty" alt="" coords="2813,7222,3117,7369">
+<area shape="rect" id="node30" href="tables/tbl_identification_levels.html" target="_top" title="tbl_identification_levels" alt="" coords="3330,661,3645,808">
+<area shape="rect" id="node31" href="tables/tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="1582,6062,1955,6209">
+<area shape="rect" id="node32" href="tables/tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="2205,249,2473,542">
+<area shape="rect" id="node146" href="tables/tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="1137,1469,1431,1616">
+<area shape="rect" id="node33" href="tables/tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="2180,4256,2499,4402">
+<area shape="rect" id="node35" href="tables/tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="2147,6405,2531,6581">
+<area shape="rect" id="node102" href="tables/tbl_sample_group_description_types.html" target="_top" title="tbl_sample_group_description_types" alt="" coords="1551,6526,1987,6673">
+<area shape="rect" id="node36" href="tables/tbl_years_types.html" target="_top" title="tbl_years_types" alt="" coords="4483,2826,4717,2973">
+<area shape="rect" id="node37" href="tables/tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="1143,7460,1425,7694">
+<area shape="rect" id="node38" href="tables/tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="2856,7789,3073,7936">
+<area shape="rect" id="node39" href="tables/tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="3807,7293,4065,7469">
+<area shape="rect" id="node41" href="tables/tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="3355,5610,3619,5845">
+<area shape="rect" id="node40" href="tables/tbl_analysis_categorical_values.html" target="_top" title="tbl_analysis_categorical_values" alt="" coords="3742,4258,4130,4434">
+<area shape="rect" id="node51" href="tables/tbl_value_type_items.html" target="_top" title="tbl_value_type_items" alt="" coords="3344,4030,3631,4177">
+<area shape="rect" id="node89" href="tables/tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="1163,3846,1405,3993">
+<area shape="rect" id="node42" href="tables/tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="3298,4216,3677,4392">
+<area shape="rect" id="node133" href="tables/tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="2751,4069,3178,4245">
+<area shape="rect" id="node43" href="tables/tbl_analysis_numerical_values.html" target="_top" title="tbl_analysis_numerical_values" alt="" coords="3748,3573,4124,3749">
+<area shape="rect" id="node104" href="tables/tbl_value_qualifier_symbols.html" target="_top" title="tbl_value_qualifier_symbols" alt="" coords="3311,3302,3663,3478">
+<area shape="rect" id="node58" href="tables/tbl_sample_types.html" target="_top" title="tbl_sample_types" alt="" coords="1643,4846,1895,4993">
+<area shape="rect" id="node153" href="tables/tbl_alt_ref_types.html" target="_top" title="tbl_alt_ref_types" alt="" coords="1647,5862,1891,6009">
+<area shape="rect" id="node78" href="tables/tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="1181,6896,1387,7042">
+<area shape="rect" id="node46" href="tables/tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="2167,3990,2512,4166">
+<area shape="rect" id="node75" href="tables/tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="2802,697,3127,844">
+<area shape="rect" id="node48" href="tables/tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="3768,1713,4104,1889">
+<area shape="rect" id="node49" href="tables/tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="1667,4129,1870,4276">
+<area shape="rect" id="node50" href="tables/tbl_value_types.html" target="_top" title="tbl_value_types" alt="" coords="2222,3230,2457,3436">
+<area shape="rect" id="node97" href="tables/tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="1649,5440,1888,5616">
+<area shape="rect" id="node107" href="tables/tbl_units.html" target="_top" title="tbl_units" alt="" coords="747,4384,929,4560">
+<area shape="rect" id="node52" href="tables/tbl_data_providers.html" target="_top" title="tbl_data_providers" alt="" coords="1152,8240,1416,8504">
+<area shape="rect" id="node54" href="tables/tbl_sample_alt_refs.html" target="_top" title="tbl_sample_alt_refs" alt="" coords="2829,5161,3100,5366">
+<area shape="rect" id="node131" href="tables/tbl_property_type_groups.html" target="_top" title="tbl_property_type_groups" alt="" coords="2798,1494,3131,1641">
+<area shape="rect" id="node143" href="tables/tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="2839,2778,3090,2984">
+<area shape="rect" id="node56" href="tables/tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="2233,4420,2445,4566">
+<area shape="rect" id="node57" href="tables/tbl_location_types.html" target="_top" title="tbl_location_types" alt="" coords="708,6925,968,7072">
+<area shape="rect" id="node59" href="tables/tbl_data_type_groups.html" target="_top" title="tbl_data_type_groups" alt="" coords="1138,5469,1430,5616">
+<area shape="rect" id="node60" href="tables/tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="2177,632,2502,808">
+<area shape="rect" id="node94" href="tables/tbl_taxa_tree_orders.html" target="_top" title="tbl_taxa_tree_orders" alt="" coords="332,525,615,672">
+<area shape="rect" id="node62" href="tables/tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="1674,4653,1863,4829">
+<area shape="rect" id="node64" href="tables/tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="1619,596,1918,830">
+<area shape="rect" id="node65" href="tables/tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="1160,8665,1408,8841">
+<area shape="rect" id="node67" href="tables/tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="3281,5384,3693,5560">
+<area shape="rect" id="node68" href="tables/tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="3327,7581,3647,7757">
+<area shape="rect" id="node69" href="tables/tbl_site_properties.html" target="_top" title="tbl_site_properties" alt="" coords="3803,1222,4069,1398">
+<area shape="rect" id="node71" href="tables/tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="3800,796,4072,1001">
+<area shape="rect" id="node72" href="tables/tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="1641,7021,1896,7168">
+<area shape="rect" id="node73" href="tables/tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="1640,7817,1897,8022">
+<area shape="rect" id="node145" href="tables/tbl_project_types.html" target="_top" title="tbl_project_types" alt="" coords="1159,7712,1409,7858">
+<area shape="rect" id="node154" href="tables/tbl_project_stages.html" target="_top" title="tbl_project_stages" alt="" coords="1153,7876,1415,8022">
+<area shape="rect" id="node74" href="tables/tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="2164,2785,2515,2990">
+<area shape="rect" id="node139" href="tables/tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="703,4577,973,4724">
+<area shape="rect" id="node77" href="tables/tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="2810,3001,3119,3236">
+<area shape="rect" id="node79" href="tables/tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="3372,7774,3603,7950">
+<area shape="rect" id="node80" href="tables/tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="3761,409,4111,585">
+<area shape="rect" id="node81" href="tables/tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="2152,8441,2527,8558">
+<area shape="rect" id="node82" href="tables/tbl_analysis_identifiers.html" target="_top" title="tbl_analysis_identifiers" alt="" coords="3782,3766,4090,3913">
+<area shape="rect" id="node83" href="tables/tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="1635,5174,1903,5350">
+<area shape="rect" id="node84" href="tables/tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="2153,897,2526,1044">
+<area shape="rect" id="node85" href="tables/tbl_sample_coordinates.html" target="_top" title="tbl_sample_coordinates" alt="" coords="3301,4528,3674,4704">
+<area shape="rect" id="node119" href="tables/tbl_feature_types.html" target="_top" title="tbl_feature_types" alt="" coords="2819,3253,3111,3370">
+<area shape="rect" id="node88" href="tables/tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="1159,7224,1409,7370">
+<area shape="rect" id="node90" href="tables/tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="1640,8174,1897,8409">
+<area shape="rect" id="node150" href="tables/tbl_submission_states.html" target="_top" title="tbl_submission_states" alt="" coords="1135,8040,1433,8186">
+<area shape="rect" id="node91" href="tables/tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="1140,3494,1428,3700">
+<area shape="rect" id="node92" href="tables/tbl_submission_tasks.html" target="_top" title="tbl_submission_tasks" alt="" coords="2195,8156,2484,8390">
+<area shape="rect" id="node95" href="tables/tbl_sample_horizons.html" target="_top" title="tbl_sample_horizons" alt="" coords="2824,4262,3105,4438">
+<area shape="rect" id="node96" href="tables/tbl_sample_group_description_ty_6c2e420e.html" target="_top" title="tbl_sample_group_description_type_sampling_contexts" alt="" coords="2031,6634,2648,6810">
+<area shape="rect" id="node99" href="tables/tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="1643,5669,1895,5845">
+<area shape="rect" id="node100" href="tables/tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="2186,1061,2493,1208">
+<area shape="rect" id="node101" href="tables/tbl_sample_colours.html" target="_top" title="tbl_sample_colours" alt="" coords="2830,4732,3099,4908">
+<area shape="rect" id="node103" href="tables/tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="2199,5753,2480,5958">
+<area shape="rect" id="node105" href="tables/tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="1632,3106,1905,3282">
+<area shape="rect" id="node106" href="tables/tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="2179,5501,2500,5736">
+<area shape="rect" id="node109" href="tables/tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="2873,6805,3056,7010">
+<area shape="rect" id="node110" href="tables/tbl_analysis_integer_ranges.html" target="_top" title="tbl_analysis_integer_ranges" alt="" coords="3759,2934,4113,3140">
+<area shape="rect" id="node111" href="tables/tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="2165,1225,2513,1372">
+<area shape="rect" id="node112" href="tables/tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="3763,5157,4109,5450">
+<area shape="rect" id="node134" href="tables/tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="1670,7480,1867,7656">
+<area shape="rect" id="node113" href="tables/tbl_sample_images.html" target="_top" title="tbl_sample_images" alt="" coords="2831,3876,3099,4052">
+<area shape="rect" id="node114" href="tables/tbl_sample_notes.html" target="_top" title="tbl_sample_notes" alt="" coords="2839,4997,3091,5144">
+<area shape="rect" id="node115" href="tables/tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="1589,3565,1949,3712">
+<area shape="rect" id="node117" href="tables/tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="2219,7769,2459,8121">
+<area shape="rect" id="node118" href="tables/tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="2822,8701,3107,8906">
+<area shape="rect" id="node120" href="tables/tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="2835,3424,3094,3600">
+<area shape="rect" id="node142" href="tables/tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="2183,3453,2495,3600">
+<area shape="rect" id="node122" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="4483,3245,4709,3362">
+<area shape="rect" id="node123" href="tables/tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="2139,1389,2540,1536">
+<area shape="rect" id="node124" href="tables/tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="2777,3653,3152,3858">
+<area shape="rect" id="node125" href="tables/tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="2199,7028,2480,7262">
+<area shape="rect" id="node126" href="tables/tbl_analysis_value_dimensions.html" target="_top" title="tbl_analysis_value_dimensions" alt="" coords="3746,4452,4126,4628">
+<area shape="rect" id="node129" href="tables/tbl_sample_description_sample_g_89e77fa2.html" target="_top" title="tbl_sample_description_sample_group_contexts" alt="" coords="2692,6420,3237,6596">
+<area shape="rect" id="node132" href="tables/tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="2223,3008,2456,3213">
+<area shape="rect" id="node135" href="tables/tbl_physical_sample_features.html" target="_top" title="tbl_physical_sample_features" alt="" coords="3752,4754,4120,4930">
+<area shape="rect" id="node136" href="tables/tbl_analysis_numerical_ranges.html" target="_top" title="tbl_analysis_numerical_ranges" alt="" coords="3746,3157,4126,3362">
+<area shape="rect" id="node138" href="tables/tbl_analysis_integer_values.html" target="_top" title="tbl_analysis_integer_values" alt="" coords="3761,3380,4111,3556">
+<area shape="rect" id="node140" href="tables/tbl_site_site_types.html" target="_top" title="tbl_site_site_types" alt="" coords="1637,402,1900,578">
+<area shape="rect" id="node148" href="tables/tbl_site_types.html" target="_top" title="tbl_site_types" alt="" coords="1169,548,1399,753">
+<area shape="rect" id="node155" href="tables/tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="1631,3336,1907,3512">
+<area shape="rect" id="node144" href="tables/tbl_tephra_dates.html" target="_top" title="tbl_tephra_dates" alt="" coords="3357,7134,3617,7340">
+<area shape="rect" id="node147" href="tables/tbl_temperatures.html" target="_top" title="tbl_temperatures" alt="" coords="4483,3634,4735,3752">
+<area shape="rect" id="node149" href="tables/tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="2197,7280,2482,7456">
+<area shape="rect" id="node151" href="tables/tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="2173,3761,2506,3937">
+<area shape="rect" id="node152" href="tables/tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="2804,8382,3125,8588">
+<area shape="rect" id="node156" href="tables/tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="2225,1553,2454,1670">
+<area shape="rect" id="node157" href="tables/tbl_analysis_notes.html" target="_top" title="tbl_analysis_notes" alt="" coords="3805,3930,4067,4077">
+<area shape="rect" id="node158" href="tables/tbl_analysis_entity_dimensions.html" target="_top" title="tbl_analysis_entity_dimensions" alt="" coords="3295,5061,3680,5237">
+<area shape="rect" id="node159" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="4483,4048,4757,4141">
+<area shape="rect" id="node160" href="tables/view_taxa_alphabetically.html" target="_top" title="view_taxa_alphabetically" alt="" coords="4483,2013,4807,2194">
+<area shape="rect" id="node161" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="4483,4437,4747,4530">
+<area shape="rect" id="node162" href="tables/view_typed_analysis_tables.html" target="_top" title="view_typed_analysis_tables" alt="" coords="4483,4856,4831,4920">
+<area shape="rect" id="node163" href="tables/view_typed_analysis_values.html" target="_top" title="view_typed_analysis_values" alt="" coords="4483,5216,4833,5309">
+<area shape="rect" id="node164" href="tables/view_bibliography_references.html" target="_top" title="view_bibliography_references" alt="" coords="4483,2520,4853,2584">
+<area shape="rect" id="node165" href="tables/typed_analysis_values.html" target="_top" title="typed_analysis_values" alt="" coords="4483,5605,4780,5698">
+</map>
+                                        <a name='diagram'><img id="compactDegreeImg" src="diagrams/summary/relationships.real.compact.png" usemap="#compactRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeRelationshipsDiagram" name="largeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="1140,359,1428,540">
+<area shape="rect" id="node61" href="tables/tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="690,379,986,560">
+<area shape="rect" id="node2" href="tables/tbl_value_qualifiers.html" target="_top" title="tbl_value_qualifiers" alt="" coords="2203,3379,2476,3560">
+<area shape="rect" id="node3" href="tables/tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="2151,7915,2527,8126">
+<area shape="rect" id="node66" href="tables/tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="1625,2364,1913,2575">
+<area shape="rect" id="node98" href="tables/tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="737,10876,939,11234">
+<area shape="rect" id="node4" href="tables/tbl_measured_value_dimensions.html" target="_top" title="tbl_measured_value_dimensions" alt="" coords="3737,6372,4135,6583">
+<area shape="rect" id="node53" href="tables/tbl_measured_values.html" target="_top" title="tbl_measured_values" alt="" coords="3343,6599,3631,6780">
+<area shape="rect" id="node128" href="tables/tbl_dimensions.html" target="_top" title="tbl_dimensions" alt="" coords="2205,4386,2473,4655">
+<area shape="rect" id="node5" href="tables/tbl_ceramics.html" target="_top" title="tbl_ceramics" alt="" coords="3365,6159,3610,6370">
+<area shape="rect" id="node27" href="tables/tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="1629,5230,1909,5440">
+<area shape="rect" id="node130" href="tables/tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="2824,7251,3105,7432">
+<area shape="rect" id="node6" href="tables/tbl_submission_task_types.html" target="_top" title="tbl_submission_task_types" alt="" coords="1598,10348,1939,10500">
+<area shape="rect" id="node7" href="tables/tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="2220,3614,2459,3854">
+<area shape="rect" id="node116" href="tables/tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="739,7658,937,8074">
+<area shape="rect" id="node8" href="tables/tbl_sample_locations.html" target="_top" title="tbl_sample_locations" alt="" coords="2821,6795,3108,7006">
+<area shape="rect" id="node44" href="tables/tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="2195,6970,2483,7239">
+<area shape="rect" id="node141" href="tables/tbl_sample_location_types.html" target="_top" title="tbl_sample_location_types" alt="" coords="2170,7328,2509,7510">
+<area shape="rect" id="node9" href="tables/tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="2231,9147,2448,9358">
+<area shape="rect" id="node121" href="tables/tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="1648,9080,1889,9408">
+<area shape="rect" id="node10" href="tables/tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="2181,2727,2498,2938">
+<area shape="rect" id="node127" href="tables/tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="1583,5956,1954,6167">
+<area shape="rect" id="node11" href="tables/tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="1628,1086,1909,1267">
+<area shape="rect" id="node12" href="tables/tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="2212,11044,2467,11226">
+<area shape="rect" id="node13" href="tables/tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="2200,3871,2479,4111">
+<area shape="rect" id="node14" href="tables/tbl_abundance_properties.html" target="_top" title="tbl_abundance_properties" alt="" coords="3768,670,4104,851">
+<area shape="rect" id="node47" href="tables/tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="3351,472,3623,712">
+<area shape="rect" id="node55" href="tables/tbl_property_types.html" target="_top" title="tbl_property_types" alt="" coords="3347,1842,3627,2140">
+<area shape="rect" id="node15" href="tables/tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="5,675,288,856">
+<area shape="rect" id="node16" href="tables/tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="3753,238,4119,419">
+<area shape="rect" id="node137" href="tables/tbl_modification_types.html" target="_top" title="tbl_modification_types" alt="" coords="3316,274,3659,455">
+<area shape="rect" id="node17" href="tables/tbl_sample_descriptions.html" target="_top" title="tbl_sample_descriptions" alt="" coords="2806,7023,3123,7234">
+<area shape="rect" id="node70" href="tables/tbl_sample_description_types.html" target="_top" title="tbl_sample_description_types" alt="" coords="2154,8642,2525,8823">
+<area shape="rect" id="node18" href="tables/tbl_relative_age_types.html" target="_top" title="tbl_relative_age_types" alt="" coords="1133,8611,1435,8792">
+<area shape="rect" id="node19" href="tables/tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="2155,6771,2523,6952">
+<area shape="rect" id="node86" href="tables/tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="1617,6184,1921,6483">
+<area shape="rect" id="node20" href="tables/tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="2219,2440,2459,2710">
+<area shape="rect" id="node22" href="tables/tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="1648,5686,1889,5867">
+<area shape="rect" id="node21" href="tables/tbl_age_types.html" target="_top" title="tbl_age_types" alt="" coords="3379,8546,3596,8727">
+<area shape="rect" id="node23" href="tables/tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="659,4206,1017,4504">
+<area shape="rect" id="node108" href="tables/tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="1126,4027,1442,4414">
+<area shape="rect" id="node24" href="tables/tbl_sample_location_type_sampli_68b7010d.html" target="_top" title="tbl_sample_location_type_sampling_contexts" alt="" coords="2705,8407,3224,8588">
+<area shape="rect" id="node34" href="tables/tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="1061,8239,1507,8450">
+<area shape="rect" id="node25" href="tables/tbl_feature_properties.html" target="_top" title="tbl_feature_properties" alt="" coords="3785,1924,4087,2106">
+<area shape="rect" id="node87" href="tables/tbl_features.html" target="_top" title="tbl_features" alt="" coords="3367,2176,3607,2387">
+<area shape="rect" id="node26" href="tables/tbl_analysis_boolean_values.html" target="_top" title="tbl_analysis_boolean_values" alt="" coords="3757,3895,4115,4076">
+<area shape="rect" id="node63" href="tables/tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="3352,4462,3623,4848">
+<area shape="rect" id="node76" href="tables/tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="1121,5366,1447,5723">
+<area shape="rect" id="node28" href="tables/tbl_site_type_groups.html" target="_top" title="tbl_site_type_groups" alt="" coords="696,578,980,818">
+<area shape="rect" id="node29" href="tables/tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="3357,8259,3617,8528">
+<area shape="rect" id="node45" href="tables/tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1644,8582,1893,9027">
+<area shape="rect" id="node93" href="tables/tbl_dating_uncertainty.html" target="_top" title="tbl_dating_uncertainty" alt="" coords="2813,9191,3117,9372">
+<area shape="rect" id="node30" href="tables/tbl_identification_levels.html" target="_top" title="tbl_identification_levels" alt="" coords="3330,730,3645,940">
+<area shape="rect" id="node31" href="tables/tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="1582,7968,1955,8150">
+<area shape="rect" id="node32" href="tables/tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="2205,254,2473,640">
+<area shape="rect" id="node146" href="tables/tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="1137,1666,1431,1818">
+<area shape="rect" id="node33" href="tables/tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="2180,6302,2499,6483">
+<area shape="rect" id="node35" href="tables/tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="2147,8143,2531,8354">
+<area shape="rect" id="node102" href="tables/tbl_sample_group_description_types.html" target="_top" title="tbl_sample_group_description_types" alt="" coords="1551,8311,1987,8492">
+<area shape="rect" id="node36" href="tables/tbl_years_types.html" target="_top" title="tbl_years_types" alt="" coords="4379,5631,4613,5812">
+<area shape="rect" id="node37" href="tables/tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="1143,9710,1425,10008">
+<area shape="rect" id="node38" href="tables/tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="2856,9464,3073,9851">
+<area shape="rect" id="node39" href="tables/tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="3807,9308,4065,9490">
+<area shape="rect" id="node41" href="tables/tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="3355,7464,3619,7880">
+<area shape="rect" id="node40" href="tables/tbl_analysis_categorical_values.html" target="_top" title="tbl_analysis_categorical_values" alt="" coords="3742,5380,4130,5591">
+<area shape="rect" id="node51" href="tables/tbl_value_type_items.html" target="_top" title="tbl_value_type_items" alt="" coords="3344,5064,3631,5246">
+<area shape="rect" id="node89" href="tables/tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="1163,7206,1405,7446">
+<area shape="rect" id="node42" href="tables/tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="3298,2734,3677,2974">
+<area shape="rect" id="node133" href="tables/tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="2751,2698,3178,2938">
+<area shape="rect" id="node43" href="tables/tbl_analysis_numerical_values.html" target="_top" title="tbl_analysis_numerical_values" alt="" coords="3748,4263,4124,4474">
+<area shape="rect" id="node104" href="tables/tbl_value_qualifier_symbols.html" target="_top" title="tbl_value_qualifier_symbols" alt="" coords="3311,4866,3663,5047">
+<area shape="rect" id="node58" href="tables/tbl_sample_types.html" target="_top" title="tbl_sample_types" alt="" coords="1643,6764,1895,6946">
+<area shape="rect" id="node153" href="tables/tbl_alt_ref_types.html" target="_top" title="tbl_alt_ref_types" alt="" coords="1647,7734,1891,7915">
+<area shape="rect" id="node78" href="tables/tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="1181,8892,1387,9132">
+<area shape="rect" id="node46" href="tables/tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="2167,6572,2512,6754">
+<area shape="rect" id="node75" href="tables/tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="2802,766,3127,976">
+<area shape="rect" id="node48" href="tables/tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="3768,2854,4104,3035">
+<area shape="rect" id="node49" href="tables/tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="1667,6536,1870,6747">
+<area shape="rect" id="node50" href="tables/tbl_value_types.html" target="_top" title="tbl_value_types" alt="" coords="2222,2991,2457,3290">
+<area shape="rect" id="node97" href="tables/tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="1649,7434,1888,7644">
+<area shape="rect" id="node107" href="tables/tbl_units.html" target="_top" title="tbl_units" alt="" coords="747,3951,929,4162">
+<area shape="rect" id="node52" href="tables/tbl_data_providers.html" target="_top" title="tbl_data_providers" alt="" coords="1152,10730,1416,11028">
+<area shape="rect" id="node54" href="tables/tbl_sample_alt_refs.html" target="_top" title="tbl_sample_alt_refs" alt="" coords="2829,6567,3100,6778">
+<area shape="rect" id="node131" href="tables/tbl_property_type_groups.html" target="_top" title="tbl_property_type_groups" alt="" coords="2798,1971,3131,2152">
+<area shape="rect" id="node143" href="tables/tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="2839,3036,3090,3306">
+<area shape="rect" id="node56" href="tables/tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="2233,6015,2445,6284">
+<area shape="rect" id="node57" href="tables/tbl_location_types.html" target="_top" title="tbl_location_types" alt="" coords="708,8951,968,9132">
+<area shape="rect" id="node59" href="tables/tbl_data_type_groups.html" target="_top" title="tbl_data_type_groups" alt="" coords="1138,7463,1430,7644">
+<area shape="rect" id="node60" href="tables/tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="2177,730,2502,940">
+<area shape="rect" id="node94" href="tables/tbl_taxa_tree_orders.html" target="_top" title="tbl_taxa_tree_orders" alt="" coords="332,527,615,738">
+<area shape="rect" id="node62" href="tables/tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="1674,5458,1863,5668">
+<area shape="rect" id="node64" href="tables/tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="1619,691,1918,960">
+<area shape="rect" id="node65" href="tables/tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="1160,11199,1408,11498">
+<area shape="rect" id="node67" href="tables/tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="3281,7236,3693,7418">
+<area shape="rect" id="node68" href="tables/tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="3327,9038,3647,9366">
+<area shape="rect" id="node69" href="tables/tbl_site_properties.html" target="_top" title="tbl_site_properties" alt="" coords="3803,1643,4069,1824">
+<area shape="rect" id="node71" href="tables/tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="3800,895,4072,1164">
+<area shape="rect" id="node72" href="tables/tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="1641,9426,1896,9607">
+<area shape="rect" id="node73" href="tables/tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="1640,10062,1897,10331">
+<area shape="rect" id="node145" href="tables/tbl_project_types.html" target="_top" title="tbl_project_types" alt="" coords="1159,10062,1409,10243">
+<area shape="rect" id="node154" href="tables/tbl_project_stages.html" target="_top" title="tbl_project_stages" alt="" coords="1153,10260,1415,10442">
+<area shape="rect" id="node74" href="tables/tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="2164,4128,2515,4368">
+<area shape="rect" id="node139" href="tables/tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="703,4724,973,4906">
+<area shape="rect" id="node77" href="tables/tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="2810,5282,3119,5551">
+<area shape="rect" id="node79" href="tables/tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="3372,9383,3603,9564">
+<area shape="rect" id="node80" href="tables/tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="3761,458,4111,639">
+<area shape="rect" id="node81" href="tables/tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="2152,10716,2527,10898">
+<area shape="rect" id="node82" href="tables/tbl_analysis_identifiers.html" target="_top" title="tbl_analysis_identifiers" alt="" coords="3782,4094,4090,4246">
+<area shape="rect" id="node83" href="tables/tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="1635,6963,1903,7144">
+<area shape="rect" id="node84" href="tables/tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="2153,1030,2526,1299">
+<area shape="rect" id="node85" href="tables/tbl_sample_coordinates.html" target="_top" title="tbl_sample_coordinates" alt="" coords="3301,3530,3674,3770">
+<area shape="rect" id="node119" href="tables/tbl_feature_types.html" target="_top" title="tbl_feature_types" alt="" coords="2819,2206,3111,2387">
+<area shape="rect" id="node88" href="tables/tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="1159,9475,1409,9656">
+<area shape="rect" id="node90" href="tables/tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="1640,10518,1897,10992">
+<area shape="rect" id="node150" href="tables/tbl_submission_states.html" target="_top" title="tbl_submission_states" alt="" coords="1135,10459,1433,10611">
+<area shape="rect" id="node91" href="tables/tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="1140,4854,1428,5123">
+<area shape="rect" id="node92" href="tables/tbl_submission_tasks.html" target="_top" title="tbl_submission_tasks" alt="" coords="2195,10430,2484,10699">
+<area shape="rect" id="node95" href="tables/tbl_sample_horizons.html" target="_top" title="tbl_sample_horizons" alt="" coords="2824,6054,3105,6235">
+<area shape="rect" id="node96" href="tables/tbl_sample_group_description_ty_6c2e420e.html" target="_top" title="tbl_sample_group_description_type_sampling_contexts" alt="" coords="2031,8840,2648,9022">
+<area shape="rect" id="node99" href="tables/tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="1643,7199,1895,7380">
+<area shape="rect" id="node100" href="tables/tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="2186,1316,2493,1703">
+<area shape="rect" id="node101" href="tables/tbl_sample_colours.html" target="_top" title="tbl_sample_colours" alt="" coords="2830,5568,3099,5750">
+<area shape="rect" id="node103" href="tables/tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="2199,4672,2480,4912">
+<area shape="rect" id="node105" href="tables/tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="1632,4796,1905,5007">
+<area shape="rect" id="node106" href="tables/tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="2179,7599,2500,7898">
+<area shape="rect" id="node109" href="tables/tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="2873,8963,3056,9174">
+<area shape="rect" id="node110" href="tables/tbl_analysis_integer_ranges.html" target="_top" title="tbl_analysis_integer_ranges" alt="" coords="3759,4719,4113,5047">
+<area shape="rect" id="node111" href="tables/tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="2165,1720,2513,1931">
+<area shape="rect" id="node112" href="tables/tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="3763,5719,4109,6135">
+<area shape="rect" id="node134" href="tables/tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="1670,9660,1867,9900">
+<area shape="rect" id="node113" href="tables/tbl_sample_images.html" target="_top" title="tbl_sample_images" alt="" coords="2831,5767,3099,6036">
+<area shape="rect" id="node114" href="tables/tbl_sample_notes.html" target="_top" title="tbl_sample_notes" alt="" coords="2839,6339,3091,6550">
+<area shape="rect" id="node115" href="tables/tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="1589,5060,1949,5212">
+<area shape="rect" id="node117" href="tables/tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="2219,9924,2459,10311">
+<area shape="rect" id="node118" href="tables/tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="2822,10942,3107,11182">
+<area shape="rect" id="node120" href="tables/tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="2835,4667,3094,4848">
+<area shape="rect" id="node142" href="tables/tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="2183,4930,2495,5228">
+<area shape="rect" id="node122" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="4379,3196,4605,3407">
+<area shape="rect" id="node123" href="tables/tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="2139,1948,2540,2130">
+<area shape="rect" id="node124" href="tables/tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="2777,3455,3152,3695">
+<area shape="rect" id="node125" href="tables/tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="2199,9432,2480,9672">
+<area shape="rect" id="node126" href="tables/tbl_analysis_value_dimensions.html" target="_top" title="tbl_analysis_value_dimensions" alt="" coords="3746,3527,4126,3708">
+<area shape="rect" id="node129" href="tables/tbl_sample_description_sample_g_89e77fa2.html" target="_top" title="tbl_sample_description_sample_group_contexts" alt="" coords="2692,8690,3237,8871">
+<area shape="rect" id="node132" href="tables/tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="2223,5354,2456,5711">
+<area shape="rect" id="node135" href="tables/tbl_physical_sample_features.html" target="_top" title="tbl_physical_sample_features" alt="" coords="3752,2418,4120,2599">
+<area shape="rect" id="node136" href="tables/tbl_analysis_numerical_ranges.html" target="_top" title="tbl_analysis_numerical_ranges" alt="" coords="3746,5064,4126,5363">
+<area shape="rect" id="node138" href="tables/tbl_analysis_integer_values.html" target="_top" title="tbl_analysis_integer_values" alt="" coords="3761,4491,4111,4702">
+<area shape="rect" id="node140" href="tables/tbl_site_site_types.html" target="_top" title="tbl_site_site_types" alt="" coords="1637,434,1900,674">
+<area shape="rect" id="node148" href="tables/tbl_site_types.html" target="_top" title="tbl_site_types" alt="" coords="1169,558,1399,768">
+<area shape="rect" id="node155" href="tables/tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="1631,4539,1907,4779">
+<area shape="rect" id="node144" href="tables/tbl_tephra_dates.html" target="_top" title="tbl_tephra_dates" alt="" coords="3357,8780,3617,9020">
+<area shape="rect" id="node147" href="tables/tbl_temperatures.html" target="_top" title="tbl_temperatures" alt="" coords="4379,6098,4631,6250">
+<area shape="rect" id="node149" href="tables/tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="2197,8443,2482,8624">
+<area shape="rect" id="node151" href="tables/tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="2173,5728,2506,5998">
+<area shape="rect" id="node152" href="tables/tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="2804,10655,3125,10924">
+<area shape="rect" id="node156" href="tables/tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="2225,2147,2454,2387">
+<area shape="rect" id="node157" href="tables/tbl_analysis_notes.html" target="_top" title="tbl_analysis_notes" alt="" coords="3805,3726,4067,3878">
+<area shape="rect" id="node158" href="tables/tbl_analysis_entity_dimensions.html" target="_top" title="tbl_analysis_entity_dimensions" alt="" coords="3295,5510,3680,5720">
+<area shape="rect" id="node159" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="4379,3818,4653,4063">
+<area shape="rect" id="node160" href="tables/view_taxa_alphabetically.html" target="_top" title="view_taxa_alphabetically" alt="" coords="4379,4386,4703,4719">
+<area shape="rect" id="node161" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="4379,5130,4643,5375">
+<area shape="rect" id="node162" href="tables/view_typed_analysis_tables.html" target="_top" title="view_typed_analysis_tables" alt="" coords="4379,6559,4727,6687">
+<area shape="rect" id="node163" href="tables/view_typed_analysis_values.html" target="_top" title="view_typed_analysis_values" alt="" coords="4379,7026,4729,7124">
+<area shape="rect" id="node164" href="tables/view_bibliography_references.html" target="_top" title="view_bibliography_references" alt="" coords="4379,7463,4749,7562">
+<area shape="rect" id="node165" href="tables/typed_analysis_values.html" target="_top" title="typed_analysis_values" alt="" coords="4379,7871,4676,7999">
+</map>
+                                        <a name='diagram'><img id="largeDegreeImg" src="diagrams/summary/relationships.real.large.png" usemap="#largeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="compactimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactImpliedRelationshipsDiagram" name="compactImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="2004,398,2292,574">
+<area shape="rect" id="node61" href="tables/tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="1554,322,1850,498">
+<area shape="rect" id="node2" href="tables/tbl_value_qualifiers.html" target="_top" title="tbl_value_qualifiers" alt="" coords="3067,5918,3340,6065">
+<area shape="rect" id="node3" href="tables/tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="3015,4319,3391,4495">
+<area shape="rect" id="node66" href="tables/tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="2489,1411,2777,1587">
+<area shape="rect" id="node98" href="tables/tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="1227,7567,1429,7714">
+<area shape="rect" id="node4" href="tables/tbl_measured_value_dimensions.html" target="_top" title="tbl_measured_value_dimensions" alt="" coords="4601,3214,4999,3390">
+<area shape="rect" id="node53" href="tables/tbl_measured_values.html" target="_top" title="tbl_measured_values" alt="" coords="4207,4765,4495,4911">
+<area shape="rect" id="node128" href="tables/tbl_dimensions.html" target="_top" title="tbl_dimensions" alt="" coords="3069,1863,3337,2039">
+<area shape="rect" id="node5" href="tables/tbl_ceramics.html" target="_top" title="tbl_ceramics" alt="" coords="4229,3886,4474,4062">
+<area shape="rect" id="node27" href="tables/tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="2493,2538,2773,2685">
+<area shape="rect" id="node130" href="tables/tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="3688,6311,3969,6487">
+<area shape="rect" id="node6" href="tables/tbl_submission_task_types.html" target="_top" title="tbl_submission_task_types" alt="" coords="2462,6951,2803,7069">
+<area shape="rect" id="node7" href="tables/tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="3084,1641,3323,1846">
+<area shape="rect" id="node116" href="tables/tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="1603,4755,1801,4902">
+<area shape="rect" id="node8" href="tables/tbl_sample_locations.html" target="_top" title="tbl_sample_locations" alt="" coords="3685,5437,3972,5613">
+<area shape="rect" id="node44" href="tables/tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="3059,4965,3347,5170">
+<area shape="rect" id="node141" href="tables/tbl_sample_location_types.html" target="_top" title="tbl_sample_location_types" alt="" coords="3034,5331,3373,5478">
+<area shape="rect" id="node9" href="tables/tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="2524,3575,2741,3722">
+<area shape="rect" id="node121" href="tables/tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="2027,3647,2269,3853">
+<area shape="rect" id="node10" href="tables/tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="3045,2905,3362,3110">
+<area shape="rect" id="node127" href="tables/tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="2447,4133,2818,4279">
+<area shape="rect" id="node11" href="tables/tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="2492,594,2773,711">
+<area shape="rect" id="node12" href="tables/tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="3076,7750,3331,7867">
+<area shape="rect" id="node13" href="tables/tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="3064,2057,3343,2262">
+<area shape="rect" id="node14" href="tables/tbl_abundance_properties.html" target="_top" title="tbl_abundance_properties" alt="" coords="4632,811,4968,987">
+<area shape="rect" id="node47" href="tables/tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="4215,647,4487,853">
+<area shape="rect" id="node55" href="tables/tbl_property_types.html" target="_top" title="tbl_property_types" alt="" coords="4211,1999,4491,2263">
+<area shape="rect" id="node15" href="tables/tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="851,2045,1133,2191">
+<area shape="rect" id="node16" href="tables/tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="4617,425,4983,601">
+<area shape="rect" id="node137" href="tables/tbl_modification_types.html" target="_top" title="tbl_modification_types" alt="" coords="4180,483,4523,630">
+<area shape="rect" id="node17" href="tables/tbl_sample_descriptions.html" target="_top" title="tbl_sample_descriptions" alt="" coords="3670,5889,3987,6065">
+<area shape="rect" id="node70" href="tables/tbl_sample_description_types.html" target="_top" title="tbl_sample_description_types" alt="" coords="3018,6118,3389,6265">
+<area shape="rect" id="node18" href="tables/tbl_relative_age_types.html" target="_top" title="tbl_relative_age_types" alt="" coords="1177,8478,1479,8625">
+<area shape="rect" id="node19" href="tables/tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="3019,5689,3387,5865">
+<area shape="rect" id="node86" href="tables/tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="2481,5969,2785,6203">
+<area shape="rect" id="node20" href="tables/tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="3083,4735,3323,4911">
+<area shape="rect" id="node22" href="tables/tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="2512,5407,2753,5554">
+<area shape="rect" id="node21" href="tables/tbl_age_types.html" target="_top" title="tbl_age_types" alt="" coords="4243,7438,4460,7555">
+<area shape="rect" id="node23" href="tables/tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="1523,7027,1881,7203">
+<area shape="rect" id="node108" href="tables/tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="1990,6863,2306,7039">
+<area shape="rect" id="node24" href="tables/tbl_sample_location_type_sampli_68b7010d.html" target="_top" title="tbl_sample_location_type_sampling_contexts" alt="" coords="3569,6118,4088,6294">
+<area shape="rect" id="node34" href="tables/tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="1925,6481,2371,6598">
+<area shape="rect" id="node25" href="tables/tbl_feature_properties.html" target="_top" title="tbl_feature_properties" alt="" coords="4649,1266,4951,1442">
+<area shape="rect" id="node87" href="tables/tbl_features.html" target="_top" title="tbl_features" alt="" coords="4231,1215,4471,1362">
+<area shape="rect" id="node26" href="tables/tbl_analysis_boolean_values.html" target="_top" title="tbl_analysis_boolean_values" alt="" coords="4621,3751,4979,3898">
+<area shape="rect" id="node63" href="tables/tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="4216,4243,4487,4419">
+<area shape="rect" id="node76" href="tables/tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="1985,2679,2311,2973">
+<area shape="rect" id="node28" href="tables/tbl_site_type_groups.html" target="_top" title="tbl_site_type_groups" alt="" coords="1560,7819,1844,7966">
+<area shape="rect" id="node29" href="tables/tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="4221,6169,4481,6403">
+<area shape="rect" id="node45" href="tables/tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1577,8543,1827,8749">
+<area shape="rect" id="node93" href="tables/tbl_dating_uncertainty.html" target="_top" title="tbl_dating_uncertainty" alt="" coords="3677,6706,3981,6853">
+<area shape="rect" id="node30" href="tables/tbl_identification_levels.html" target="_top" title="tbl_identification_levels" alt="" coords="4194,870,4509,1017">
+<area shape="rect" id="node31" href="tables/tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="2446,3969,2819,4115">
+<area shape="rect" id="node32" href="tables/tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="3069,166,3337,459">
+<area shape="rect" id="node146" href="tables/tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="2001,591,2295,738">
+<area shape="rect" id="node33" href="tables/tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="3044,6282,3363,6429">
+<area shape="rect" id="node35" href="tables/tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="3011,6610,3395,6786">
+<area shape="rect" id="node102" href="tables/tbl_sample_group_description_types.html" target="_top" title="tbl_sample_group_description_types" alt="" coords="2415,6643,2851,6790">
+<area shape="rect" id="node36" href="tables/tbl_years_types.html" target="_top" title="tbl_years_types" alt="" coords="5,6511,240,6658">
+<area shape="rect" id="node37" href="tables/tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="2007,7538,2289,7773">
+<area shape="rect" id="node38" href="tables/tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="3720,6541,3937,6687">
+<area shape="rect" id="node39" href="tables/tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="4671,6159,4929,6335">
+<area shape="rect" id="node41" href="tables/tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="4219,6643,4483,6878">
+<area shape="rect" id="node40" href="tables/tbl_analysis_categorical_values.html" target="_top" title="tbl_analysis_categorical_values" alt="" coords="4606,3447,4994,3623">
+<area shape="rect" id="node51" href="tables/tbl_value_type_items.html" target="_top" title="tbl_value_type_items" alt="" coords="4208,4079,4495,4226">
+<area shape="rect" id="node89" href="tables/tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="1581,6863,1823,7010">
+<area shape="rect" id="node42" href="tables/tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="4162,2683,4541,2859">
+<area shape="rect" id="node133" href="tables/tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="3615,2098,4042,2274">
+<area shape="rect" id="node43" href="tables/tbl_analysis_numerical_values.html" target="_top" title="tbl_analysis_numerical_values" alt="" coords="4612,4354,4988,4530">
+<area shape="rect" id="node104" href="tables/tbl_value_qualifier_symbols.html" target="_top" title="tbl_value_qualifier_symbols" alt="" coords="4175,4978,4527,5154">
+<area shape="rect" id="node58" href="tables/tbl_sample_types.html" target="_top" title="tbl_sample_types" alt="" coords="2507,4497,2759,4643">
+<area shape="rect" id="node153" href="tables/tbl_alt_ref_types.html" target="_top" title="tbl_alt_ref_types" alt="" coords="2511,4333,2755,4479">
+<area shape="rect" id="node78" href="tables/tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="889,5490,1095,5637">
+<area shape="rect" id="node46" href="tables/tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="3031,4126,3376,4302">
+<area shape="rect" id="node75" href="tables/tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="3666,1081,3991,1227">
+<area shape="rect" id="node48" href="tables/tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="4632,1887,4968,2063">
+<area shape="rect" id="node49" href="tables/tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="2531,2982,2734,3129">
+<area shape="rect" id="node50" href="tables/tbl_value_types.html" target="_top" title="tbl_value_types" alt="" coords="3086,4513,3321,4718">
+<area shape="rect" id="node97" href="tables/tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="2513,5178,2752,5354">
+<area shape="rect" id="node107" href="tables/tbl_units.html" target="_top" title="tbl_units" alt="" coords="1611,2118,1793,2294">
+<area shape="rect" id="node52" href="tables/tbl_data_providers.html" target="_top" title="tbl_data_providers" alt="" coords="2016,7257,2280,7521">
+<area shape="rect" id="node54" href="tables/tbl_sample_alt_refs.html" target="_top" title="tbl_sample_alt_refs" alt="" coords="3693,4378,3964,4583">
+<area shape="rect" id="node131" href="tables/tbl_property_type_groups.html" target="_top" title="tbl_property_type_groups" alt="" coords="3662,1934,3995,2081">
+<area shape="rect" id="node143" href="tables/tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="3703,2869,3954,3074">
+<area shape="rect" id="node56" href="tables/tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="3097,6446,3309,6593">
+<area shape="rect" id="node57" href="tables/tbl_location_types.html" target="_top" title="tbl_location_types" alt="" coords="547,5519,807,5666">
+<area shape="rect" id="node59" href="tables/tbl_data_type_groups.html" target="_top" title="tbl_data_type_groups" alt="" coords="2002,5207,2294,5354">
+<area shape="rect" id="node60" href="tables/tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="3041,477,3366,653">
+<area shape="rect" id="node94" href="tables/tbl_taxa_tree_orders.html" target="_top" title="tbl_taxa_tree_orders" alt="" coords="1187,381,1469,527">
+<area shape="rect" id="node62" href="tables/tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="2538,3146,2727,3322">
+<area shape="rect" id="node64" href="tables/tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="2483,4697,2782,4931">
+<area shape="rect" id="node65" href="tables/tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="1578,8350,1826,8526">
+<area shape="rect" id="node67" href="tables/tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="4145,4473,4557,4649">
+<area shape="rect" id="node68" href="tables/tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="4191,8082,4511,8258">
+<area shape="rect" id="node69" href="tables/tbl_site_properties.html" target="_top" title="tbl_site_properties" alt="" coords="4667,4741,4933,4917">
+<area shape="rect" id="node71" href="tables/tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="4664,1005,4936,1210">
+<area shape="rect" id="node72" href="tables/tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="2505,3339,2760,3486">
+<area shape="rect" id="node73" href="tables/tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="2504,8350,2761,8555">
+<area shape="rect" id="node145" href="tables/tbl_project_types.html" target="_top" title="tbl_project_types" alt="" coords="2023,8350,2273,8497">
+<area shape="rect" id="node154" href="tables/tbl_project_stages.html" target="_top" title="tbl_project_stages" alt="" coords="2017,8514,2279,8661">
+<area shape="rect" id="node74" href="tables/tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="3028,2279,3379,2485">
+<area shape="rect" id="node139" href="tables/tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="1567,1887,1837,2034">
+<area shape="rect" id="node77" href="tables/tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="3674,2521,3983,2755">
+<area shape="rect" id="node79" href="tables/tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="4236,5781,4467,5957">
+<area shape="rect" id="node80" href="tables/tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="4625,618,4975,794">
+<area shape="rect" id="node81" href="tables/tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="3016,8179,3391,8297">
+<area shape="rect" id="node82" href="tables/tbl_analysis_identifiers.html" target="_top" title="tbl_analysis_identifiers" alt="" coords="4646,3915,4954,4062">
+<area shape="rect" id="node83" href="tables/tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="2499,6450,2767,6626">
+<area shape="rect" id="node84" href="tables/tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="3017,1241,3390,1387">
+<area shape="rect" id="node85" href="tables/tbl_sample_coordinates.html" target="_top" title="tbl_sample_coordinates" alt="" coords="4165,2410,4538,2586">
+<area shape="rect" id="node119" href="tables/tbl_feature_types.html" target="_top" title="tbl_feature_types" alt="" coords="3683,1245,3975,1362">
+<area shape="rect" id="node88" href="tables/tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="2023,4978,2273,5125">
+<area shape="rect" id="node90" href="tables/tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="2504,7581,2761,7815">
+<area shape="rect" id="node150" href="tables/tbl_submission_states.html" target="_top" title="tbl_submission_states" alt="" coords="1999,7057,2297,7203">
+<area shape="rect" id="node91" href="tables/tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="2004,3870,2292,4075">
+<area shape="rect" id="node92" href="tables/tbl_submission_tasks.html" target="_top" title="tbl_submission_tasks" alt="" coords="3059,7498,3348,7733">
+<area shape="rect" id="node95" href="tables/tbl_sample_horizons.html" target="_top" title="tbl_sample_horizons" alt="" coords="3688,3551,3969,3727">
+<area shape="rect" id="node96" href="tables/tbl_sample_group_description_ty_6c2e420e.html" target="_top" title="tbl_sample_group_description_type_sampling_contexts" alt="" coords="2895,6803,3512,6979">
+<area shape="rect" id="node99" href="tables/tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="2507,7122,2759,7298">
+<area shape="rect" id="node100" href="tables/tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="3050,1405,3357,1551">
+<area shape="rect" id="node101" href="tables/tbl_sample_colours.html" target="_top" title="tbl_sample_colours" alt="" coords="3694,4185,3963,4361">
+<area shape="rect" id="node103" href="tables/tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="3063,2682,3344,2887">
+<area shape="rect" id="node105" href="tables/tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="2496,6221,2769,6397">
+<area shape="rect" id="node106" href="tables/tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="3043,3874,3364,4109">
+<area shape="rect" id="node109" href="tables/tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="3112,3487,3295,3693">
+<area shape="rect" id="node110" href="tables/tbl_analysis_integer_ranges.html" target="_top" title="tbl_analysis_integer_ranges" alt="" coords="4623,5157,4977,5362">
+<area shape="rect" id="node111" href="tables/tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="3029,706,3377,853">
+<area shape="rect" id="node112" href="tables/tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="4627,5379,4973,5673">
+<area shape="rect" id="node134" href="tables/tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="2534,4949,2731,5125">
+<area shape="rect" id="node113" href="tables/tbl_sample_images.html" target="_top" title="tbl_sample_images" alt="" coords="3695,5243,3963,5419">
+<area shape="rect" id="node114" href="tables/tbl_sample_notes.html" target="_top" title="tbl_sample_notes" alt="" coords="3703,4935,3955,5082">
+<area shape="rect" id="node115" href="tables/tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="2453,2338,2813,2485">
+<area shape="rect" id="node117" href="tables/tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="3083,7129,3323,7481">
+<area shape="rect" id="node118" href="tables/tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="3686,7662,3971,7867">
+<area shape="rect" id="node120" href="tables/tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="3699,2291,3958,2467">
+<area shape="rect" id="node142" href="tables/tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="3047,3710,3359,3857">
+<area shape="rect" id="node122" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="5419,1638,5645,1755">
+<area shape="rect" id="node123" href="tables/tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="3003,870,3404,1017">
+<area shape="rect" id="node124" href="tables/tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="3641,5666,4016,5871">
+<area shape="rect" id="node125" href="tables/tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="3063,3235,3344,3470">
+<area shape="rect" id="node126" href="tables/tbl_analysis_value_dimensions.html" target="_top" title="tbl_analysis_value_dimensions" alt="" coords="4610,2394,4990,2570">
+<area shape="rect" id="node129" href="tables/tbl_sample_description_sample_g_89e77fa2.html" target="_top" title="tbl_sample_description_sample_group_contexts" alt="" coords="3556,6873,4101,7049">
+<area shape="rect" id="node132" href="tables/tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="3087,7921,3320,8126">
+<area shape="rect" id="node135" href="tables/tbl_physical_sample_features.html" target="_top" title="tbl_physical_sample_features" alt="" coords="4616,1538,4984,1714">
+<area shape="rect" id="node136" href="tables/tbl_analysis_numerical_ranges.html" target="_top" title="tbl_analysis_numerical_ranges" alt="" coords="4610,4934,4990,5139">
+<area shape="rect" id="node138" href="tables/tbl_analysis_integer_values.html" target="_top" title="tbl_analysis_integer_values" alt="" coords="4625,4547,4975,4723">
+<area shape="rect" id="node140" href="tables/tbl_site_site_types.html" target="_top" title="tbl_site_site_types" alt="" coords="2501,7387,2764,7563">
+<area shape="rect" id="node148" href="tables/tbl_site_types.html" target="_top" title="tbl_site_types" alt="" coords="2033,7790,2263,7995">
+<area shape="rect" id="node155" href="tables/tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="2495,3739,2771,3915">
+<area shape="rect" id="node144" href="tables/tbl_tephra_dates.html" target="_top" title="tbl_tephra_dates" alt="" coords="4221,6421,4481,6626">
+<area shape="rect" id="node147" href="tables/tbl_temperatures.html" target="_top" title="tbl_temperatures" alt="" coords="5,7082,257,7199">
+<area shape="rect" id="node149" href="tables/tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="2005,8049,2291,8225">
+<area shape="rect" id="node151" href="tables/tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="3037,5495,3370,5671">
+<area shape="rect" id="node152" href="tables/tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="3668,8121,3989,8326">
+<area shape="rect" id="node156" href="tables/tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="3089,1106,3318,1223">
+<area shape="rect" id="node157" href="tables/tbl_analysis_notes.html" target="_top" title="tbl_analysis_notes" alt="" coords="4669,4079,4931,4226">
+<area shape="rect" id="node158" href="tables/tbl_analysis_entity_dimensions.html" target="_top" title="tbl_analysis_entity_dimensions" alt="" coords="4159,3397,4544,3573">
+<area shape="rect" id="node159" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="5689,1582,5964,1675">
+<area shape="rect" id="node160" href="tables/view_taxa_alphabetically.html" target="_top" title="view_taxa_alphabetically" alt="" coords="2471,323,2795,505">
+<area shape="rect" id="node161" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="5695,1693,5959,1786">
+<area shape="rect" id="node162" href="tables/view_typed_analysis_tables.html" target="_top" title="view_typed_analysis_tables" alt="" coords="5419,2263,5767,2327">
+<area shape="rect" id="node163" href="tables/view_typed_analysis_values.html" target="_top" title="view_typed_analysis_values" alt="" coords="4625,4243,4975,4337">
+<area shape="rect" id="node164" href="tables/view_bibliography_references.html" target="_top" title="view_bibliography_references" alt="" coords="5419,2805,5789,2869">
+<area shape="rect" id="node165" href="tables/typed_analysis_values.html" target="_top" title="typed_analysis_values" alt="" coords="4651,3641,4949,3734">
+</map>
+                                        <a name='diagram'><img id="compactimpliedDegreeImg" src="diagrams/summary/relationships.implied.compact.png" usemap="#compactImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeImpliedRelationshipsDiagram" name="largeImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/tbl_taxa_tree_genera.html" target="_top" title="tbl_taxa_tree_genera" alt="" coords="2071,411,2359,593">
+<area shape="rect" id="node61" href="tables/tbl_taxa_tree_families.html" target="_top" title="tbl_taxa_tree_families" alt="" coords="1621,337,1917,518">
+<area shape="rect" id="node2" href="tables/tbl_value_qualifiers.html" target="_top" title="tbl_value_qualifiers" alt="" coords="3133,8457,3407,8638">
+<area shape="rect" id="node3" href="tables/tbl_taxa_reference_specimens.html" target="_top" title="tbl_taxa_reference_specimens" alt="" coords="3082,5527,3458,5738">
+<area shape="rect" id="node66" href="tables/tbl_taxa_tree_master.html" target="_top" title="tbl_taxa_tree_master" alt="" coords="2555,2267,2843,2478">
+<area shape="rect" id="node98" href="tables/tbl_contacts.html" target="_top" title="tbl_contacts" alt="" coords="1293,10025,1496,10382">
+<area shape="rect" id="node4" href="tables/tbl_measured_value_dimensions.html" target="_top" title="tbl_measured_value_dimensions" alt="" coords="4668,5981,5065,6191">
+<area shape="rect" id="node53" href="tables/tbl_measured_values.html" target="_top" title="tbl_measured_values" alt="" coords="4274,7035,4562,7217">
+<area shape="rect" id="node128" href="tables/tbl_dimensions.html" target="_top" title="tbl_dimensions" alt="" coords="3136,2894,3404,3163">
+<area shape="rect" id="node5" href="tables/tbl_ceramics.html" target="_top" title="tbl_ceramics" alt="" coords="4295,6625,4541,6835">
+<area shape="rect" id="node27" href="tables/tbl_ceramics_lookup.html" target="_top" title="tbl_ceramics_lookup" alt="" coords="2559,3670,2839,3881">
+<area shape="rect" id="node130" href="tables/tbl_analysis_entities.html" target="_top" title="tbl_analysis_entities" alt="" coords="3755,7546,4036,7727">
+<area shape="rect" id="node6" href="tables/tbl_submission_task_types.html" target="_top" title="tbl_submission_task_types" alt="" coords="2529,9509,2870,9661">
+<area shape="rect" id="node7" href="tables/tbl_text_biology.html" target="_top" title="tbl_text_biology" alt="" coords="3151,2637,3389,2877">
+<area shape="rect" id="node116" href="tables/tbl_biblio.html" target="_top" title="tbl_biblio" alt="" coords="1669,6501,1868,6917">
+<area shape="rect" id="node8" href="tables/tbl_sample_locations.html" target="_top" title="tbl_sample_locations" alt="" coords="3752,6989,4039,7199">
+<area shape="rect" id="node44" href="tables/tbl_physical_samples.html" target="_top" title="tbl_physical_samples" alt="" coords="3126,6394,3414,6663">
+<area shape="rect" id="node141" href="tables/tbl_sample_location_types.html" target="_top" title="tbl_sample_location_types" alt="" coords="3101,7274,3439,7455">
+<area shape="rect" id="node9" href="tables/tbl_rdb_codes.html" target="_top" title="tbl_rdb_codes" alt="" coords="2591,4487,2808,4698">
+<area shape="rect" id="node121" href="tables/tbl_rdb_systems.html" target="_top" title="tbl_rdb_systems" alt="" coords="2094,4639,2335,4967">
+<area shape="rect" id="node10" href="tables/tbl_taxonomic_order.html" target="_top" title="tbl_taxonomic_order" alt="" coords="3111,3726,3429,3937">
+<area shape="rect" id="node127" href="tables/tbl_taxonomic_order_systems.html" target="_top" title="tbl_taxonomic_order_systems" alt="" coords="2514,4718,2885,4929">
+<area shape="rect" id="node11" href="tables/tbl_languages.html" target="_top" title="tbl_languages" alt="" coords="2559,757,2840,938">
+<area shape="rect" id="node12" href="tables/tbl_contact_types.html" target="_top" title="tbl_contact_types" alt="" coords="3143,9785,3397,9966">
+<area shape="rect" id="node13" href="tables/tbl_taxonomy_notes.html" target="_top" title="tbl_taxonomy_notes" alt="" coords="3131,3217,3409,3457">
+<area shape="rect" id="node14" href="tables/tbl_abundance_properties.html" target="_top" title="tbl_abundance_properties" alt="" coords="4699,1403,5035,1585">
+<area shape="rect" id="node47" href="tables/tbl_abundances.html" target="_top" title="tbl_abundances" alt="" coords="4282,1206,4554,1446">
+<area shape="rect" id="node55" href="tables/tbl_property_types.html" target="_top" title="tbl_property_types" alt="" coords="4278,3031,4558,3330">
+<area shape="rect" id="node15" href="tables/tbl_record_types.html" target="_top" title="tbl_record_types" alt="" coords="917,2145,1200,2326">
+<area shape="rect" id="node16" href="tables/tbl_abundance_modifications.html" target="_top" title="tbl_abundance_modifications" alt="" coords="4683,971,5050,1153">
+<area shape="rect" id="node137" href="tables/tbl_modification_types.html" target="_top" title="tbl_modification_types" alt="" coords="4247,1007,4589,1189">
+<area shape="rect" id="node17" href="tables/tbl_sample_descriptions.html" target="_top" title="tbl_sample_descriptions" alt="" coords="3737,6761,4054,6971">
+<area shape="rect" id="node70" href="tables/tbl_sample_description_types.html" target="_top" title="tbl_sample_description_types" alt="" coords="3085,6753,3455,6934">
+<area shape="rect" id="node18" href="tables/tbl_relative_age_types.html" target="_top" title="tbl_relative_age_types" alt="" coords="1244,8289,1545,8470">
+<area shape="rect" id="node19" href="tables/tbl_sample_group_references.html" target="_top" title="tbl_sample_group_references" alt="" coords="3086,7473,3454,7654">
+<area shape="rect" id="node86" href="tables/tbl_sample_groups.html" target="_top" title="tbl_sample_groups" alt="" coords="2547,7773,2851,8071">
+<area shape="rect" id="node20" href="tables/tbl_taxa_images.html" target="_top" title="tbl_taxa_images" alt="" coords="3150,6071,3390,6341">
+<area shape="rect" id="node22" href="tables/tbl_image_types.html" target="_top" title="tbl_image_types" alt="" coords="2579,7098,2820,7279">
+<area shape="rect" id="node21" href="tables/tbl_age_types.html" target="_top" title="tbl_age_types" alt="" coords="4309,8207,4527,8389">
+<area shape="rect" id="node23" href="tables/tbl_site_preservation_status.html" target="_top" title="tbl_site_preservation_status" alt="" coords="1589,8843,1948,9142">
+<area shape="rect" id="node108" href="tables/tbl_sites.html" target="_top" title="tbl_sites" alt="" coords="2057,8638,2373,9025">
+<area shape="rect" id="node24" href="tables/tbl_sample_location_type_sampli_68b7010d.html" target="_top" title="tbl_sample_location_type_sampling_contexts" alt="" coords="3636,8095,4155,8277">
+<area shape="rect" id="node34" href="tables/tbl_sample_group_sampling_contexts.html" target="_top" title="tbl_sample_group_sampling_contexts" alt="" coords="1992,7923,2437,8134">
+<area shape="rect" id="node25" href="tables/tbl_feature_properties.html" target="_top" title="tbl_feature_properties" alt="" coords="4716,2210,5017,2391">
+<area shape="rect" id="node87" href="tables/tbl_features.html" target="_top" title="tbl_features" alt="" coords="4298,2079,4538,2290">
+<area shape="rect" id="node26" href="tables/tbl_analysis_boolean_values.html" target="_top" title="tbl_analysis_boolean_values" alt="" coords="4688,5782,5045,5963">
+<area shape="rect" id="node63" href="tables/tbl_analysis_values.html" target="_top" title="tbl_analysis_values" alt="" coords="4283,6022,4553,6409">
+<area shape="rect" id="node76" href="tables/tbl_methods.html" target="_top" title="tbl_methods" alt="" coords="2051,3577,2378,3934">
+<area shape="rect" id="node28" href="tables/tbl_site_type_groups.html" target="_top" title="tbl_site_type_groups" alt="" coords="1627,9807,1911,10047">
+<area shape="rect" id="node29" href="tables/tbl_relative_dates.html" target="_top" title="tbl_relative_dates" alt="" coords="4288,7289,4548,7558">
+<area shape="rect" id="node45" href="tables/tbl_relative_ages.html" target="_top" title="tbl_relative_ages" alt="" coords="1644,8259,1893,8705">
+<area shape="rect" id="node93" href="tables/tbl_dating_uncertainty.html" target="_top" title="tbl_dating_uncertainty" alt="" coords="3743,8553,4047,8734">
+<area shape="rect" id="node30" href="tables/tbl_identification_levels.html" target="_top" title="tbl_identification_levels" alt="" coords="4261,1463,4575,1674">
+<area shape="rect" id="node31" href="tables/tbl_species_association_types.html" target="_top" title="tbl_species_association_types" alt="" coords="2513,5021,2886,5202">
+<area shape="rect" id="node32" href="tables/tbl_taxa_synonyms.html" target="_top" title="tbl_taxa_synonyms" alt="" coords="3136,193,3404,579">
+<area shape="rect" id="node146" href="tables/tbl_taxa_tree_authors.html" target="_top" title="tbl_taxa_tree_authors" alt="" coords="2067,610,2362,762">
+<area shape="rect" id="node33" href="tables/tbl_sample_group_notes.html" target="_top" title="tbl_sample_group_notes" alt="" coords="3111,7994,3429,8175">
+<area shape="rect" id="node35" href="tables/tbl_sample_group_descriptions.html" target="_top" title="tbl_sample_group_descriptions" alt="" coords="3078,8229,3462,8439">
+<area shape="rect" id="node102" href="tables/tbl_sample_group_description_types.html" target="_top" title="tbl_sample_group_description_types" alt="" coords="2481,8323,2917,8505">
+<area shape="rect" id="node36" href="tables/tbl_years_types.html" target="_top" title="tbl_years_types" alt="" coords="5,8099,240,8281">
+<area shape="rect" id="node37" href="tables/tbl_dataset_masters.html" target="_top" title="tbl_dataset_masters" alt="" coords="2074,9527,2355,9826">
+<area shape="rect" id="node38" href="tables/tbl_tephras.html" target="_top" title="tbl_tephras" alt="" coords="3787,8751,4004,9138">
+<area shape="rect" id="node39" href="tables/tbl_geochron_refs.html" target="_top" title="tbl_geochron_refs" alt="" coords="4738,6663,4995,6845">
+<area shape="rect" id="node41" href="tables/tbl_geochronology.html" target="_top" title="tbl_geochronology" alt="" coords="4286,7575,4550,7991">
+<area shape="rect" id="node40" href="tables/tbl_analysis_categorical_values.html" target="_top" title="tbl_analysis_categorical_values" alt="" coords="4673,5409,5061,5619">
+<area shape="rect" id="node51" href="tables/tbl_value_type_items.html" target="_top" title="tbl_value_type_items" alt="" coords="4275,5503,4561,5685">
+<area shape="rect" id="node89" href="tables/tbl_dating_labs.html" target="_top" title="tbl_dating_labs" alt="" coords="1648,10101,1889,10341">
+<area shape="rect" id="node42" href="tables/tbl_sample_group_coordinates.html" target="_top" title="tbl_sample_group_coordinates" alt="" coords="4229,4243,4607,4483">
+<area shape="rect" id="node133" href="tables/tbl_coordinate_method_dimensions.html" target="_top" title="tbl_coordinate_method_dimensions" alt="" coords="3682,3017,4109,3257">
+<area shape="rect" id="node43" href="tables/tbl_analysis_numerical_values.html" target="_top" title="tbl_analysis_numerical_values" alt="" coords="4679,7090,5055,7301">
+<area shape="rect" id="node104" href="tables/tbl_value_qualifier_symbols.html" target="_top" title="tbl_value_qualifier_symbols" alt="" coords="4242,8009,4594,8190">
+<area shape="rect" id="node58" href="tables/tbl_sample_types.html" target="_top" title="tbl_sample_types" alt="" coords="2573,5791,2825,5973">
+<area shape="rect" id="node153" href="tables/tbl_alt_ref_types.html" target="_top" title="tbl_alt_ref_types" alt="" coords="2577,5593,2821,5774">
+<area shape="rect" id="node78" href="tables/tbl_locations.html" target="_top" title="tbl_locations" alt="" coords="955,6881,1162,7121">
+<area shape="rect" id="node46" href="tables/tbl_taxonomic_order_biblio.html" target="_top" title="tbl_taxonomic_order_biblio" alt="" coords="3097,5013,3443,5194">
+<area shape="rect" id="node75" href="tables/tbl_abundance_elements.html" target="_top" title="tbl_abundance_elements" alt="" coords="3733,1294,4058,1505">
+<area shape="rect" id="node48" href="tables/tbl_analysis_taxon_counts.html" target="_top" title="tbl_analysis_taxon_counts" alt="" coords="4699,3089,5035,3270">
+<area shape="rect" id="node49" href="tables/tbl_horizons.html" target="_top" title="tbl_horizons" alt="" coords="2598,3201,2801,3411">
+<area shape="rect" id="node50" href="tables/tbl_value_types.html" target="_top" title="tbl_value_types" alt="" coords="3153,5755,3387,6054">
+<area shape="rect" id="node97" href="tables/tbl_data_types.html" target="_top" title="tbl_data_types" alt="" coords="2580,6870,2819,7081">
+<area shape="rect" id="node107" href="tables/tbl_units.html" target="_top" title="tbl_units" alt="" coords="1677,2994,1860,3205">
+<area shape="rect" id="node52" href="tables/tbl_data_providers.html" target="_top" title="tbl_data_providers" alt="" coords="2083,9211,2347,9510">
+<area shape="rect" id="node54" href="tables/tbl_sample_alt_refs.html" target="_top" title="tbl_sample_alt_refs" alt="" coords="3760,5203,4031,5414">
+<area shape="rect" id="node131" href="tables/tbl_property_type_groups.html" target="_top" title="tbl_property_type_groups" alt="" coords="3729,2818,4062,2999">
+<area shape="rect" id="node143" href="tables/tbl_value_classes.html" target="_top" title="tbl_value_classes" alt="" coords="3770,3569,4021,3838">
+<area shape="rect" id="node56" href="tables/tbl_lithology.html" target="_top" title="tbl_lithology" alt="" coords="3164,7707,3376,7977">
+<area shape="rect" id="node57" href="tables/tbl_location_types.html" target="_top" title="tbl_location_types" alt="" coords="613,6939,873,7121">
+<area shape="rect" id="node59" href="tables/tbl_data_type_groups.html" target="_top" title="tbl_data_type_groups" alt="" coords="2069,6899,2361,7081">
+<area shape="rect" id="node60" href="tables/tbl_taxa_common_names.html" target="_top" title="tbl_taxa_common_names" alt="" coords="3107,633,3433,843">
+<area shape="rect" id="node94" href="tables/tbl_taxa_tree_orders.html" target="_top" title="tbl_taxa_tree_orders" alt="" coords="1253,425,1536,635">
+<area shape="rect" id="node62" href="tables/tbl_colours.html" target="_top" title="tbl_colours" alt="" coords="2605,3970,2794,4181">
+<area shape="rect" id="node64" href="tables/tbl_site_other_records.html" target="_top" title="tbl_site_other_records" alt="" coords="2550,6254,2849,6523">
+<area shape="rect" id="node65" href="tables/tbl_chronologies.html" target="_top" title="tbl_chronologies" alt="" coords="1645,10394,1893,10693">
+<area shape="rect" id="node67" href="tables/tbl_analysis_entity_prep_methods.html" target="_top" title="tbl_analysis_entity_prep_methods" alt="" coords="4212,6426,4624,6607">
+<area shape="rect" id="node68" href="tables/tbl_analysis_entity_ages.html" target="_top" title="tbl_analysis_entity_ages" alt="" coords="4258,10095,4578,10423">
+<area shape="rect" id="node69" href="tables/tbl_site_properties.html" target="_top" title="tbl_site_properties" alt="" coords="4734,7663,4999,7845">
+<area shape="rect" id="node71" href="tables/tbl_dating_material.html" target="_top" title="tbl_dating_material" alt="" coords="4731,1629,5003,1898">
+<area shape="rect" id="node72" href="tables/tbl_activity_types.html" target="_top" title="tbl_activity_types" alt="" coords="2572,4198,2827,4379">
+<area shape="rect" id="node73" href="tables/tbl_projects.html" target="_top" title="tbl_projects" alt="" coords="2571,10430,2828,10699">
+<area shape="rect" id="node145" href="tables/tbl_project_types.html" target="_top" title="tbl_project_types" alt="" coords="2089,10430,2340,10611">
+<area shape="rect" id="node154" href="tables/tbl_project_stages.html" target="_top" title="tbl_project_stages" alt="" coords="2084,10629,2345,10810">
+<area shape="rect" id="node74" href="tables/tbl_text_identification_keys.html" target="_top" title="tbl_text_identification_keys" alt="" coords="3095,4755,3445,4995">
+<area shape="rect" id="node139" href="tables/tbl_method_groups.html" target="_top" title="tbl_method_groups" alt="" coords="1634,3339,1903,3521">
+<area shape="rect" id="node77" href="tables/tbl_sample_dimensions.html" target="_top" title="tbl_sample_dimensions" alt="" coords="3741,3927,4050,4197">
+<area shape="rect" id="node79" href="tables/tbl_tephra_refs.html" target="_top" title="tbl_tephra_refs" alt="" coords="4303,8893,4533,9074">
+<area shape="rect" id="node80" href="tables/tbl_abundance_ident_levels.html" target="_top" title="tbl_abundance_ident_levels" alt="" coords="4691,1191,5042,1373">
+<area shape="rect" id="node81" href="tables/tbl_dataset_submission_types.html" target="_top" title="tbl_dataset_submission_types" alt="" coords="3083,10394,3457,10575">
+<area shape="rect" id="node82" href="tables/tbl_analysis_identifiers.html" target="_top" title="tbl_analysis_identifiers" alt="" coords="4713,6209,5021,6361">
+<area shape="rect" id="node83" href="tables/tbl_site_references.html" target="_top" title="tbl_site_references" alt="" coords="2565,8738,2833,8919">
+<area shape="rect" id="node84" href="tables/tbl_taxa_measured_attributes.html" target="_top" title="tbl_taxa_measured_attributes" alt="" coords="3083,2021,3457,2290">
+<area shape="rect" id="node85" href="tables/tbl_sample_coordinates.html" target="_top" title="tbl_sample_coordinates" alt="" coords="4231,3773,4605,4013">
+<area shape="rect" id="node119" href="tables/tbl_feature_types.html" target="_top" title="tbl_feature_types" alt="" coords="3749,2109,4041,2290">
+<area shape="rect" id="node88" href="tables/tbl_season_types.html" target="_top" title="tbl_season_types" alt="" coords="2090,6694,2339,6875">
+<area shape="rect" id="node90" href="tables/tbl_submissions.html" target="_top" title="tbl_submissions" alt="" coords="2571,8981,2828,9455">
+<area shape="rect" id="node150" href="tables/tbl_submission_states.html" target="_top" title="tbl_submission_states" alt="" coords="2066,9042,2363,9194">
+<area shape="rect" id="node91" href="tables/tbl_ecocode_systems.html" target="_top" title="tbl_ecocode_systems" alt="" coords="2071,5782,2359,6051">
+<area shape="rect" id="node92" href="tables/tbl_submission_tasks.html" target="_top" title="tbl_submission_tasks" alt="" coords="3125,9426,3415,9695">
+<area shape="rect" id="node95" href="tables/tbl_sample_horizons.html" target="_top" title="tbl_sample_horizons" alt="" coords="3755,4250,4036,4431">
+<area shape="rect" id="node96" href="tables/tbl_sample_group_description_ty_6c2e420e.html" target="_top" title="tbl_sample_group_description_type_sampling_contexts" alt="" coords="2961,8655,3579,8837">
+<area shape="rect" id="node99" href="tables/tbl_site_locations.html" target="_top" title="tbl_site_locations" alt="" coords="2573,8125,2825,8306">
+<area shape="rect" id="node100" href="tables/tbl_mcr_summary_data.html" target="_top" title="tbl_mcr_summary_data" alt="" coords="3117,897,3423,1283">
+<area shape="rect" id="node101" href="tables/tbl_sample_colours.html" target="_top" title="tbl_sample_colours" alt="" coords="3761,4795,4030,4977">
+<area shape="rect" id="node103" href="tables/tbl_text_distribution.html" target="_top" title="tbl_text_distribution" alt="" coords="3129,2379,3411,2619">
+<area shape="rect" id="node105" href="tables/tbl_site_natgridrefs.html" target="_top" title="tbl_site_natgridrefs" alt="" coords="2563,6026,2836,6237">
+<area shape="rect" id="node106" href="tables/tbl_species_associations.html" target="_top" title="tbl_species_associations" alt="" coords="3109,4439,3431,4738">
+<area shape="rect" id="node109" href="tables/tbl_rdb.html" target="_top" title="tbl_rdb" alt="" coords="3179,4211,3361,4422">
+<area shape="rect" id="node110" href="tables/tbl_analysis_integer_ranges.html" target="_top" title="tbl_analysis_integer_ranges" alt="" coords="4690,7318,5043,7646">
+<area shape="rect" id="node111" href="tables/tbl_mcrdata_birmbeetledat.html" target="_top" title="tbl_mcrdata_birmbeetledat" alt="" coords="3096,1301,3444,1511">
+<area shape="rect" id="node112" href="tables/tbl_analysis_dating_ranges.html" target="_top" title="tbl_analysis_dating_ranges" alt="" coords="4694,8178,5039,8594">
+<area shape="rect" id="node134" href="tables/tbl_seasons.html" target="_top" title="tbl_seasons" alt="" coords="2601,6577,2798,6817">
+<area shape="rect" id="node113" href="tables/tbl_sample_images.html" target="_top" title="tbl_sample_images" alt="" coords="3761,6474,4029,6743">
+<area shape="rect" id="node114" href="tables/tbl_sample_notes.html" target="_top" title="tbl_sample_notes" alt="" coords="3769,6210,4021,6421">
+<area shape="rect" id="node115" href="tables/tbl_ceramics_measurements.html" target="_top" title="tbl_ceramics_measurements" alt="" coords="2519,3429,2879,3581">
+<area shape="rect" id="node117" href="tables/tbl_datasets.html" target="_top" title="tbl_datasets" alt="" coords="3150,9022,3390,9409">
+<area shape="rect" id="node118" href="tables/tbl_dataset_contacts.html" target="_top" title="tbl_dataset_contacts" alt="" coords="3753,9749,4038,9989">
+<area shape="rect" id="node120" href="tables/tbl_ecocodes.html" target="_top" title="tbl_ecocodes" alt="" coords="3766,3274,4025,3455">
+<area shape="rect" id="node142" href="tables/tbl_ecocode_definitions.html" target="_top" title="tbl_ecocode_definitions" alt="" coords="3114,5211,3426,5510">
+<area shape="rect" id="node122" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="5477,2579,5704,2790">
+<area shape="rect" id="node123" href="tables/tbl_imported_taxa_replacements.html" target="_top" title="tbl_imported_taxa_replacements" alt="" coords="3069,1529,3471,1710">
+<area shape="rect" id="node124" href="tables/tbl_sample_group_dimensions.html" target="_top" title="tbl_sample_group_dimensions" alt="" coords="3708,7289,4083,7529">
+<area shape="rect" id="node125" href="tables/tbl_taxa_seasonality.html" target="_top" title="tbl_taxa_seasonality" alt="" coords="3129,3954,3411,4194">
+<area shape="rect" id="node126" href="tables/tbl_analysis_value_dimensions.html" target="_top" title="tbl_analysis_value_dimensions" alt="" coords="4677,3929,5057,4110">
+<area shape="rect" id="node129" href="tables/tbl_sample_description_sample_g_89e77fa2.html" target="_top" title="tbl_sample_description_sample_group_contexts" alt="" coords="3623,7821,4168,8002">
+<area shape="rect" id="node132" href="tables/tbl_site_images.html" target="_top" title="tbl_site_images" alt="" coords="3153,9983,3387,10341">
+<area shape="rect" id="node135" href="tables/tbl_physical_sample_features.html" target="_top" title="tbl_physical_sample_features" alt="" coords="4683,2570,5051,2751">
+<area shape="rect" id="node136" href="tables/tbl_analysis_numerical_ranges.html" target="_top" title="tbl_analysis_numerical_ranges" alt="" coords="4677,7862,5057,8161">
+<area shape="rect" id="node138" href="tables/tbl_analysis_integer_values.html" target="_top" title="tbl_analysis_integer_values" alt="" coords="4692,6862,5041,7073">
+<area shape="rect" id="node140" href="tables/tbl_site_site_types.html" target="_top" title="tbl_site_site_types" alt="" coords="2568,9785,2831,10025">
+<area shape="rect" id="node148" href="tables/tbl_site_types.html" target="_top" title="tbl_site_types" alt="" coords="2099,9843,2330,10054">
+<area shape="rect" id="node155" href="tables/tbl_ecocode_groups.html" target="_top" title="tbl_ecocode_groups" alt="" coords="2561,5331,2837,5571">
+<area shape="rect" id="node144" href="tables/tbl_tephra_dates.html" target="_top" title="tbl_tephra_dates" alt="" coords="4288,8406,4548,8646">
+<area shape="rect" id="node147" href="tables/tbl_temperatures.html" target="_top" title="tbl_temperatures" alt="" coords="5,7521,257,7673">
+<area shape="rect" id="node149" href="tables/tbl_relative_age_refs.html" target="_top" title="tbl_relative_age_refs" alt="" coords="2072,8367,2357,8549">
+<area shape="rect" id="node151" href="tables/tbl_sample_group_images.html" target="_top" title="tbl_sample_group_images" alt="" coords="3103,6951,3437,7221">
+<area shape="rect" id="node152" href="tables/tbl_dataset_submissions.html" target="_top" title="tbl_dataset_submissions" alt="" coords="3735,10335,4056,10605">
+<area shape="rect" id="node156" href="tables/tbl_mcr_names.html" target="_top" title="tbl_mcr_names" alt="" coords="3155,1763,3385,2003">
+<area shape="rect" id="node157" href="tables/tbl_analysis_notes.html" target="_top" title="tbl_analysis_notes" alt="" coords="4736,6378,4997,6530">
+<area shape="rect" id="node158" href="tables/tbl_analysis_entity_dimensions.html" target="_top" title="tbl_analysis_entity_dimensions" alt="" coords="4225,5775,4611,5986">
+<area shape="rect" id="node159" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="5748,2301,6023,2546">
+<area shape="rect" id="node160" href="tables/view_taxa_alphabetically.html" target="_top" title="view_taxa_alphabetically" alt="" coords="2537,298,2861,631">
+<area shape="rect" id="node161" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="5753,2563,6017,2809">
+<area shape="rect" id="node162" href="tables/view_typed_analysis_tables.html" target="_top" title="view_typed_analysis_tables" alt="" coords="5477,3289,5825,3417">
+<area shape="rect" id="node163" href="tables/view_typed_analysis_values.html" target="_top" title="view_typed_analysis_values" alt="" coords="4691,6547,5042,6646">
+<area shape="rect" id="node164" href="tables/view_bibliography_references.html" target="_top" title="view_bibliography_references" alt="" coords="5477,3926,5848,4025">
+<area shape="rect" id="node165" href="tables/typed_analysis_values.html" target="_top" title="typed_analysis_values" alt="" coords="4718,5637,5015,5765">
+</map>
+                                        <a name='diagram'><img id="largeimpliedDegreeImg" src="diagrams/summary/relationships.implied.large.png" usemap="#largeImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 7.0.2</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="relationships.js"></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>
